@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campaigns — Gerard Irurre</title>
+<meta name="description" content="Gerard Irurre — brand &amp; content designer, Barcelona. Brand identity, content, campaigns and social.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&amp;family=Caveat:wght@500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#EEEBE4}
+a{color:inherit}a:hover{color:inherit}
+.grain{position:absolute;inset:0;pointer-events:none;background-image:url(assets/e985e5adb271.png);background-repeat:repeat;opacity:.55;mix-blend-mode:multiply}
+.t1{background:url(assets/0f13f55e5321.png) center/100% 100% no-repeat}
+.t2{background:url(assets/c73f49ea2a15.png) center/100% 100% no-repeat}
+.tape1{background:url(assets/5d264df71453.png) center/100% 100% no-repeat}
+.tape2{background:url(assets/e5c109c687ad.png) center/100% 100% no-repeat}
+.nav a{text-decoration:none;padding:12px 0}
+.nav a:hover,.nav a:focus,.nav a.on{text-decoration:underline;text-underline-offset:4px}
+.clips{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:clamp(48px,5vw,72px) clamp(24px,3vw,44px)}
+.clip{position:relative;display:block;text-decoration:none;color:#0E0E0E;transition:transform .35s ease}
+.clip:hover,.clip:focus{transform:translateY(-6px) rotate(0deg) !important}
+.next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
+</style>
+<style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
+</head>
+<body>
+<template id="dc-template">
+<div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
+
+<header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
+<a href="index.html" style="text-decoration: none; padding: 12px 0;">Kodak Tri-X 400 &#160;▸ 03A &#160; Gerard Irurre — Issue 01</a>
+<nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
+<a href="brand.html">Brand</a><a href="content.html">Content</a><a class="on" href="campaigns.html">Campaigns</a><a href="social.html">Social</a><a href="index.html#contact">Contact</a>
+</nav>
+</header>
+
+<section aria-label="Campaigns" style="position: relative; height: clamp(520px, 52vw, 780px); overflow: hidden; background: #2A2A2A;">
+<img src="assets/73ad3b685275.jpg" alt="The KALIHU × Maresme Waves pop-up at night, black and white photocopy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+<p style="position: absolute; left: clamp(16px, 4vw, 56px); top: clamp(20px, 3vw, 40px); margin: 0; color: #FFFFFF; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 03 — 03 entries</p>
+<div class="t1" style="position: absolute; left: -2%; right: -2%; top: 34%; height: clamp(170px, 19vw, 290px); display: flex; flex-direction: column; justify-content: center; padding: 0 clamp(24px, 5vw, 72px);">
+<h1 style="margin: 0; font-weight: 900; font-size: clamp(88px, 14vw, 216px); line-height: 0.78; letter-spacing: -0.05em; text-transform: uppercase; white-space: nowrap;">Campaigns</h1>
+<p style="margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;"><span>A goal, a date, a result</span><span>Collabs · pop-ups · paid social</span><span>2025</span></p>
+</div>
+<p style="position: absolute; right: clamp(16px, 5vw, 72px); bottom: clamp(24px, 4vw, 56px); margin: 0; transform: rotate(-5deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(26px, 2.6vw, 40px); color: #FFFFFF;">+40% KALIHU sales ↘</p>
+</section>
+
+<main style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(64px, 8vw, 120px) clamp(16px, 4vw, 56px);">
+<div class="grain" aria-hidden="true"></div>
+<div class="clips" style="position: relative;">
+<sc-for list="{{clips}}" as="c" hint-placeholder-count="3">
+<a class="clip" href="{{c.href}}" style="{{c.box}}">
+<span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
+<span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);">
+<sc-if value="{{c.hasImg}}" hint-placeholder-val="{{true}}"><img src="{{c.img}}" alt="{{c.alt}}" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover;"></sc-if>
+<sc-if value="{{c.noImg}}" hint-placeholder-val="{{false}}"><span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #F4F1EA; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">[ad creatives soon]</span></sc-if>
+</span>
+<span style="display: block; margin-top: 18px; font-weight: 900; font-size: clamp(28px, 2.6vw, 38px); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase;">{{c.title}}</span>
+<span style="display: block; margin-top: 10px; border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Date</span><span>{{c.year}}</span></span>
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Type</span><span>{{c.type}}</span></span>
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span>Result</span><span style="text-align: right;">{{c.result}}</span></span>
+</span>
+<span style="display: block; margin-top: 10px; transform: rotate(-2deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 26px; line-height: 1.05; color: #C8321E;">{{c.note}}</span>
+</a>
+</sc-for>
+</div>
+</main>
+
+<a class="next" href="social.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
+<span class="t2" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 clamp(24px, 5vw, 72px);">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Next — Poster 04</span>
+<span class="next-t" style="font-weight: 900; font-size: clamp(56px, 8vw, 120px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Social &amp; UGC →</span>
+</span>
+</a>
+
+<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<a href="content.html" style="text-decoration: none; padding: 12px 0;">← Poster 02 Content</a>
+<a href="mailto:girurre5@gmail.com" style="text-decoration: none; padding: 12px 0;">girurre5@gmail.com</a>
+<span style="padding: 12px 0;">Barcelona — available now</span>
+</footer>
+</div>
+</template>
+<div id="dc-root"></div>
+<script src="dc.js"></script>
+<script>
+class Component extends DCLogic {
+  renderVals() {
+    const B = 'assets/';
+    const d = [
+      { title: 'KALIHU × Maresme Waves', year: 'Nov 2025', type: 'Brand collab', result: '+40% sales · 200 pieces', note: 'capsule + 2 pop-ups →', img: 'assets/0881c818fc1b.jpg', alt: 'Guests at the pop-up', href: 'kalihu-x-maresme-waves.html', r: -2 },
+      { title: 'Nordest — launch', year: '[year]', type: 'Concept', result: 'Goal KPIs only', note: 'concept — not a real client', img: 'assets/23f77dd40dfa.jpg', alt: 'Runner in motion, Nordest concept', href: 'campaigns.html', r: 2 },
+      { title: 'Bazest — Meta Ads', year: '[year]', type: 'Client · paid social', result: '[result]', note: 'supplements, Shopify', href: 'campaigns.html', r: -1 }
+    ];
+    return { clips: d.map((x, i) => ({ ...x, tape: i % 2 ? 'tape2' : 'tape1', hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '',
+      box: 'transform: rotate(' + x.r + 'deg);' + (i % 3 === 1 ? ' margin-top: clamp(0px, 4vw, 64px);' : '') })) };
+  }
+}
+window.__DCComponent = Component;
+</script>
+</body>
+</html>

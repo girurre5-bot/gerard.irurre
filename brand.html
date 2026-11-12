@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand &amp; Identity — Gerard Irurre</title>
+<meta name="description" content="Gerard Irurre — brand &amp; content designer, Barcelona. Brand identity, content, campaigns and social.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&amp;family=Caveat:wght@500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#EEEBE4}
+a{color:inherit}a:hover{color:inherit}
+.grain{position:absolute;inset:0;pointer-events:none;background-image:url(assets/e985e5adb271.png);background-repeat:repeat;opacity:.55;mix-blend-mode:multiply}
+.t1{background:url(assets/0f13f55e5321.png) center/100% 100% no-repeat}
+.tape1{background:url(assets/5d264df71453.png) center/100% 100% no-repeat}
+.tape2{background:url(assets/e5c109c687ad.png) center/100% 100% no-repeat}
+.nav a{text-decoration:none;padding:12px 0}
+.nav a:hover,.nav a:focus,.nav a.on{text-decoration:underline;text-underline-offset:4px}
+.folders{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(24px,2.6vw,40px)}
+.folders > .folder{flex:0 0 calc((100% - 2 * clamp(24px,2.6vw,40px)) / 3)}
+@media (max-width:1100px){.folders > .folder{flex-basis:calc((100% - clamp(24px,2.6vw,40px)) / 2)}}
+.folder{position:relative;display:block;width:100%;aspect-ratio:4/3;padding:0;border:0;background:transparent;cursor:pointer;container-type:inline-size;font:inherit;color:#0E0E0E;text-align:left}
+.folder .peek{transition:transform .4s ease}
+.folder:hover .peek,.folder:focus .peek{transform:translateY(-2.4cqw)}
+.kraft{background-color:#A8A6A0;background-image:url(assets/e985e5adb271.png);background-blend-mode:multiply}
+.kraft2{background-color:#C9C7C1;background-image:url(assets/e985e5adb271.png);background-blend-mode:multiply}
+.clips{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(56px,6vw,88px) clamp(32px,4vw,56px)}
+.clips > .clip{flex:0 1 420px;min-width:0}
+.clip{position:relative;display:block;text-decoration:none;color:#0E0E0E;transition:transform .35s ease}
+.clip:hover,.clip:focus{transform:translateY(-6px) rotate(0deg) !important}
+.next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
+@media (max-width:760px){.folders > .folder{flex-basis:100%}}
+</style>
+<style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
+</head>
+<body>
+<template id="dc-template">
+<div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
+
+<header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
+<a href="index.html" style="text-decoration: none; padding: 12px 0;">Kodak Tri-X 400 &#160;▸ 01A &#160; Gerard Irurre — Issue 01</a>
+<nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
+<a class="on" href="brand.html">Brand</a><a href="content.html">Content</a><a href="campaigns.html">Campaigns</a><a href="social.html">Social</a><a href="index.html#contact">Contact</a>
+</nav>
+</header>
+
+<section aria-label="Brand &amp; Identity" style="position: relative; height: clamp(520px, 52vw, 780px); overflow: hidden; background: #CFCFCF;">
+<img src="assets/78b1a1ebc130.jpg" alt="A surfer riding a wave below a rocky headland, black and white film" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%;">
+<div style="position: absolute; left: clamp(16px, 4vw, 56px); top: clamp(24px, 4vw, 56px); right: clamp(16px, 4vw, 56px); color: #FFFFFF;">
+<p style="margin: 0 0 12px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 01 — 5 folders — 13 pieces</p>
+<h1 style="margin: 0; font-weight: 900; font-size: clamp(72px, 11vw, 168px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Brand &amp;<br>Identity</h1>
+<p style="margin: 18px 0 0; transform: rotate(-3deg); transform-origin: left; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.4vw, 34px); color: #FFFFFF;">brands built from zero — open a folder ↓</p>
+</div>
+<span style="position: absolute; right: clamp(16px, 4vw, 56px); bottom: clamp(16px, 3vw, 40px); color: #FFFFFF; font-weight: 900; font-size: clamp(64px, 9vw, 140px); line-height: 0.8;">01</span>
+</section>
+
+<section aria-label="Folders" style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px) clamp(32px, 4vw, 56px);">
+<div class="grain" aria-hidden="true"></div>
+<div class="folders" style="position: relative;">
+<sc-for list="{{folders}}" as="f" hint-placeholder-count="4">
+<button type="button" class="folder" onClick="{{f.pick}}" aria-pressed="{{f.pressed}}" aria-label="{{f.aria}}">
+<span class="kraft" aria-hidden="true" style="position: absolute; left: 0; top: 4cqw; width: 38cqw; height: 9cqw; border-radius: 2cqw 2cqw 0 0; display: flex; align-items: flex-start; padding: 2cqw 3cqw; box-sizing: border-box; font-family: 'Space Mono', monospace; font-size: 2.2cqw; text-transform: uppercase;">{{f.tab}}</span>
+<span class="kraft" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 11cqw; bottom: 0; border-radius: 0 1.6cqw 1.2cqw 1.2cqw;"></span>
+<span class="peek" aria-hidden="true" style="position: absolute; left: 3cqw; right: 6cqw; top: 12.6cqw; height: 6cqw; background: #FBFAF6; transform: rotate(-0.8deg); box-shadow: 0 0.3cqw 0.8cqw rgba(14,14,14,0.15);"></span>
+<span class="peek" aria-hidden="true" style="position: absolute; left: 5cqw; right: 3cqw; top: 14cqw; height: 6cqw; background: #F1EDE3; transform: rotate(0.6deg); box-shadow: 0 0.3cqw 0.8cqw rgba(14,14,14,0.15);"></span>
+<span class="kraft2" aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 17cqw; bottom: 0; border-radius: 1.2cqw; box-shadow: 0 -0.6cqw 1.4cqw rgba(14,14,14,0.18);"></span>
+<span style="position: absolute; left: 6cqw; right: 6cqw; top: 22cqw; display: flex; justify-content: space-between; gap: 2cqw; font-family: 'Space Mono', monospace; font-size: 2.2cqw; text-transform: uppercase;"><span>Folder {{f.letter}} — {{f.count}}</span><span>Gerard Irurre — Issue 01</span></span>
+<span style="position: absolute; left: 6cqw; right: 6cqw; top: 26cqw; border-top: 0.35cqw solid #0E0E0E;" aria-hidden="true"></span>
+<span style="position: absolute; left: 5.4cqw; right: 6cqw; bottom: 6cqw; display: block; font-weight: 900; font-size: 12.5cqw; line-height: 0.82; letter-spacing: -0.05em; text-transform: uppercase;">{{f.title}}</span>
+<span style="position: absolute; right: 6cqw; top: 30cqw; transform: rotate(-6deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 6cqw; line-height: 1; color: #C8321E;">{{f.state}}</span>
+</button>
+</sc-for>
+</div>
+</section>
+
+<main aria-live="polite" style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(24px, 3vw, 40px) clamp(16px, 4vw, 56px) clamp(64px, 8vw, 112px);">
+<div class="grain" aria-hidden="true"></div>
+<div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 24px; padding-top: 14px; border-top: 2px solid #0E0E0E; margin-bottom: clamp(40px, 5vw, 64px);">
+<div>
+<span style="display: block; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Open — folder {{cur.letter}} — {{cur.count}}</span>
+<h2 style="margin: 6px 0 0; font-weight: 900; font-size: clamp(48px, 6vw, 92px); line-height: 0.82; letter-spacing: -0.045em; text-transform: uppercase;">{{cur.title}}</h2>
+</div>
+<span style="transform: rotate(-3deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.2vw, 32px); color: #C8321E;">{{cur.note}}</span>
+</div>
+<div class="clips" style="position: relative;">
+<sc-for list="{{items}}" as="c" hint-placeholder-count="4">
+<a class="clip" href="{{c.href}}" style="{{c.box}}">
+<span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
+<span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);">
+<sc-if value="{{c.hasImg}}" hint-placeholder-val="{{true}}"><img src="{{c.img}}" alt="{{c.alt}}" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;"></sc-if>
+<sc-if value="{{c.noImg}}" hint-placeholder-val="{{false}}"><span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 3; background: #F4F1EA; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">{{c.ph}}</span></sc-if>
+</span>
+<span style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 16px;">
+<span style="font-weight: 900; font-size: clamp(24px, 2.2vw, 32px); line-height: 0.92; letter-spacing: -0.03em; text-transform: uppercase;">{{c.title}}</span>
+<span style="flex: 0 0 auto; transform: rotate(-3deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 24px; color: #C8321E;">{{c.client}}</span>
+</span>
+<span style="display: block; margin-top: 10px; border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Year</span><span>{{c.year}}</span></span>
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span>What I did</span><span style="text-align: right;">{{c.did}}</span></span>
+</span>
+</a>
+</sc-for>
+</div>
+</main>
+
+<a class="next" href="content.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
+<span class="t1" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 clamp(24px, 5vw, 72px);">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Next — Poster 02</span>
+<span class="next-t" style="font-weight: 900; font-size: clamp(56px, 8vw, 120px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Content →</span>
+</span>
+</a>
+
+<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<a href="mailto:girurre5@gmail.com" style="text-decoration: none; padding: 12px 0;">girurre5@gmail.com</a>
+<a href="https://www.instagram.com/gerard.irurre/" style="text-decoration: none; padding: 12px 0;">@gerard.irurre</a>
+<span style="padding: 12px 0;">Barcelona — available now</span>
+</footer>
+</div>
+</template>
+<div id="dc-root"></div>
+<script src="dc.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { open: 0 }; }
+  renderVals() {
+    const B = 'assets/';
+    const ch = [
+      { letter: 'A', tab: 'A — Branding', title: 'Branding', note: 'the why before the look', peek: [], items: [
+        { title: 'KALIHU', client: 'surf apparel', year: '2019 — now', did: 'Concept · positioning · tone of voice', img: 'assets/6497032e0c04.jpg', alt: 'Surfers at dusk — KALIHU', href: 'branding-kalihu.html' },
+        { title: '[Project]', client: 'rebrand / repositioning', year: '[year]', did: '[what I did]', ph: '[project soon]' },
+        { title: '[Project]', client: 'applied strategy', year: '[year]', did: '[what I did]', ph: '[project soon]' }
+      ]},
+      { letter: 'B', tab: 'B — Identity', title: 'Visual identity', note: 'logos, type, colour, systems', peek: ['5bd98d3e7af352fe5e82e338a4b46679','de33739e8e4f388795c787c966f4598a','b7aec6a939bf2d2d46490c3a215dbbc6'], items: [
+        { title: 'KALIHU', client: 'surf apparel', year: '2019 — now', did: 'Logo · system · labels', img: 'assets/5bd98d3e7af3.jpg', alt: 'KALIHU logo', href: 'identity-kalihu.html' },
+        { title: 'Jove Llar', client: 'for Jove Llar', year: '[year]', did: 'Logo · identity', img: 'assets/fda38811180f.png', alt: 'Jove Llar Reformes logo', href: 'identity-jove-llar.html' },
+        { title: 'Dusty Fin', client: 'for Dusty Fin', year: '2025', did: 'Logo · colour · type', img: 'assets/b7aec6a939bf.jpg', alt: 'Dusty Fin logo', href: 'identity-dusty-fin.html' }
+      ]},
+      { letter: 'C', tab: 'C — Product', title: 'Product design', note: 'garments, bags, samples', peek: ['5eb4765a4c860258bc0953f65a954c3b','904e77d24d28de0f825ba154fbb08101'], items: [
+        { title: 'KALIHU', client: 'surf apparel', year: '2019 — now', did: 'Tees · hoodies · caps · prints', img: 'assets/5eb4765a4c86.jpg', alt: 'KALIHU t-shirt on the beach' },
+        { title: 'Nordest', client: 'concept', year: '[year]', did: 'Graphic · garment mockup', img: 'assets/904e77d24d28.jpg', alt: 'Nordest t-shirt with horse print' },
+        { title: '[Project]', client: '[brand]', year: '[year]', did: '[what I did]', ph: '[project soon]' }
+      ]},
+      { letter: 'D', tab: 'D — Web', title: 'Web design', note: 'built to convert', peek: ['77d8c963ac8e38e02a4050c37156e7a0','6d7a9411773488fd09f58fa5a7c7249c'], items: [
+        { title: 'Jove Llar', client: 'for Jove Llar', year: '[year]', did: 'Structure · design · build', img: 'assets/77d8c963ac8e.jpg', alt: 'Jove Llar website' },
+        { title: 'KALIHU store', client: 'KALIHU', year: '2019 — now', did: 'Shopify · SEO · collections', ph: '[screenshot soon]' },
+        { title: 'Abril Fox Studio', client: 'for Abril Fox Studio', year: '[year]', did: '[what I did]', ph: '[screenshot soon]' }
+      ]},
+      { letter: 'E', tab: 'E — Concept', title: 'Concept', note: 'speculative — not a real client', peek: ['9c9891842634bb0a5ba11301914b57e2','23f77dd40dfa2f17568fb6bebae701e2','904e77d24d28de0f825ba154fbb08101'], items: [
+        { title: 'Nordest Running Club', client: 'concept', year: '[year]', did: 'Brand · strategy · ad copy', img: 'assets/9c9891842634.jpg', alt: 'Nordest Not Only Running Club poster' }
+      ]}
+    ];
+    const open = this.state.open;
+    const pos = [ { l: 8, t: 10, w: 34, r: -7 }, { l: 34, t: 6, w: 34, r: 3 }, { l: 60, t: 12, w: 32, r: 8 } ];
+    const rots = [-2, 2, -1, 3, -3, 1];
+    const cnt = n => String(n).padStart(2, '0') + (n === 1 ? ' piece' : ' pieces');
+    const c = ch[open];
+    return {
+      folders: ch.map((f, i) => ({ ...f, count: cnt(f.items.length), pressed: i === open ? 'true' : 'false',
+        aria: 'Open folder ' + f.letter + ', ' + f.title + ', ' + cnt(f.items.length),
+        state: i === open ? 'open ✓' : 'click to open',
+        pick: () => this.setState({ open: i }),
+        prints: f.peek.map((id, k) => ({ img: id,
+          box: 'position: absolute; left: ' + pos[k].l + 'cqw; top: ' + pos[k].t + 'cqw; width: ' + pos[k].w + 'cqw; background: #FFFFFF; padding: 1.2cqw; transform: rotate(' + pos[k].r + 'deg); box-shadow: 0 0.6cqw 1.6cqw rgba(14,14,14,0.2);' })) })),
+      cur: { letter: c.letter, title: c.title, note: c.note, count: cnt(c.items.length) },
+      items: c.items.map((x, i) => ({ ...x, href: x.href || 'brand.html', tape: i % 2 ? 'tape2' : 'tape1', hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '', ph: x.ph || '',
+        box: 'transform: rotate(' + rots[i % rots.length] + 'deg);' + (i % 3 === 1 ? ' margin-top: clamp(0px, 4vw, 64px);' : '') }))
+    };
+  }
+}
+window.__DCComponent = Component;
+</script>
+</body>
+</html>

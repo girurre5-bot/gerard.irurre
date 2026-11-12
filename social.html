@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social &amp; UGC — Gerard Irurre</title>
+<meta name="description" content="Gerard Irurre — brand &amp; content designer, Barcelona. Brand identity, content, campaigns and social.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&amp;family=Caveat:wght@500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<style>
+body{margin:0;background:#EEEBE4}
+a{color:inherit}a:hover{color:inherit}
+.grain{position:absolute;inset:0;pointer-events:none;background-image:url(assets/e985e5adb271.png);background-repeat:repeat;opacity:.55;mix-blend-mode:multiply}
+.t1{background:url(assets/0f13f55e5321.png) center/100% 100% no-repeat}
+.tape1{background:url(assets/5d264df71453.png) center/100% 100% no-repeat}
+.tape2{background:url(assets/e5c109c687ad.png) center/100% 100% no-repeat}
+.nav a{text-decoration:none;padding:12px 0}
+.nav a:hover,.nav a:focus,.nav a.on{text-decoration:underline;text-underline-offset:4px}
+.clips{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:clamp(48px,5vw,72px) clamp(24px,3vw,40px)}
+.clip{position:relative;display:block;text-decoration:none;color:#0E0E0E;transition:transform .35s ease}
+.clip:hover,.clip:focus{transform:translateY(-6px) rotate(0deg) !important}
+.lined{background-color:#FBFAF6;background-image:repeating-linear-gradient(to bottom,transparent 0 46px,rgba(14,14,14,.55) 46px 47px)}
+.next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
+</style>
+<style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
+</head>
+<body>
+<template id="dc-template">
+<div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
+
+<header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
+<a href="index.html" style="text-decoration: none; padding: 12px 0;">Kodak Gold 200 &#160;▸ 04A &#160; Gerard Irurre — Issue 01</a>
+<nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
+<a href="brand.html">Brand</a><a href="content.html">Content</a><a href="campaigns.html">Campaigns</a><a class="on" href="social.html">Social</a><a href="index.html#contact">Contact</a>
+</nav>
+</header>
+
+<section aria-label="Social &amp; UGC" style="position: relative; min-height: clamp(560px, 54vw, 800px); overflow: hidden; background: #6B8CA6;">
+<img src="assets/904e211e6c83.jpg" alt="Friends at a viewpoint at sunset, shot on colour film" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%;">
+<p style="position: absolute; left: clamp(16px, 4vw, 56px); top: clamp(20px, 3vw, 40px); margin: 0; color: #FFFFFF; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 04 — 06 entries</p>
+<div class="lined" style="position: relative; margin: clamp(120px, 14vw, 200px) clamp(16px, 8vw, 120px) clamp(48px, 6vw, 88px) auto; width: min(640px, calc(100% - 32px)); box-sizing: border-box; padding: 46px clamp(20px, 3vw, 40px) 30px; transform: rotate(-2deg); box-shadow: 0 14px 34px rgba(14,14,14,0.3);">
+<span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(3deg);"></span>
+<h1 style="margin: 0; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(56px, 6vw, 88px); line-height: 47px; padding-top: 14px;">Social &amp; UGC</h1>
+<p style="margin: 47px 0 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: clamp(26px, 2.4vw, 32px); line-height: 47px;">The accounts I run over time,<br>and the creators I direct.<br><span style="color: #C8321E;">strategy · content · community · gifting ↓</span></p>
+</div>
+</section>
+
+<main style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(64px, 8vw, 120px) clamp(16px, 4vw, 56px);">
+<div class="grain" aria-hidden="true"></div>
+<div class="clips" style="position: relative;">
+<sc-for list="{{clips}}" as="c" hint-placeholder-count="6">
+<a class="clip" href="{{c.href}}" style="{{c.box}}">
+<span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
+<span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);">
+<sc-if value="{{c.hasImg}}" hint-placeholder-val="{{true}}"><img src="{{c.img}}" alt="{{c.alt}}" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover;"></sc-if>
+<sc-if value="{{c.noImg}}" hint-placeholder-val="{{false}}"><span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #F4F1EA; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">[grid screenshot soon]</span></sc-if>
+</span>
+<span style="display: block; margin-top: 18px; font-weight: 900; font-size: clamp(24px, 2.2vw, 32px); line-height: 0.95; letter-spacing: -0.03em;">{{c.title}}</span>
+<span style="display: block; margin-top: 10px; border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Period</span><span>{{c.year}}</span></span>
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Type</span><span>{{c.type}}</span></span>
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span>What I did</span><span style="text-align: right;">{{c.did}}</span></span>
+</span>
+<span style="display: block; margin-top: 10px; transform: rotate(-2deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 26px; line-height: 1.05; color: #C8321E;">{{c.note}}</span>
+</a>
+</sc-for>
+</div>
+<p style="position: relative; margin: clamp(56px, 7vw, 96px) 0 0; padding-top: 16px; border-top: 2px solid #0E0E0E; font-weight: 800; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.2; letter-spacing: -0.02em; text-transform: uppercase;">Instagram · TikTok · Facebook · Pinterest · LinkedIn <span style="font-family: 'Caveat', cursive; font-weight: 700; text-transform: none; letter-spacing: 0; color: #C8321E;">with</span> Meta Ads · ManyChat · CapCut · After Effects · Canva · Lightroom · Mailchimp</p>
+</main>
+
+<a class="next" href="index.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
+<span class="t1" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 clamp(24px, 5vw, 72px);">
+<span style="font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Back to the cover</span>
+<span class="next-t" style="font-weight: 900; font-size: clamp(56px, 8vw, 120px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Issue 01 →</span>
+</span>
+</a>
+
+<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<a href="campaigns.html" style="text-decoration: none; padding: 12px 0;">← Poster 03 Campaigns</a>
+<a href="mailto:girurre5@gmail.com" style="text-decoration: none; padding: 12px 0;">girurre5@gmail.com</a>
+<span style="padding: 12px 0;">Barcelona — available now</span>
+</footer>
+</div>
+</template>
+<div id="dc-root"></div>
+<script src="dc.js"></script>
+<script>
+class Component extends DCLogic {
+  renderVals() {
+    const B = 'assets/';
+    const d = [
+      { title: '@communityofkalihu', year: '2019 — now', type: 'Brand account', did: 'Strategy · content · community', note: '100 → 280 followers, organic', img: 'assets/6d7a94117734.jpg', alt: 'KALIHU Instagram grid', r: -2 },
+      { title: '@stemvius', year: '[period]', type: 'Client', did: '[my part]', note: '[what I did]', r: 2 },
+      { title: '@donnybarmanly', year: '[period]', type: 'Client', did: '[my part]', note: '[what I did]', r: -1 },
+      { title: '@bazest.official', year: '[period]', type: 'Client', did: 'Content · product photo · Meta ads', note: 'supplements, Shopify', r: 3 },
+      { title: 'Creators — Spain', year: '[year]', type: 'KALIHU · sales', did: 'Influencers · UGC · gifting', note: '~€15K budget, mixed creators', img: 'assets/0a46ca348643.jpg', alt: 'Guests wearing the KALIHU collab hoodies', r: -3 },
+      { title: 'Creators — USA', year: '[year]', type: 'Client · content', did: 'Influencers · UGC · reports', note: 'new customers', r: 1 }
+    ];
+    return { clips: d.map((x, i) => ({ ...x, href: 'social.html', tape: i % 2 ? 'tape2' : 'tape1', hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '',
+      box: 'transform: rotate(' + x.r + 'deg);' + (i % 3 === 1 ? ' margin-top: clamp(0px, 4vw, 64px);' : '') })) };
+  }
+}
+window.__DCComponent = Component;
+</script>
+</body>
+</html>
