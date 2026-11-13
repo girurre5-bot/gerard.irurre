@@ -28,7 +28,7 @@ a{color:inherit}a:hover{color:inherit}
 <div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
 
 <header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
-<a href="index.html" style="text-decoration: none; padding: 12px 0;">Kodak Gold 200 &#160;▸ 04A &#160; Gerard Irurre — Issue 01</a>
+<a href="index.html" style="text-decoration: none; padding: 12px 0;">Issue 01 &#160;▸ 04A &#160; Gerard Irurre</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
 <a href="brand.html">Brand</a><a href="content.html">Content</a><a href="campaigns.html">Campaigns</a><a class="on" href="social.html">Social</a><a href="index.html#contact">Contact</a>
 </nav>
@@ -36,7 +36,7 @@ a{color:inherit}a:hover{color:inherit}
 
 <section aria-label="Social &amp; UGC" style="position: relative; min-height: clamp(560px, 54vw, 800px); overflow: hidden; background: #6B8CA6;">
 <img src="assets/904e211e6c83.jpg" alt="Friends at a viewpoint at sunset, shot on colour film" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%;">
-<p style="position: absolute; left: clamp(16px, 4vw, 56px); top: clamp(20px, 3vw, 40px); margin: 0; color: #FFFFFF; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 04 — 06 entries</p>
+<p style="position: absolute; left: clamp(16px, 4vw, 56px); top: clamp(20px, 3vw, 40px); margin: 0; color: #FFFFFF; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 04 — 05 entries</p>
 <div class="lined" style="position: relative; margin: clamp(120px, 14vw, 200px) clamp(16px, 8vw, 120px) clamp(48px, 6vw, 88px) auto; width: min(640px, calc(100% - 32px)); box-sizing: border-box; padding: 46px clamp(20px, 3vw, 40px) 30px; transform: rotate(-2deg); box-shadow: 0 14px 34px rgba(14,14,14,0.3);">
 <span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(3deg);"></span>
 <h1 style="margin: 0; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(56px, 6vw, 88px); line-height: 47px; padding-top: 14px;">Social &amp; UGC</h1>
@@ -47,7 +47,7 @@ a{color:inherit}a:hover{color:inherit}
 <main style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(64px, 8vw, 120px) clamp(16px, 4vw, 56px);">
 <div class="grain" aria-hidden="true"></div>
 <div class="clips" style="position: relative;">
-<sc-for list="{{clips}}" as="c" hint-placeholder-count="6">
+<sc-for list="{{clips}}" as="c" hint-placeholder-count="5">
 <a class="clip" href="{{c.href}}" style="{{c.box}}">
 <span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
 <span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);">
@@ -92,8 +92,7 @@ class Component extends DCLogic {
       { title: '@stemvius', year: '[period]', type: 'Client', did: '[my part]', note: '[what I did]', r: 2 },
       { title: '@donnybarmanly', year: '[period]', type: 'Client', did: '[my part]', note: '[what I did]', r: -1 },
       { title: '@bazest.official', year: '[period]', type: 'Client', did: 'Content · product photo · Meta ads', note: 'supplements, Shopify', r: 3 },
-      { title: 'Creators — Spain', year: '[year]', type: 'KALIHU · sales', did: 'Influencers · UGC · gifting', note: '~€15K budget, mixed creators', img: 'assets/0a46ca348643.jpg', alt: 'Guests wearing the KALIHU collab hoodies', r: -3 },
-      { title: 'Creators — USA', year: '[year]', type: 'Client · content', did: 'Influencers · UGC · reports', note: 'new customers', r: 1 }
+      { title: 'Creators — Spain', year: '[year]', type: 'KALIHU · sales', did: 'Influencers · UGC · gifting', note: '~€15K budget, mixed creators', img: 'assets/0a46ca348643.jpg', alt: 'Guests wearing the KALIHU collab hoodies', r: -3 }
     ];
     return { clips: d.map((x, i) => ({ ...x, href: 'social.html', tape: i % 2 ? 'tape2' : 'tape1', hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '',
       box: 'transform: rotate(' + x.r + 'deg);' + (i % 3 === 1 ? ' margin-top: clamp(0px, 4vw, 64px);' : '') })) };

@@ -37,7 +37,7 @@ a{color:inherit}a:hover{color:inherit}
 <div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
 
 <header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
-<a href="index.html" style="text-decoration: none; padding: 12px 0;">Kodak Tri-X 400 &#160;▸ 01A &#160; Gerard Irurre — Issue 01</a>
+<a href="index.html" style="text-decoration: none; padding: 12px 0;">Issue 01 &#160;▸ 01A &#160; Gerard Irurre</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
 <a class="on" href="brand.html">Brand</a><a href="content.html">Content</a><a href="campaigns.html">Campaigns</a><a href="social.html">Social</a><a href="index.html#contact">Contact</a>
 </nav>
@@ -72,7 +72,7 @@ a{color:inherit}a:hover{color:inherit}
 </div>
 </section>
 
-<main aria-live="polite" style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(24px, 3vw, 40px) clamp(16px, 4vw, 56px) clamp(64px, 8vw, 112px);">
+<main id="folder-open" aria-live="polite" style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(24px, 3vw, 40px) clamp(16px, 4vw, 56px) clamp(64px, 8vw, 112px);">
 <div class="grain" aria-hidden="true"></div>
 <div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 24px; padding-top: 14px; border-top: 2px solid #0E0E0E; margin-bottom: clamp(40px, 5vw, 64px);">
 <div>
@@ -86,7 +86,7 @@ a{color:inherit}a:hover{color:inherit}
 <a class="clip" href="{{c.href}}" style="{{c.box}}">
 <span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
 <span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);">
-<sc-if value="{{c.hasImg}}" hint-placeholder-val="{{true}}"><img src="{{c.img}}" alt="{{c.alt}}" style="display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;"></sc-if>
+<sc-if value="{{c.hasImg}}" hint-placeholder-val="{{true}}"><img src="{{c.img}}" alt="{{c.alt}}" style="{{c.imgStyle}}"></sc-if>
 <sc-if value="{{c.noImg}}" hint-placeholder-val="{{false}}"><span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 3; background: #F4F1EA; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">{{c.ph}}</span></sc-if>
 </span>
 <span style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 16px;">
@@ -131,8 +131,8 @@ class Component extends DCLogic {
       ]},
       { letter: 'B', tab: 'B — Identity', title: 'Visual identity', note: 'logos, type, colour, systems', peek: ['5bd98d3e7af352fe5e82e338a4b46679','de33739e8e4f388795c787c966f4598a','b7aec6a939bf2d2d46490c3a215dbbc6'], items: [
         { title: 'KALIHU', client: 'surf apparel', year: '2019 — now', did: 'Logo · system · labels', img: 'assets/5bd98d3e7af3.jpg', alt: 'KALIHU logo', href: 'identity-kalihu.html' },
-        { title: 'Jove Llar', client: 'for Jove Llar', year: '[year]', did: 'Logo · identity', img: 'assets/fda38811180f.png', alt: 'Jove Llar Reformes logo', href: 'identity-jove-llar.html' },
-        { title: 'Dusty Fin', client: 'for Dusty Fin', year: '2025', did: 'Logo · colour · type', img: 'assets/b7aec6a939bf.jpg', alt: 'Dusty Fin logo', href: 'identity-dusty-fin.html' }
+        { title: 'Jove Llar', client: 'for Jove Llar', year: '[year]', did: 'Logo · identity', img: 'assets/fda38811180f.png', alt: 'Jove Llar Reformes logo', href: 'identity-jove-llar.html', fit: 'contain', bg: '#FFFFFF' },
+        { title: 'Dusty Fin', client: 'for Dusty Fin', year: '2025', did: 'Logo · colour · type', img: 'assets/b7aec6a939bf.jpg', alt: 'Dusty Fin logo', href: 'identity-dusty-fin.html', fit: 'contain', bg: '#F1EEDF' }
       ]},
       { letter: 'C', tab: 'C — Product', title: 'Product design', note: 'garments, bags, samples', peek: ['5eb4765a4c860258bc0953f65a954c3b','904e77d24d28de0f825ba154fbb08101'], items: [
         { title: 'KALIHU', client: 'surf apparel', year: '2019 — now', did: 'Tees · hoodies · caps · prints', img: 'assets/5eb4765a4c86.jpg', alt: 'KALIHU t-shirt on the beach' },
@@ -157,11 +157,12 @@ class Component extends DCLogic {
       folders: ch.map((f, i) => ({ ...f, count: cnt(f.items.length), pressed: i === open ? 'true' : 'false',
         aria: 'Open folder ' + f.letter + ', ' + f.title + ', ' + cnt(f.items.length),
         state: i === open ? 'open ✓' : 'click to open',
-        pick: () => this.setState({ open: i }),
+        pick: () => { this.setState({ open: i }); setTimeout(() => { const el = document.getElementById('folder-open'); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 60); },
         prints: f.peek.map((id, k) => ({ img: id,
           box: 'position: absolute; left: ' + pos[k].l + 'cqw; top: ' + pos[k].t + 'cqw; width: ' + pos[k].w + 'cqw; background: #FFFFFF; padding: 1.2cqw; transform: rotate(' + pos[k].r + 'deg); box-shadow: 0 0.6cqw 1.6cqw rgba(14,14,14,0.2);' })) })),
       cur: { letter: c.letter, title: c.title, note: c.note, count: cnt(c.items.length) },
       items: c.items.map((x, i) => ({ ...x, href: x.href || 'brand.html', tape: i % 2 ? 'tape2' : 'tape1', hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '', ph: x.ph || '',
+        imgStyle: 'display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: ' + (x.fit || 'cover') + '; background: ' + (x.bg || '#FFFFFF') + ';' + (x.fit ? ' padding: 6%; box-sizing: border-box;' : ''),
         box: 'transform: rotate(' + rots[i % rots.length] + 'deg);' + (i % 3 === 1 ? ' margin-top: clamp(0px, 4vw, 64px);' : '') }))
     };
   }
