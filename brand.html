@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brand &amp; Identity — Gerard Irurre</title>
-<meta name="description" content="Gerard Irurre — brand &amp; content designer, Barcelona. Brand identity, content, campaigns and social.">
+<meta name="description" content="Gerard Irurre — Brand &amp; Creative Designer, Barcelona. Brand identity, ads &amp; creatives, and content.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&amp;family=Caveat:wght@500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
 <style>
 body{margin:0;background:#EEEBE4}
@@ -39,16 +39,16 @@ a{color:inherit}a:hover{color:inherit}
 <header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
 <a href="index.html" style="text-decoration: none; padding: 12px 0;">Issue 01 &#160;▸ 01A &#160; Gerard Irurre</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
-<a class="on" href="brand.html">Brand</a><a href="content.html">Content</a><a href="campaigns.html">Campaigns</a><a href="social.html">Social</a><a href="index.html#contact">Contact</a>
+<a class="on" href="brand.html">Brand</a><a href="ads-and-creatives.html">Ads &amp; Creatives</a><a href="content.html">Content</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
 </nav>
 </header>
 
 <section aria-label="Brand &amp; Identity" style="position: relative; height: clamp(520px, 52vw, 780px); overflow: hidden; background: #CFCFCF;">
 <img src="assets/78b1a1ebc130.jpg" alt="A surfer riding a wave below a rocky headland, black and white film" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%;">
 <div style="position: absolute; left: clamp(16px, 4vw, 56px); top: clamp(24px, 4vw, 56px); right: clamp(16px, 4vw, 56px); color: #FFFFFF;">
-<p style="margin: 0 0 12px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 01 — 5 folders — 13 pieces</p>
+<p style="margin: 0 0 12px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 01 — 4 folders — 13 pieces</p>
 <h1 style="margin: 0; font-weight: 900; font-size: clamp(72px, 11vw, 168px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Brand &amp;<br>Identity</h1>
-<p style="margin: 18px 0 0; transform: rotate(-3deg); transform-origin: left; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.4vw, 34px); color: #FFFFFF;">brands built from zero — open a folder ↓</p>
+<p style="margin: 18px 0 0; transform: rotate(-3deg); transform-origin: left; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.4vw, 34px); color: #FFFFFF;">by discipline — open a folder ↓</p>
 </div>
 <span style="position: absolute; right: clamp(16px, 4vw, 56px); bottom: clamp(16px, 3vw, 40px); color: #FFFFFF; font-weight: 900; font-size: clamp(64px, 9vw, 140px); line-height: 0.8;">01</span>
 </section>
@@ -85,6 +85,7 @@ a{color:inherit}a:hover{color:inherit}
 <sc-for list="{{items}}" as="c" hint-placeholder-count="4">
 <a class="clip" href="{{c.href}}" style="{{c.box}}">
 <span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
+<sc-if value="{{c.concept}}" hint-placeholder-val="{{false}}"><span style="position: absolute; right: 18px; top: 22px; z-index: 2; transform: rotate(7deg); padding: 6px 14px; border: 3px solid #C8321E; background: rgba(251,250,246,0.92); color: #C8321E; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase;">Concept</span></sc-if>
 <span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);">
 <sc-if value="{{c.hasImg}}" hint-placeholder-val="{{true}}"><img src="{{c.img}}" alt="{{c.alt}}" style="{{c.imgStyle}}"></sc-if>
 <sc-if value="{{c.noImg}}" hint-placeholder-val="{{false}}"><span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 3; background: #F4F1EA; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">{{c.ph}}</span></sc-if>
@@ -94,25 +95,27 @@ a{color:inherit}a:hover{color:inherit}
 <span style="flex: 0 0 auto; transform: rotate(-3deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 24px; color: #C8321E;">{{c.client}}</span>
 </span>
 <span style="display: block; margin-top: 10px; border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Year</span><span>{{c.year}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span>What I did</span><span style="text-align: right;">{{c.did}}</span></span>
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Client</span><span style="text-align: right;">{{c.clientName}}</span></span>
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Year</span><span style="text-align: right;">{{c.year}}</span></span>
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Role</span><span style="text-align: right;">{{c.role}}</span></span>
+<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span>Tags</span><span style="text-align: right;">{{c.tags}}</span></span>
 </span>
 </a>
 </sc-for>
 </div>
 </main>
 
-<a class="next" href="content.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
+<a class="next" href="ads-and-creatives.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
 <span class="t1" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 clamp(24px, 5vw, 72px);">
 <span style="font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Next — Poster 02</span>
-<span class="next-t" style="font-weight: 900; font-size: clamp(56px, 8vw, 120px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Content →</span>
+<span class="next-t" style="font-weight: 900; font-size: clamp(44px, 7vw, 108px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Ads &amp; Creatives →</span>
 </span>
 </a>
 
 <footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
 <a href="mailto:girurre5@gmail.com" style="text-decoration: none; padding: 12px 0;">girurre5@gmail.com</a>
 <a href="https://www.instagram.com/gerard.irurre/" style="text-decoration: none; padding: 12px 0;">@gerard.irurre</a>
-<span style="padding: 12px 0;">Barcelona — available now</span>
+<span style="padding: 12px 0;">Brand &amp; Creative Designer — Barcelona</span>
 </footer>
 </div>
 </template>
@@ -124,28 +127,26 @@ class Component extends DCLogic {
   renderVals() {
     const B = 'assets/';
     const ch = [
-      { letter: 'A', tab: 'A — Branding', title: 'Branding', note: 'the why before the look', peek: [], items: [
-        { title: 'KALIHU', client: 'surf apparel', year: '2019 — now', did: 'Concept · positioning · tone of voice', img: 'assets/6497032e0c04.jpg', alt: 'Surfers at dusk — KALIHU', href: 'branding-kalihu.html' },
-        { title: '[Project]', client: 'rebrand / repositioning', year: '[year]', did: '[what I did]', ph: '[project soon]' },
-        { title: '[Project]', client: 'applied strategy', year: '[year]', did: '[what I did]', ph: '[project soon]' }
+      { letter: 'A', tab: 'A — Branding', title: 'Branding', note: 'name, idea, values, voice', peek: [], items: [
+        { title: 'KALIHU — Brand strategy', client: 'surf apparel', clientName: 'KALIHU', year: '2019 — now', tags: 'Naming · platform · tone of voice', img: 'assets/6497032e0c04.jpg', alt: 'Surfers at dusk on the Maresme coast', href: 'branding-kalihu.html', gray: true },
+        { title: '[Project 02]', client: '[sector]', clientName: '[client]', year: '[year]', tags: '[naming · platform · tone]', ph: '[project 02]', href: 'branding-project-02.html' },
+        { title: 'Nordest Running Club', client: 'running club', clientName: 'Self-initiated', year: '[year]', tags: 'Brand · strategy · ad copy', img: 'assets/9c9891842634.jpg', alt: 'Nordest Not Only Running Club poster', concept: true, href: 'branding-nordest.html' }
       ]},
-      { letter: 'B', tab: 'B — Identity', title: 'Visual identity', note: 'logos, type, colour, systems', peek: ['5bd98d3e7af352fe5e82e338a4b46679','de33739e8e4f388795c787c966f4598a','b7aec6a939bf2d2d46490c3a215dbbc6'], items: [
-        { title: 'KALIHU', client: 'surf apparel', year: '2019 — now', did: 'Logo · system · labels', img: 'assets/5bd98d3e7af3.jpg', alt: 'KALIHU logo', href: 'identity-kalihu.html' },
-        { title: 'Jove Llar', client: 'for Jove Llar', year: '[year]', did: 'Logo · identity', img: 'assets/fda38811180f.png', alt: 'Jove Llar Reformes logo', href: 'identity-jove-llar.html', fit: 'contain', bg: '#FFFFFF' },
-        { title: 'Dusty Fin', client: 'for Dusty Fin', year: '2025', did: 'Logo · colour · type', img: 'assets/b7aec6a939bf.jpg', alt: 'Dusty Fin logo', href: 'identity-dusty-fin.html', fit: 'contain', bg: '#F1EEDF' }
+      { letter: 'B', tab: 'B — Identity', title: 'Visual identity', note: 'logo, colour, type, applications', peek: [], items: [
+        { title: 'KALIHU — Visual identity', client: 'surf apparel', clientName: 'KALIHU', year: '2019 — now', tags: 'Logo · type · packaging · showroom', img: 'assets/5bd98d3e7af3.jpg', alt: 'KALIHU logo', href: 'identity-kalihu.html' },
+        { title: 'Jove Llar', client: 'home renovation', clientName: 'Jove Llar', year: '[year]', tags: 'Logo · colour · type · applications · web', img: 'assets/fda38811180f.png', alt: 'Jove Llar Reformes logo', href: 'identity-jove-llar.html', fit: 'contain', bg: '#FFFFFF' },
+        { title: 'Dusty Fin', client: 'surf travel', clientName: 'Dusty Fin', year: '2025', tags: 'Logo · colour · type · scalability', img: 'assets/b7aec6a939bf.jpg', alt: 'Dusty Fin logo', href: 'identity-dusty-fin.html', fit: 'contain', bg: '#F1EEDF' },
+        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio (co-founder)', year: '[year]', tags: 'Logo · colour · type · applications · web', ph: '[logo soon]', href: 'identity-abril-fox-studio.html' }
       ]},
-      { letter: 'C', tab: 'C — Product', title: 'Product design', note: 'garments, bags, samples', peek: ['5eb4765a4c860258bc0953f65a954c3b','904e77d24d28de0f825ba154fbb08101'], items: [
-        { title: 'KALIHU', client: 'surf apparel', year: '2019 — now', did: 'Tees · hoodies · caps · prints', img: 'assets/5eb4765a4c86.jpg', alt: 'KALIHU t-shirt on the beach' },
-        { title: 'Nordest', client: 'concept', year: '[year]', did: 'Graphic · garment mockup', img: 'assets/904e77d24d28.jpg', alt: 'Nordest t-shirt with horse print' },
-        { title: '[Project]', client: '[brand]', year: '[year]', did: '[what I did]', ph: '[project soon]' }
+      { letter: 'C', tab: 'C — Product', title: 'Product design', note: 'materials, samples, final product', peek: [], items: [
+        { title: 'KALIHU', client: 'surf apparel', clientName: 'KALIHU', year: '2019 — now', tags: 'Tees · hoodies · caps · socks', img: 'assets/5eb4765a4c86.jpg', alt: 'KALIHU t-shirt on the beach', href: 'product-kalihu.html' },
+        { title: 'Nordest', client: 'running club', clientName: 'Self-initiated', year: '[year]', tags: 'Graphic · garment mockup', img: 'assets/904e77d24d28.jpg', alt: 'Nordest t-shirt with horse print', concept: true, href: 'product-nordest.html' },
+        { title: '[Project]', client: '[sector]', clientName: '[brand]', year: '[year]', tags: '[tags]', ph: '[project soon]', href: 'product-project-03.html' }
       ]},
-      { letter: 'D', tab: 'D — Web', title: 'Web design', note: 'built to convert', peek: ['77d8c963ac8e38e02a4050c37156e7a0','6d7a9411773488fd09f58fa5a7c7249c'], items: [
-        { title: 'Jove Llar', client: 'for Jove Llar', year: '[year]', did: 'Structure · design · build', img: 'assets/77d8c963ac8e.jpg', alt: 'Jove Llar website' },
-        { title: 'KALIHU store', client: 'KALIHU', year: '2019 — now', did: 'Shopify · SEO · collections', ph: '[screenshot soon]' },
-        { title: 'Abril Fox Studio', client: 'for Abril Fox Studio', year: '[year]', did: '[what I did]', ph: '[screenshot soon]' }
-      ]},
-      { letter: 'E', tab: 'E — Concept', title: 'Concept', note: 'speculative — not a real client', peek: ['9c9891842634bb0a5ba11301914b57e2','23f77dd40dfa2f17568fb6bebae701e2','904e77d24d28de0f825ba154fbb08101'], items: [
-        { title: 'Nordest Running Club', client: 'concept', year: '[year]', did: 'Brand · strategy · ad copy', img: 'assets/9c9891842634.jpg', alt: 'Nordest Not Only Running Club poster' }
+      { letter: 'D', tab: 'D — Web', title: 'Web design', note: 'structure, design, live site', peek: [], items: [
+        { title: 'Jove Llar', client: 'home renovation', clientName: 'Jove Llar', year: '[year]', tags: 'Structure · design · build', img: 'assets/77d8c963ac8e.jpg', alt: 'Jove Llar website', href: 'web-jove-llar.html' },
+        { title: 'KALIHU store', client: 'e-commerce', clientName: 'KALIHU', year: '2019 — now', tags: 'Shopify · SEO · collections', ph: '[screenshot soon]', href: 'web-kalihu-store.html' },
+        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio (co-founder)', year: '[year]', tags: '[tags]', ph: '[screenshot soon]', href: 'web-abril-fox-studio.html' }
       ]}
     ];
     const open = this.state.open;
@@ -161,8 +162,8 @@ class Component extends DCLogic {
         prints: f.peek.map((id, k) => ({ img: id,
           box: 'position: absolute; left: ' + pos[k].l + 'cqw; top: ' + pos[k].t + 'cqw; width: ' + pos[k].w + 'cqw; background: #FFFFFF; padding: 1.2cqw; transform: rotate(' + pos[k].r + 'deg); box-shadow: 0 0.6cqw 1.6cqw rgba(14,14,14,0.2);' })) })),
       cur: { letter: c.letter, title: c.title, note: c.note, count: cnt(c.items.length) },
-      items: c.items.map((x, i) => ({ ...x, href: x.href || 'brand.html', tape: i % 2 ? 'tape2' : 'tape1', hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '', ph: x.ph || '',
-        imgStyle: 'display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: ' + (x.fit || 'cover') + '; background: ' + (x.bg || '#FFFFFF') + ';' + (x.fit ? ' padding: 6%; box-sizing: border-box;' : ''),
+      items: c.items.map((x, i) => ({ ...x, href: x.href || 'brand.html', tape: i % 2 ? 'tape2' : 'tape1', role: x.role || 'Graphic designer', concept: !!x.concept, hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '', ph: x.ph || '',
+        imgStyle: 'display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: ' + (x.fit || 'cover') + '; background: ' + (x.bg || '#FFFFFF') + ';' + (x.gray ? ' filter: grayscale(1) contrast(1.1);' : '') + (x.fit ? ' padding: 6%; box-sizing: border-box;' : ''),
         box: 'transform: rotate(' + rots[i % rots.length] + 'deg);' + (i % 3 === 1 ? ' margin-top: clamp(0px, 4vw, 64px);' : '') }))
     };
   }
