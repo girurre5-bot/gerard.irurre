@@ -27,6 +27,8 @@ a{color:inherit}a:hover{color:inherit}
 .print figcaption{position:absolute;left:12px;bottom:8px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
 .empty{display:flex;align-items:center;justify-content:center;background:#F4F1EA;border:1px dashed rgba(14,14,14,.35);font-family:'Caveat',cursive;font-weight:700;font-size:26px;color:#8A8478;text-align:center}
 .stamp{display:inline-block;padding:6px 14px;border:3px solid #C8321E;background:rgba(251,250,246,.92);color:#C8321E;font-family:'Space Mono',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-6deg)}
+.id4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1100px){.id4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
 </style>
 <style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
@@ -45,10 +47,9 @@ a{color:inherit}a:hover{color:inherit}
 <!-- HERO -->
 <section aria-label="Nordest Running Club" style="position: relative; height: clamp(560px, 56vw, 840px); overflow: hidden; background: #2A2A2A;">
 <img src="assets/9c9891842634.jpg" alt="Nordest Not Only Running Club poster" style="position: absolute; left: 50%; top: 6%; height: 88%; transform: translateX(-50%) rotate(2deg); box-shadow: 0 16px 40px rgba(0,0,0,0.4);">
-<span class="stamp" style="position: absolute; right: clamp(16px, 5vw, 72px); top: clamp(24px, 4vw, 56px); font-size: 20px;">Concept</span>
 <div class="t2" style="position: absolute; left: -2%; right: -2%; top: 52%; height: clamp(220px, 24vw, 350px); display: flex; flex-direction: column; justify-content: center; padding: 0 clamp(24px, 5vw, 72px);">
 <h1 style="margin: 0; font-weight: 900; font-size: clamp(72px, 12vw, 190px); line-height: 0.8; letter-spacing: -0.05em; text-transform: uppercase;">Nordest</h1>
-<p class="mono" style="margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px;"><span>Branding — concept</span><span>Running club</span><span>[year]</span></p>
+<p class="mono" style="margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px;"><span>Branding</span><span>Private running club</span><span>2026</span></p>
 </div>
 </section>
 
@@ -56,15 +57,14 @@ a{color:inherit}a:hover{color:inherit}
 <section style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px); display: flex; flex-wrap: wrap; gap: 40px clamp(32px, 5vw, 80px);">
 <div class="grain" aria-hidden="true"></div>
 <div style="position: relative; flex: 1.3 1 420px; min-width: 0;">
-<p style="margin: 0 0 18px;"><span class="stamp">Concept — self-initiated</span></p>
 <p class="mono" style="margin: 0 0 10px;">Brief</p>
-<p style="margin: 0; font-weight: 600; font-size: clamp(20px, 1.9vw, 27px); line-height: 1.35;">A self-initiated concept, not a real client. <span class="ph">[1 line: what you set out to explore]</span></p>
+<p style="margin: 0; font-weight: 600; font-size: clamp(20px, 1.9vw, 27px); line-height: 1.35;">A private running club with my friends. That Christmas, instead of buying commercial clothes for the Secret Santa, I designed our own collection: a tee and a pair of shorts.</p>
 </div>
 <dl style="position: relative; flex: 1 1 340px; min-width: 0; margin: 0; border-top: 2px solid #0E0E0E; font-weight: 600; font-size: 15px; text-transform: uppercase;">
-<div class="row"><dt>Client</dt><dd style="margin: 0; text-align: right;">Self-initiated — concept</dd></div>
-<div class="row"><dt>Year</dt><dd style="margin: 0; text-align: right;">[year]</dd></div>
+<div class="row"><dt>Client</dt><dd style="margin: 0; text-align: right;">Private club — my friends</dd></div>
+<div class="row"><dt>Year</dt><dd style="margin: 0; text-align: right;">2026</dd></div>
 <div class="row"><dt>Role</dt><dd style="margin: 0; text-align: right;">Graphic designer</dd></div>
-<div class="row" style="border-bottom: 2px solid #0E0E0E;"><dt>Tags</dt><dd style="margin: 0; text-align: right;">Brand · strategy · ad copy</dd></div>
+<div class="row" style="border-bottom: 2px solid #0E0E0E;"><dt>Tags</dt><dd style="margin: 0; text-align: right;">Naming · platform · tee &amp; shorts</dd></div>
 </dl>
 </section>
 
@@ -73,11 +73,11 @@ a{color:inherit}a:hover{color:inherit}
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E;">
 <div style="padding: 20px clamp(0px, 2vw, 32px) 28px 0;">
 <p class="mono" style="margin: 0 0 12px;">The challenge</p>
-<p style="margin: 0; font-weight: 900; font-size: clamp(30px, 3.2vw, 48px); line-height: 0.95; letter-spacing: -0.03em; text-transform: uppercase;"><span class="ph">[the challenge — 1 line]</span></p>
+<p style="margin: 0; font-weight: 900; font-size: clamp(30px, 3.2vw, 48px); line-height: 0.95; letter-spacing: -0.03em; text-transform: uppercase;">Running clubs are too serious and too competitive.</p>
 </div>
 <div style="padding: 20px 0 28px clamp(0px, 2vw, 32px);">
 <p class="mono" style="margin: 0 0 12px;">The idea</p>
-<p style="margin: 0; font-weight: 900; font-size: clamp(30px, 3.2vw, 48px); line-height: 0.95; letter-spacing: -0.03em; text-transform: uppercase;"><span class="ph">[the idea — 1 line]</span></p>
+<p style="margin: 0; font-weight: 900; font-size: clamp(30px, 3.2vw, 48px); line-height: 0.95; letter-spacing: -0.03em; text-transform: uppercase;">Running as an excuse — to meet your mates midweek.</p>
 </div>
 </div>
 </section>
@@ -88,18 +88,15 @@ a{color:inherit}a:hover{color:inherit}
 <span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(-3deg);"></span>
 <p class="mono" style="margin: 0; display: flex; justify-content: space-between;"><span>Sheet 01</span><span>Naming</span></p>
 <div style="margin-top: clamp(40px, 5vw, 64px); font-weight: 900; font-size: clamp(56px, 6.4vw, 100px); line-height: 0.85; letter-spacing: -0.04em; text-transform: uppercase;">Nordest</div>
-<p style="margin: 22px 0 0; font-weight: 600; font-size: 17px; line-height: 1.45;"><span class="ph">[where the name comes from — the north-east wind?]</span> “Not only running club.”</p>
-<div style="margin-top: 28px; padding-top: 14px; border-top: 1px solid #0E0E0E;">
-<p class="mono" style="margin: 0 0 10px;">Also on the table</p>
-<p class="ph" style="margin: 0; font-size: 28px;">[discarded names — and why]</p>
-</div>
+<p style="margin: 22px 0 0; font-weight: 600; font-size: 17px; line-height: 1.45;">Named after the <b style="font-weight: 900;">nordest</b> — the wind that blows across the Maresme from the north and the east. And a line under it: <i>not only running club</i> — not just for runners who only talk about running, but for anyone who wants an excuse to move.</p>
+<p class="hand" style="margin: 28px 0 0; padding-top: 14px; border-top: 1px solid #0E0E0E; font-size: 28px; transform: rotate(-1.5deg);">no plan B — it was always Nordest</p>
 </article>
 <article class="sheet" style="flex: 1 1 480px; min-width: 0; margin-top: clamp(0px, 6vw, 96px); transform: rotate(1.4deg);">
 <span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(3deg);"></span>
 <p class="mono" style="margin: 0; display: flex; justify-content: space-between;"><span>Sheet 02</span><span>Brand platform</span></p>
 <h2 style="margin: 28px 0 18px; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(48px, 4.6vw, 68px); line-height: 0.9;">What Nordest is</h2>
 <div style="border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-weight: 600; font-size: 17px; line-height: 1.35;">
-<div class="prow"><span class="mono" style="padding-top: 3px;">For</span><span><span class="ph">[audience]</span></span></div><div class="prow"><span class="mono" style="padding-top: 3px;">Purpose</span><span><span class="ph">[purpose]</span></span></div><div class="prow"><span class="mono" style="padding-top: 3px;">Why join</span><span><span class="ph">[why]</span></span></div><div class="prow"><span class="mono" style="padding-top: 3px;">Values</span><span><span class="ph">[value · value · value]</span></span></div><div class="prow"><span class="mono" style="padding-top: 3px;">Personality</span><span><span class="ph">[personality]</span></span></div><div class="prow" style="border-bottom: 0;"><span class="mono" style="padding-top: 3px;">Not</span><span><span class="ph">[what it is not]</span></span></div>
+<div class="prow"><span class="mono" style="padding-top: 3px;">For</span><span>18 — 30, sporty, a mid-level runner.</span></div><div class="prow"><span class="mono" style="padding-top: 3px;">Purpose</span><span>Laughing with your mates.</span></div><div class="prow"><span class="mono" style="padding-top: 3px;">Why join</span><span>You can’t — it’s a private running club.</span></div><div class="prow"><span class="mono" style="padding-top: 3px;">Values</span><span style="font-weight: 900; text-transform: uppercase; letter-spacing: -0.01em;">Friendship · Competition</span></div><div class="prow"><span class="mono" style="padding-top: 3px;">Personality</span><span>Passive-aggressive. Runs at your pace the whole way — then sprints the last kilometre.</span></div><div class="prow" style="border-bottom: 0;"><span class="mono" style="padding-top: 3px;">Not</span><span>Chill.</span></div>
 </div>
 </article>
 </section>
@@ -109,51 +106,57 @@ a{color:inherit}a:hover{color:inherit}
 <figure class="print" style="flex: 0 1 460px; min-width: 0; transform: rotate(-2.5deg);">
 <span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 100px; height: 30px; margin-left: -50px; z-index: 1;"></span>
 <img src="assets/9c9891842634.jpg" alt="Nordest Not Only Running Club poster" style="display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover;">
+<p class="hand" style="margin: 14px 6px 4px; font-size: 24px; line-height: 1.1; transform: rotate(-1deg);">every running club says “not only running”. we’re a joke running club — so we had to say it too.</p>
 <figcaption>Sheet 03 — Poster</figcaption>
 </figure>
 <div style="flex: 1 1 480px; min-width: 0;">
 <p class="mono" style="margin: 0 0 8px; display: flex; justify-content: space-between; border-bottom: 2px solid #0E0E0E; padding-bottom: 8px;"><span>Sheet 04</span><span>Tone of voice</span></p>
 <div class="lined" style="position: relative; box-sizing: border-box; margin-top: 28px; padding: 0 clamp(18px, 2.4vw, 28px) 4px; transform: rotate(-1.5deg); box-shadow: 0 10px 24px rgba(14,14,14,0.14);">
 <span class="tape1" aria-hidden="true" style="position: absolute; left: 24px; top: -12px; width: 84px; height: 24px; transform: rotate(-4deg);"></span>
-<p style="margin: 0; padding-top: 10px; font-weight: 900; font-size: 30px; line-height: 47px; letter-spacing: -0.02em; text-transform: uppercase;">[Trait 1] <span style="font-family: 'Caveat', cursive; font-weight: 500; font-size: 26px; text-transform: none; letter-spacing: 0; color: #8A8478;">— [1 line]</span></p>
-<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700;">We say:</b> <span style="color: #8A8478;">[example]</span></p>
-<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700; color: #C8321E;">Never:</b> <span style="color: #8A8478;">[example]</span></p>
+<p style="margin: 0; padding-top: 10px; font-weight: 900; font-size: 30px; line-height: 47px; letter-spacing: -0.02em; text-transform: uppercase;">Cheeky <span style="font-family: 'Caveat', cursive; font-weight: 500; font-size: 26px; text-transform: none; letter-spacing: 0; color: #6A645A;">— the friend who wins and won’t shut up about it</span></p>
+<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700;">We say:</b> <span style="color: #0E0E0E;">“see you at the last kilometre.”</span></p>
+<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700; color: #C8321E;">Never:</b> <span style="color: #6A645A; text-decoration: line-through; text-decoration-color: #C8321E; text-decoration-thickness: 2px;">“Every runner is a winner.”</span></p>
 </div>
 <div class="lined" style="position: relative; box-sizing: border-box; margin-top: 40px; padding: 0 clamp(18px, 2.4vw, 28px) 4px; transform: rotate(1.2deg); box-shadow: 0 10px 24px rgba(14,14,14,0.14);">
 <span class="tape2" aria-hidden="true" style="position: absolute; left: 24px; top: -12px; width: 84px; height: 24px; transform: rotate(-4deg);"></span>
-<p style="margin: 0; padding-top: 10px; font-weight: 900; font-size: 30px; line-height: 47px; letter-spacing: -0.02em; text-transform: uppercase;">[Trait 2] <span style="font-family: 'Caveat', cursive; font-weight: 500; font-size: 26px; text-transform: none; letter-spacing: 0; color: #8A8478;">— [1 line]</span></p>
-<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700;">We say:</b> <span style="color: #8A8478;">[example]</span></p>
-<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700; color: #C8321E;">Never:</b> <span style="color: #8A8478;">[example]</span></p>
+<p style="margin: 0; padding-top: 10px; font-weight: 900; font-size: 30px; line-height: 47px; letter-spacing: -0.02em; text-transform: uppercase;">Mates first <span style="font-family: 'Caveat', cursive; font-weight: 500; font-size: 26px; text-transform: none; letter-spacing: 0; color: #6A645A;">— the run is the excuse, the bar is the plan</span></p>
+<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700;">We say:</b> <span style="color: #0E0E0E;">“5k, then the bar.”</span></p>
+<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700; color: #C8321E;">Never:</b> <span style="color: #6A645A; text-decoration: line-through; text-decoration-color: #C8321E; text-decoration-thickness: 2px;">“Push your limits. Beat your PB.”</span></p>
 </div>
 <div class="lined" style="position: relative; box-sizing: border-box; margin-top: 40px; padding: 0 clamp(18px, 2.4vw, 28px) 4px; transform: rotate(-0.8deg); box-shadow: 0 10px 24px rgba(14,14,14,0.14);">
 <span class="tape1" aria-hidden="true" style="position: absolute; left: 24px; top: -12px; width: 84px; height: 24px; transform: rotate(-4deg);"></span>
-<p style="margin: 0; padding-top: 10px; font-weight: 900; font-size: 30px; line-height: 47px; letter-spacing: -0.02em; text-transform: uppercase;">[Trait 3] <span style="font-family: 'Caveat', cursive; font-weight: 500; font-size: 26px; text-transform: none; letter-spacing: 0; color: #8A8478;">— [1 line]</span></p>
-<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700;">We say:</b> <span style="color: #8A8478;">[example]</span></p>
-<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700; color: #C8321E;">Never:</b> <span style="color: #8A8478;">[example]</span></p>
+<p style="margin: 0; padding-top: 10px; font-weight: 900; font-size: 30px; line-height: 47px; letter-spacing: -0.02em; text-transform: uppercase;">Secretly competitive <span style="font-family: 'Caveat', cursive; font-weight: 500; font-size: 26px; text-transform: none; letter-spacing: 0; color: #6A645A;">— a joke club that takes winning very seriously</span></p>
+<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700;">We say:</b> <span style="color: #0E0E0E;">“not a race. obviously.”</span></p>
+<p style="margin: 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 25px; line-height: 47px;"><b style="font-weight: 700; color: #C8321E;">Never:</b> <span style="color: #6A645A; text-decoration: line-through; text-decoration-color: #C8321E; text-decoration-thickness: 2px;">“Listen to your body and take it easy.”</span></p>
 </div>
 </div>
 </section>
-<!-- HOW IT TRANSLATES -->
-<section aria-label="How it translates to the brand" style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
+<section aria-label="The identity" style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
 <div class="grain" aria-hidden="true"></div>
-<p class="mono" style="position: relative; margin: 0 0 40px; padding: 8px 0; border-top: 2px solid #0E0E0E; border-bottom: 1px solid #0E0E0E; display: flex; justify-content: space-between;"><span>Sheet 05 — How it translates to the brand</span><span>[year]</span></p>
-<div style="position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 44px);">
-<figure class="print" style="flex: 0 1 300px; min-width: 0; transform: rotate(-3deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
-<img src="assets/23f77dd40dfa.jpg" alt="Nordest ad creative" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #FFFFFF;">
-<figcaption>Ad</figcaption></figure>
-<figure class="print" style="flex: 0 1 300px; min-width: 0; transform: rotate(2.5deg); margin-top: clamp(0px, 4vw, 64px);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
-<img src="assets/904e77d24d28.jpg" alt="Nordest t-shirt with horse print" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #FFFFFF;">
-<figcaption>Tee</figcaption></figure>
-<figure class="print" style="flex: 0 1 300px; min-width: 0; transform: rotate(-1.5deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
-<span class="empty" style="width: 100%; aspect-ratio: 4 / 5; box-sizing: border-box;">[image 3]</span>
-<figcaption>[caption]</figcaption></figure>
+<p class="mono" style="position: relative; margin: 0 0 40px; padding: 8px 0; border-top: 2px solid #0E0E0E; border-bottom: 1px solid #0E0E0E; display: flex; justify-content: space-between;"><span>Sheet 05 — The identity</span><span>Logo · wordmark · horse · compass</span></p>
+<div class="id4" style="position: relative; align-items: start; gap: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 44px);">
+<figure class="print" style="min-width: 0; transform: rotate(-2deg); margin-top: 0;"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
+<img src="assets/94b2fd21295f.png" alt="Nordest logo: running horse with the wordmark across it" style="display: block; width: 100%; aspect-ratio: 14 / 9; object-fit: contain; background: #FFFFFF;">
+<figcaption>Logo</figcaption></figure>
+<figure class="print" style="min-width: 0; transform: rotate(1.8deg); margin-top: clamp(0px, 3vw, 48px);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
+<img src="assets/884793801d8d.jpg" alt="Nordest wordmark, cream on black" style="display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; background: #0E0E0E;">
+<p class="hand" style="margin: 12px 6px 4px; font-size: 22px; line-height: 1.1; transform: rotate(-1deg);">wide, flat, fast — and a full stop. no plan B.</p>
+<figcaption>Wordmark</figcaption></figure>
+<figure class="print" style="min-width: 0; transform: rotate(2.5deg); margin-top: 0;"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
+<img src="assets/0d25cb9f811a.jpg" alt="The Nordest horse" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: contain; background: #FFFFFF;">
+<p class="hand" style="margin: 12px 6px 4px; font-size: 22px; line-height: 1.1; transform: rotate(-1deg);">a horse — they move in a herd and love to run free.</p>
+<figcaption>The horse</figcaption></figure>
+<figure class="print" style="min-width: 0; transform: rotate(-1.5deg); margin-top: clamp(0px, 4vw, 64px);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
+<img src="assets/235ec20f576c.jpg" alt="Compass printed on the tee sleeve" style="display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; background: #FFFFFF;">
+<p class="hand" style="margin: 12px 6px 4px; font-size: 22px; line-height: 1.1; transform: rotate(-1deg);">north + east = nordest.</p>
+<figcaption>Sleeve — the compass</figcaption></figure>
 </div>
 </section>
 
 <!-- CLOSING -->
 <section aria-label="Closing" style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
 <div class="grain" aria-hidden="true"></div>
-<p style="position: relative; margin: 0; padding-top: 14px; border-top: 2px solid #0E0E0E; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(30px, 3vw, 44px); line-height: 1.1; color: #8A8478;">[closing — 1 line, only if it's real; delete if not]</p>
+<p style="position: relative; margin: 0; padding-top: 14px; border-top: 2px solid #0E0E0E; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(30px, 3vw, 44px); line-height: 1.1; color: #C8321E;">It started as a Secret Santa gift — it ended up as a club with its own kit.</p>
 </section>
 
 <a class="next" href="identity-kalihu.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
