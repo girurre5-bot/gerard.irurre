@@ -10,134 +10,79 @@
 body{margin:0;background:#EEEBE4}
 a{color:inherit}a:hover{color:inherit}
 .grain{position:absolute;inset:0;pointer-events:none;background-image:url(assets/e985e5adb271.png);background-repeat:repeat;opacity:.55;mix-blend-mode:multiply}
-.t1{background:url(assets/0f13f55e5321.png) center/100% 100% no-repeat}
-.tape1{background:url(assets/5d264df71453.png) center/100% 100% no-repeat}
-.tape2{background:url(assets/e5c109c687ad.png) center/100% 100% no-repeat}
 .nav a{text-decoration:none;padding:12px 0}
 .nav a:hover,.nav a:focus,.nav a.on{text-decoration:underline;text-underline-offset:4px}
-.clips{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:clamp(48px,5vw,72px) clamp(24px,3vw,44px)}
-.clip{position:relative;display:block;text-decoration:none;color:#0E0E0E;transition:transform .35s ease}
-.clip:hover,.clip:focus{transform:translateY(-6px) rotate(0deg) !important}
-.next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
-.hero{position:relative;min-height:clamp(560px,52vw,780px)}
-@media (max-width:760px){.hero-p{display:none !important}.hero{min-height:0 !important;padding-bottom:8px !important}}
+.cw{position:relative;display:grid;grid-template-columns:minmax(270px,27%) 1fr;border-top:2px solid #0E0E0E}
+.side{position:relative;align-self:stretch;box-sizing:border-box;display:flex;flex-direction:column;padding:clamp(28px,3.4vw,48px) clamp(20px,2.6vw,40px) 28px;overflow-y:auto;border-right:2px solid #0E0E0E}
+.bar{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-top:2px solid #0E0E0E;border-bottom:1px solid #0E0E0E;font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase}
+.title{margin:clamp(20px,2.4vw,32px) 0 0;transform:rotate(-3deg);transform-origin:left;font-family:'Caveat',cursive;font-weight:700;font-size:clamp(72px,6.4vw,104px);line-height:.8}
+.intro{margin:16px 0 0;font-family:'Space Mono',monospace;font-size:11px;line-height:1.6;text-transform:uppercase}
+.lbl{display:flex;justify-content:space-between;margin:clamp(32px,3.6vw,52px) 0 6px;padding-top:8px;border-top:2px solid #0E0E0E;font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase}
+.list{list-style:none;margin:0;padding:0}
+.list li{border-bottom:1px solid rgba(14,14,14,.35)}
+.list a,.list span{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:9px 0;font-weight:900;font-size:clamp(19px,1.6vw,24px);line-height:1;letter-spacing:-0.02em;text-transform:uppercase;text-decoration:none;color:#0E0E0E}
+.list span{font-weight:600;font-size:16px;letter-spacing:0;text-transform:none;color:#6A645A}
+.list a small{font-family:'Space Mono',monospace;font-weight:400;font-size:10px;letter-spacing:0;color:#6A645A}
+.list a:hover,.list a:focus{color:#C8321E}
+.note{margin:22px 0 0;transform:rotate(-2deg);font-family:'Caveat',cursive;font-weight:700;font-size:26px;line-height:1.05;color:#C8321E}
+.small{margin-top:auto;padding-top:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase}
+.small a{text-decoration:none;padding:10px 0}
+.small a:hover,.small a:focus{text-decoration:underline}
+.grid{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-content:start}
+.tile{position:relative;display:block;text-decoration:none;aspect-ratio:1/1;overflow:hidden;background:#FBFAF6}
+.tile img{display:block;width:100%;height:100%;object-fit:cover;transition:opacity .3s ease}
+.tile .lab{position:absolute;left:14px;bottom:12px;padding:4px 8px;background:#FBFAF6;font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;opacity:0;transition:opacity .25s ease}
+.tile.empty{display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(14,14,14,.18)}
+.tile .ph{font-family:'Caveat',cursive;font-weight:700;font-size:clamp(22px,2vw,30px);color:#8A8478;text-align:center;padding:0 12px}
+.tile:hover img,.tile:focus img{opacity:.85}
+.tile:hover .lab,.tile:focus .lab{opacity:1}
+@media (max-width:900px){.cw{grid-template-columns:1fr}.side{position:relative;height:auto;border-right:0;border-bottom:2px solid #0E0E0E}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
 </head>
 <body>
 <template id="dc-template">
-<div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
-
+<div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif;">
 <header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
 <a href="index.html" style="text-decoration: none; padding: 12px 0;">Issue 01 &#160;▸ 03A &#160; Gerard Irurre</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
 <a href="brand.html">Brand</a><a href="ads-and-creatives.html">Ads &amp; Creatives</a><a class="on" href="content.html">Content</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
 </nav>
 </header>
-
-<section class="hero" aria-label="Content" style="max-width: 1440px; margin: 0 auto; padding: clamp(32px, 4vw, 56px) clamp(16px, 4vw, 56px) 0;">
+<div class="cw">
+<aside class="side">
 <div class="grain" aria-hidden="true"></div>
-<div style="position: relative; display: flex; justify-content: space-between; gap: 16px; padding: 6px 0; border-top: 2px solid #0E0E0E; border-bottom: 1px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;"><span>▸ 03</span><span>▸ 03A</span><span>▸ 03B</span><span>Poster 03 — 09 entries</span></div>
-<h1 style="position: relative; z-index: 2; margin: clamp(24px, 3vw, 40px) 0 0; transform: rotate(-3deg); transform-origin: left; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(120px, 15vw, 230px); line-height: 0.8;">Content</h1>
-<p style="position: relative; z-index: 2; margin: 18px 0 0; max-width: 380px; font-family: 'Space Mono', monospace; font-size: 12px; line-height: 1.6; text-transform: uppercase;">What I shoot and film — 35mm, digital and reels. Trips, people and brands.</p>
-<span class="hero-p" style="position: absolute; right: clamp(220px, 24vw, 360px); top: clamp(64px, 7vw, 100px); width: clamp(240px, 26vw, 380px); display: block; background: #FFFFFF; padding: 10px 10px 34px; transform: rotate(-4deg); box-shadow: 0 10px 26px rgba(14,14,14,0.2);">
-<span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 100px; height: 30px; margin-left: -50px; transform: rotate(-3deg);"></span>
-<img src="assets/2cd35c8fbeb9.jpg" alt="Basque coast, black and white" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover;">
-</span>
-<span class="hero-p" style="position: absolute; right: clamp(16px, 4vw, 56px); top: clamp(200px, 20vw, 300px); width: clamp(200px, 20vw, 290px); display: block; background: #FFFFFF; padding: 10px 10px 30px; transform: rotate(6deg); box-shadow: 0 10px 26px rgba(14,14,14,0.22);">
-<span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 92px; height: 28px; margin-left: -46px; transform: rotate(4deg);"></span>
-<img src="assets/96f474f3b1fb.jpg" alt="Turquoise bay below green cliffs, Tenerife" style="display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover;">
-</span>
-</section>
-
-<main style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(64px, 8vw, 120px) clamp(16px, 4vw, 56px);">
-<div class="grain" aria-hidden="true"></div>
-<div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 24px; padding-top: 14px; border-top: 2px solid #0E0E0E; margin-bottom: clamp(40px, 5vw, 64px);">
-<h2 style="margin: 0; font-weight: 900; font-size: clamp(44px, 5.4vw, 84px); line-height: 0.82; letter-spacing: -0.045em; text-transform: uppercase;">Brands</h2>
-<span style="transform: rotate(-3deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.2vw, 32px); color: #C8321E;">content, reels &amp; social</span>
+<div style="position: relative; display: flex; flex-direction: column; min-height: 100%;">
+<div class="bar"><span>▸ 03</span><span>Poster 03</span></div>
+<h1 class="title">Content</h1>
+<p class="intro">What I shoot and film — 35mm, digital and reels.</p>
+<p class="lbl"><span>Brands</span><span>03</span></p>
+<ul class="list">
+<li><a href="content-kalihu-grid.html">KALIHU <small>Reels · social</small></a></li>
+<li><a href="content-abril-fox-studio.html">Abril Fox Studio <small>Weddings</small></a></li>
+<li><a href="content-brand-03.html" style="color: #8A8478;">[Brand 03] <small>soon</small></a></li>
+</ul>
+<p class="lbl"><span>Photography</span><span>04</span></p>
+<ul class="list ph">
+<li><a href="content-tenerife.html">28,2916° N, 16,6291° W <small>Tenerife</small></a></li>
+<li><a href="content-philippines.html">14,5995° N, 120,9842° E <small>Philippines</small></a></li>
+<li><a href="content-stradbroke-island.html">27,5000° S, 153,4700° E <small>Stradbroke Island</small></a></li>
+<li><a href="content-basque-country.html">43,3036° N, 2,2044° W <small>Basque Country</small></a></li>
+</ul>
+<p class="note">click a photo — it opens the project →</p>
+<nav class="small" aria-label="More"><a href="ads-and-creatives.html">← Poster 02</a><a href="mailto:girurre5@gmail.com">Contact</a></nav>
 </div>
-<div class="clips" style="position: relative;">
-<sc-for list="{{clips}}" as="c" hint-placeholder-count="3">
-<a class="clip" href="{{c.href}}" style="{{c.box}}">
-<span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
-<span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);">
-<sc-if value="{{c.hasImg}}" hint-placeholder-val="{{true}}"><img src="{{c.img}}" alt="{{c.alt}}" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover;"></sc-if>
-<sc-if value="{{c.noImg}}" hint-placeholder-val="{{false}}"><span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #F4F1EA; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">[cover soon]</span></sc-if>
-</span>
-<span style="display: flex; justify-content: space-between; margin-top: 8px; font-family: 'Space Mono', monospace; font-size: 10px; text-transform: uppercase;"><span>▸ {{c.frame}}</span><span>{{c.film}}</span></span>
-<span style="display: block; margin-top: 12px; font-weight: 900; font-size: clamp(28px, 2.6vw, 38px); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase;">{{c.title}}</span>
-<span style="display: block; margin-top: 10px; border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Client</span><span style="text-align: right;">{{c.client}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Year</span><span style="text-align: right;">{{c.year}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Role</span><span style="text-align: right;">{{c.role}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span>Tags</span><span style="text-align: right;">{{c.tags}}</span></span>
-</span>
-<span style="display: block; margin-top: 10px; transform: rotate(-2deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 26px; line-height: 1.05; color: #C8321E;">{{c.note}}</span>
-</a>
-</sc-for>
-</div>
+</aside>
+<main class="grid" aria-label="Content — one photo per project">
+<a class="tile" href="content-kalihu-grid.html"><img src="assets/6497032e0c04.jpg" alt="Surfers at dusk on the Maresme coast" loading="lazy"><span class="lab">KALIHU — 2020 — now</span></a>
+<a class="tile" href="content-abril-fox-studio.html"><img src="assets/720a9d88499d.jpg" alt="A couple in silhouette in an arched window over the sea" loading="lazy"><span class="lab">Abril Fox Studio — [year]</span></a>
+<a class="tile" href="content-tenerife.html"><img src="assets/8d741d23c5ec.jpg" alt="The Masca valley and its village" loading="lazy"><span class="lab">Tenerife — 2021</span></a>
+<a class="tile" href="content-philippines.html"><img src="assets/7615962e5b5e.jpg" alt="A palm-lined white beach" loading="lazy"><span class="lab">Philippines — [year]</span></a>
+<a class="tile" href="content-stradbroke-island.html"><img src="assets/886cfa1a64fe.jpg" alt="Old jetty posts in the bay" loading="lazy"><span class="lab">Stradbroke Island — [year]</span></a>
+<a class="tile" href="content-basque-country.html"><img src="assets/2cd35c8fbeb9.jpg" alt="Basque coast, black and white" loading="lazy"><span class="lab">Basque Country — [year]</span></a>
 </main>
-
-<main style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
-<div class="grain" aria-hidden="true"></div>
-<div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 24px; padding-top: 14px; border-top: 2px solid #0E0E0E; margin-bottom: clamp(40px, 5vw, 64px);">
-<h2 style="margin: 0; font-weight: 900; font-size: clamp(44px, 5.4vw, 84px); line-height: 0.82; letter-spacing: -0.045em; text-transform: uppercase;">35mm</h2>
-<span style="transform: rotate(-3deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.2vw, 32px); color: #C8321E;">personal rolls</span>
 </div>
-<div class="clips" style="position: relative;">
-<sc-for list="{{film}}" as="c" hint-placeholder-count="3">
-<a class="clip" href="{{c.href}}" style="{{c.box}}">
-<span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
-<span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);">
-<sc-if value="{{c.hasImg}}" hint-placeholder-val="{{true}}"><img src="{{c.img}}" alt="{{c.alt}}" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover;"></sc-if>
-<sc-if value="{{c.noImg}}" hint-placeholder-val="{{false}}"><span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #F4F1EA; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">[cover soon]</span></sc-if>
-</span>
-<span style="display: flex; justify-content: space-between; margin-top: 8px; font-family: 'Space Mono', monospace; font-size: 10px; text-transform: uppercase;"><span>▸ {{c.frame}}</span><span>{{c.film}}</span></span>
-<span style="display: block; margin-top: 12px; font-weight: 900; font-size: clamp(28px, 2.6vw, 38px); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase;">{{c.title}}</span>
-<span style="display: block; margin-top: 10px; border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Client</span><span style="text-align: right;">{{c.client}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Year</span><span style="text-align: right;">{{c.year}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Role</span><span style="text-align: right;">{{c.role}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span>Tags</span><span style="text-align: right;">{{c.tags}}</span></span>
-</span>
-<span style="display: block; margin-top: 10px; transform: rotate(-2deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 26px; line-height: 1.05; color: #C8321E;">{{c.note}}</span>
-</a>
-</sc-for>
-</div>
-</main>
-
-<section id="clients" aria-labelledby="cl-h" style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
-<div class="grain" aria-hidden="true"></div>
-<div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 8px 24px; padding-top: 14px; border-top: 2px solid #0E0E0E; margin-bottom: clamp(40px, 5vw, 64px);">
-<h2 id="cl-h" style="margin: 0; font-weight: 900; font-size: clamp(44px, 5.4vw, 84px); line-height: 0.82; letter-spacing: -0.045em; text-transform: uppercase;">For clients</h2>
-<span style="transform: rotate(-3deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.2vw, 32px); color: #C8321E;">content made for other brands</span>
-</div>
-<div class="clips" style="position: relative;">
-<sc-for list="{{clients}}" as="c" hint-placeholder-count="3">
-<div class="clip" style="{{c.box}}">
-<span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
-<span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);"><span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #F4F1EA; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">[content samples]</span></span>
-<span style="display: block; margin-top: 16px; font-weight: 900; font-size: clamp(24px, 2.2vw, 32px); line-height: 0.95; letter-spacing: -0.03em;">{{c.title}}</span>
-<span style="display: block; margin-top: 10px; border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Client</span><span style="text-align: right;">{{c.client}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Year</span><span style="text-align: right;">{{c.year}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Role</span><span style="text-align: right;">{{c.role}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span>Tags</span><span style="text-align: right;">{{c.tags}}</span></span>
-</span>
-<span style="display: block; margin-top: 10px; font-weight: 600; font-size: 16px; line-height: 1.35;">{{c.line}}</span>
-</div>
-</sc-for>
-</div>
-</section>
-
-<a class="next" href="index.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
-<span class="t1" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 clamp(24px, 5vw, 72px);">
-<span style="font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Back to the cover</span>
-<span class="next-t" style="font-weight: 900; font-size: clamp(56px, 8vw, 120px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Issue 01 →</span>
-</span>
-</a>
-
-<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; border-top: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
 <a href="ads-and-creatives.html" style="text-decoration: none; padding: 12px 0;">← Poster 02 Ads &amp; Creatives</a>
 <a href="mailto:girurre5@gmail.com" style="text-decoration: none; padding: 12px 0;">girurre5@gmail.com</a>
 <span style="padding: 12px 0;">Brand &amp; Creative Designer — Barcelona</span>
@@ -148,27 +93,7 @@ a{color:inherit}a:hover{color:inherit}
 <script src="dc.js"></script>
 <script>
 class Component extends DCLogic {
-  renderVals() {
-    const B = 'assets/';
-    const d = [
-      { title: 'KALIHU', client: 'KALIHU', year: '2020 — now', role: 'Art direction · shooting · editing', tags: 'Photo · reels · social', frame: 'KH', film: 'Digital + film', note: 'product, lifestyle, reels & social →', img: 'assets/6497032e0c04.jpg', alt: 'Surfers at dusk — KALIHU', href: 'content-kalihu.html', r: -3 },
-      { title: 'Abril Fox Studio', client: 'Abril Fox Studio (co-founder)', year: '[year]', role: '[photographer · editing]', tags: 'Weddings · reels · social', frame: 'AF', film: 'Wedding studio', note: 'our wedding studio — La ermita →', img: 'assets/720a9d88499d.jpg', alt: 'A couple in silhouette in an arched window over the sea', href: 'abril-fox-studio.html', r: 2 },
-      { title: '[Brand 03]', client: '[client]', year: '[year]', role: '[role]', tags: '[tags]', frame: '03', film: '[format]', note: '[to decide]', href: 'content-brand-03.html', r: -1 }
-    ];
-    const fm = [
-      { title: 'Tenerife', client: 'Personal series', year: '2021', role: 'Photographer', tags: 'Kodak Gold 200 · 35mm', frame: '1—37', film: 'Kodak Gold 200', note: 'one roll, one trip →', img: 'assets/96f474f3b1fb.jpg', alt: 'Turquoise bay below green cliffs, Tenerife', href: 'tenerife.html', r: 3 },
-      { title: 'Basque Country', client: 'Personal series', year: '[year]', role: 'Photographer', tags: '35mm b&w + colour', frame: '34', film: '35mm b&w + colour', note: 'van, cliffs, coast →', img: 'assets/2cd35c8fbeb9.jpg', alt: 'Basque coast, black and white', href: 'basque-country.html', r: -2 },
-      { title: '[35mm 03]', client: 'Personal series', year: '[year]', role: 'Photographer', tags: '35mm', frame: '03', film: '[film]', note: '[to decide]', href: '35mm-03.html', r: 1.5 }
-    ];
-    const cl = [
-      { title: '@bazest.official', client: 'Bazest', line: 'Content and Instagram management for @bazest.official', year: '[period]', role: '[role]', tags: 'Content · Instagram', r: -1.5 },
-      { title: '@stemvius', client: '[client]', line: '[One line of context — what I made for them]', year: '[period]', role: '[role]', tags: '[tags]', r: 1.5 },
-      { title: '@donnybarmanly', client: '[client]', line: '[One line of context — what I made for them]', year: '[period]', role: '[role]', tags: '[tags]', r: -1 }
-    ];
-    return { clients: cl.map((x, i) => ({ ...x, tape: i % 2 ? 'tape2' : 'tape1', box: 'transform: rotate(' + x.r + 'deg);' })), clips: d.map((x, i) => ({ ...x, tape: i % 2 ? 'tape2' : 'tape1', hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '',
-      box: 'transform: rotate(' + x.r + 'deg);' + (i % 3 === 1 ? ' margin-top: clamp(0px, 4vw, 64px);' : '') })), film: fm.map((x, i) => ({ ...x, tape: i % 2 ? 'tape2' : 'tape1', hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '',
-      box: 'transform: rotate(' + x.r + 'deg);' + (i % 3 === 1 ? ' margin-top: clamp(0px, 4vw, 64px);' : '') })) };
-  }
+  renderVals() { return {}; }
 }
 window.__DCComponent = Component;
 </script>

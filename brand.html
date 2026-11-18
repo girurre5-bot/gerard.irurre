@@ -46,7 +46,7 @@ a{color:inherit}a:hover{color:inherit}
 <section aria-label="Brand &amp; Identity" style="position: relative; height: clamp(520px, 52vw, 780px); overflow: hidden; background: #CFCFCF;">
 <img src="assets/78b1a1ebc130.jpg" alt="A surfer riding a wave below a rocky headland, black and white film" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%;">
 <div style="position: absolute; left: clamp(16px, 4vw, 56px); top: clamp(24px, 4vw, 56px); right: clamp(16px, 4vw, 56px); color: #FFFFFF;">
-<p style="margin: 0 0 12px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 01 — 4 folders — 13 pieces</p>
+<p style="margin: 0 0 12px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 01 — 4 folders — 12 pieces</p>
 <h1 style="margin: 0; font-weight: 900; font-size: clamp(72px, 11vw, 168px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Brand &amp;<br>Identity</h1>
 <p style="margin: 18px 0 0; transform: rotate(-3deg); transform-origin: left; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.4vw, 34px); color: #FFFFFF;">by discipline — open a folder ↓</p>
 </div>
@@ -129,14 +129,13 @@ class Component extends DCLogic {
     const ch = [
       { letter: 'A', tab: 'A — Branding', title: 'Branding', note: 'name, idea, values, voice', peek: [], items: [
         { title: 'KALIHU — Brand strategy', client: 'surf apparel', clientName: 'KALIHU', year: '2020 — now', tags: 'Naming · platform · tone of voice', img: 'assets/6497032e0c04.jpg', alt: 'Surfers at dusk on the Maresme coast', href: 'branding-kalihu.html', gray: true },
-        { title: '[Project 02]', client: '[sector]', clientName: '[client]', year: '[year]', tags: '[naming · platform · tone]', ph: '[project 02]', href: 'branding-project-02.html' },
-        { title: 'Nordest Running Club', client: 'private club', clientName: 'Private club — my friends', year: '2026', tags: 'Naming · platform · tee & shorts', img: 'assets/9c9891842634.jpg', alt: 'Nordest Not Only Running Club poster', href: 'branding-nordest.html' }
+        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio', year: '2026', role: 'Brand designer', tags: 'Research · positioning · naming', img: 'assets/7013b9fb158f.jpg', alt: 'Abril Fox Studio brand manual cover', href: 'branding-abril-fox-studio.html' },
+        { title: 'Jove Camper', client: 'campervan rental', clientName: 'Jove Camper (own project)', year: '2025', role: 'Brand & marketing', tags: 'Business plan · positioning · logo exploration', img: 'assets/1ef4da4fc788.jpg', alt: 'Jove Camper provisional logo: two vans in a cream circle on black', concept: true, href: 'branding-jove-camper.html' }
       ]},
       { letter: 'B', tab: 'B — Identity', title: 'Visual identity', note: 'logo, colour, type, applications', peek: [], items: [
         { title: 'KALIHU — Visual identity', client: 'surf apparel', clientName: 'KALIHU', year: '2020 — now', tags: 'Logo · type · packaging · showroom', img: 'assets/5bd98d3e7af3.jpg', alt: 'KALIHU logo', href: 'identity-kalihu.html' },
-        { title: 'Jove Llar', client: 'home renovation', clientName: 'Jove Llar', year: '[year]', tags: 'Logo · colour · type · applications · web', img: 'assets/fda38811180f.png', alt: 'Jove Llar Reformes logo', href: 'identity-jove-llar.html', fit: 'contain', bg: '#FFFFFF' },
-        { title: 'Dusty Fin', client: 'surf travel', clientName: 'Dusty Fin', year: '2025', tags: 'Logo · colour · type · scalability', img: 'assets/b7aec6a939bf.jpg', alt: 'Dusty Fin logo', href: 'identity-dusty-fin.html', fit: 'contain', bg: '#F1EEDF' },
-        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio (co-founder)', year: '[year]', tags: 'Logo · colour · type · applications · web', ph: '[logo soon]', href: 'identity-abril-fox-studio.html' }
+        { title: 'gerard.irurre', client: 'personal brand', clientName: 'Personal brand', year: '2026', role: 'Brand designer', tags: 'Logo · colour · type · Instagram', img: 'assets/20492a732643.jpg', alt: 'G. IRURRE hand-lettered logo on warm black', href: 'identity-gerard-irurre.html' },
+        { title: 'Dusty Fin', client: 'surf travel', clientName: 'Dusty Fin', year: '2025', tags: 'Logo · colour · type · scalability', img: 'assets/b7aec6a939bf.jpg', alt: 'Dusty Fin logo', href: 'identity-dusty-fin.html', fit: 'contain', bg: '#F1EEDF' }
       ]},
       { letter: 'C', tab: 'C — Product', title: 'Product design', note: 'materials, samples, final product', peek: [], items: [
         { title: 'KALIHU', client: 'surf apparel', clientName: 'KALIHU', year: '2020 — now', tags: 'Tees · hoodies · caps · socks', img: 'assets/5eb4765a4c86.jpg', alt: 'KALIHU t-shirt on the beach', href: 'product-kalihu.html' },
@@ -145,8 +144,8 @@ class Component extends DCLogic {
       ]},
       { letter: 'D', tab: 'D — Web', title: 'Web design', note: 'structure, design, live site', peek: [], items: [
         { title: 'Jove Llar', client: 'home renovation', clientName: 'Jove Llar', year: '[year]', tags: 'Structure · design · build', img: 'assets/77d8c963ac8e.jpg', alt: 'Jove Llar website', href: 'web-jove-llar.html' },
-        { title: 'KALIHU store', client: 'e-commerce', clientName: 'KALIHU', year: '2020 — now', tags: 'Shopify · SEO · collections', ph: '[screenshot soon]', href: 'web-kalihu-store.html' },
-        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio (co-founder)', year: '[year]', tags: '[tags]', ph: '[screenshot soon]', href: 'web-abril-fox-studio.html' }
+        { title: 'KALIHU store', client: 'e-commerce', clientName: 'KALIHU', year: '2020 — now', tags: 'Shopify · SEO · collections', img: 'assets/219d75dc5483.jpg', alt: 'KALIHU store shop grid on mobile', href: 'web-kalihu-store.html' },
+        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio', year: '[year]', tags: '[tags]', ph: '[screenshot soon]', href: 'web-abril-fox-studio.html' }
       ]}
     ];
     const open = this.state.open;

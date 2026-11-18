@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dusty Fin — Visual identity — Gerard Irurre</title>
 <meta name="description" content="Gerard Irurre — Brand &amp; Creative Designer, Barcelona. Brand identity, ads &amp; creatives, and content.">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&amp;family=Caveat:wght@500;700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&amp;family=Caveat:wght@500;700&amp;family=Space+Mono:wght@400;700&amp;family=EB+Garamond:ital,wght@0,400;1,400&amp;family=Courier+Prime:wght@400;700&amp;family=Rock+Salt&amp;display=swap">
 <style>
 body{margin:0;background:#EEEBE4}
 a{color:inherit}a:hover{color:inherit}
@@ -16,18 +16,49 @@ a{color:inherit}a:hover{color:inherit}
 .tape2{background:url(assets/e5c109c687ad.png) center/100% 100% no-repeat}
 .nav a{text-decoration:none;padding:12px 0}
 .nav a:hover,.nav a:focus,.nav a.on{text-decoration:underline;text-underline-offset:4px}
-.lined{background-color:#FBFAF6;background-image:repeating-linear-gradient(to bottom,transparent 0 46px,rgba(14,14,14,.55) 46px 47px)}
-.sheet{position:relative;box-sizing:border-box;background:#FBFAF6;padding:clamp(24px,3vw,40px);box-shadow:0 12px 30px rgba(14,14,14,.16)}
 .mono{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase}
 .hand{font-family:'Caveat',cursive;font-weight:700;color:#C8321E}
 .ph{font-family:'Caveat',cursive;font-weight:700;color:#8A8478}
-.row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #0E0E0E}
-.prow{display:grid;grid-template-columns:minmax(90px,140px) 1fr;gap:16px;padding:14px 0;border-bottom:1px solid #0E0E0E}
-.print{position:relative;display:block;margin:0;background:#FFFFFF;padding:10px 10px 30px;box-shadow:0 10px 26px rgba(14,14,14,.18)}
-.print figcaption{position:absolute;left:12px;bottom:8px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
-.empty{display:flex;align-items:center;justify-content:center;background:#F4F1EA;border:1px dashed rgba(14,14,14,.35);font-family:'Caveat',cursive;font-weight:700;font-size:26px;color:#8A8478;text-align:center}
-.stamp{display:inline-block;padding:6px 14px;border:3px solid #C8321E;background:rgba(251,250,246,.92);color:#C8321E;font-family:'Space Mono',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-6deg)}
 .next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
+.vi-wrap{position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(16px,4vw,56px) clamp(56px,7vw,104px)}
+.vi-lab{position:relative;margin:0 0 22px;padding:8px 0;border-top:2px solid #0E0E0E;border-bottom:1px solid #0E0E0E;display:flex;justify-content:space-between;gap:16px}
+.vi-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid #0E0E0E;border-bottom:2px solid #0E0E0E}
+.vi-meta div{padding:12px 14px 14px 0}
+.vi-meta dt{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;color:#6A645A}
+.vi-meta dd{margin:6px 0 0;font-weight:700;font-size:15px;text-transform:uppercase;line-height:1.25}
+.vi-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start}
+.vi-lead{margin:0;font-weight:600;font-size:clamp(20px,1.9vw,27px);line-height:1.35}
+.vi-sheet{position:relative;box-sizing:border-box;aspect-ratio:16/9;background:#FBFAF6;padding:clamp(18px,2.4vw,36px);box-shadow:0 12px 30px rgba(14,14,14,.16);display:flex;flex-direction:column;overflow:hidden}
+.vi-sheet .sh{margin:0 0 clamp(12px,1.6vw,22px);display:flex;justify-content:space-between}
+.vi-body{flex:1;min-height:0}
+.lg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:clamp(10px,1.4vw,20px);height:100%}
+.lg figure{margin:0;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid rgba(14,14,14,.25)}
+.lg figure img{max-width:84%;max-height:78%;object-fit:contain;display:block}
+.lg figure img.fill{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
+.lg figcaption{position:absolute;left:10px;bottom:8px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
+.lg .ph4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;width:92%}
+.lg .ph4 img{max-width:100%;max-height:none;width:100%;aspect-ratio:1/1;object-fit:cover}
+.cl{display:grid;gap:clamp(10px,1.4vw,20px);height:100%}
+.cl div{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(10px,1.2vw,16px);border:1px solid rgba(14,14,14,.2)}
+.cl b{font-weight:900;font-size:clamp(15px,1.4vw,20px);text-transform:uppercase;letter-spacing:-.01em}
+.cl span{font-family:'Space Mono',monospace;font-size:11px;margin-top:4px}
+.cl i{font-style:normal;font-family:'Caveat',cursive;font-size:clamp(17px,1.5vw,21px);margin-top:4px;line-height:1.05}
+.ty{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(16px,2.4vw,40px);height:100%}
+.ty .faces{display:flex;flex-direction:column;gap:clamp(10px,1.4vw,18px)}
+.ty .face{border-top:2px solid #0E0E0E;padding-top:10px}
+.ty .face p{margin:0}
+.ty .hier{border:1px solid rgba(14,14,14,.25);background:#FFFFFF;padding:clamp(14px,2vw,28px);display:flex;flex-direction:column;justify-content:center;gap:10px;overflow:hidden}
+.ty .tag{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;color:#6A645A}
+.ap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(36px,4vw,64px) clamp(20px,3vw,44px);align-items:start}
+.ap figure{position:relative;margin:0;background:#FFFFFF;padding:10px 10px 34px;box-shadow:0 10px 26px rgba(14,14,14,.18)}
+.ap figure img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.ty .face img{max-width:100%}
+.ap figure .empty{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/5;background:#F4F1EA;border:1px dashed rgba(14,14,14,.35);font-family:'Caveat',cursive;font-weight:700;font-size:26px;color:#8A8478;text-align:center;box-sizing:border-box}
+.ap figcaption{position:absolute;left:12px;bottom:10px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
+.vi-links{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:18px}
+.vi-links a{font-weight:900;font-size:clamp(20px,2vw,28px);text-transform:uppercase;letter-spacing:-.02em;text-decoration:none;border-bottom:3px solid #0E0E0E}
+.vi-links a:hover{color:#C8321E;border-color:#C8321E}
+@media (max-width:900px){.vi-meta{grid-template-columns:repeat(2,minmax(0,1fr))}.vi-two{grid-template-columns:1fr}.vi-sheet{aspect-ratio:auto}.lg{grid-template-rows:none}.lg figure{aspect-ratio:4/3}.cl{grid-template-columns:repeat(2,minmax(0,1fr))!important}.cl div{aspect-ratio:1/1}.ty{grid-template-columns:1fr}.ap{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>
 <style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
 </head>
@@ -36,206 +67,91 @@ a{color:inherit}a:hover{color:inherit}
 <div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
 
 <header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
-<a href="brand.html" style="text-decoration: none; padding: 12px 0;">← Poster 01 Brand &#160;▸ B. Visual identity &#160;▸ 03</a>
+<a href="brand.html" style="text-decoration: none; padding: 12px 0;">← Poster 01 Brand &nbsp;▸ B. Visual identity &nbsp;▸ 03</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
 <a class="on" href="brand.html">Brand</a><a href="ads-and-creatives.html">Ads &amp; Creatives</a><a href="content.html">Content</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
 </nav>
 </header>
 
-<!-- HERO -->
-<section aria-label="Dusty Fin — visual identity" style="position: relative; min-height: clamp(520px, 50vw, 760px); overflow: hidden; background: #6A5ACD; color: #F1EEDF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(18px, 2vw, 28px); padding: clamp(80px, 8vw, 120px) clamp(16px, 4vw, 56px); box-sizing: border-box;">
-<p class="mono" style="position: absolute; left: clamp(16px, 4vw, 56px); right: clamp(16px, 4vw, 56px); top: clamp(20px, 3vw, 40px); margin: 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px;"><span>Visual identity</span><span>Curated surf adventures &amp; culture</span><span>2025</span></p>
-<img src="assets/c74529950d34.png" alt="Dusty Fin wordmark in off-white, with an orange surf fin forming the i" style="display: block; width: min(980px, 88%);">
-<img src="assets/bb7775583927.png" alt="Curated surf adventures and culture" style="display: block; width: min(640px, 64%);">
-<p style="position: absolute; left: clamp(16px, 5vw, 72px); bottom: clamp(24px, 4vw, 56px); margin: 0; transform: rotate(-4deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(28px, 2.8vw, 42px); color: #F1EEDF;">the fin is the i ↗</p>
-<p class="mono" style="position: absolute; right: clamp(16px, 4vw, 56px); bottom: clamp(20px, 3vw, 40px); margin: 0;">B. Visual identity — 03 / 04</p>
-</section>
-
-<!-- INTRO -->
-<section style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px); display: flex; flex-wrap: wrap; gap: 40px clamp(32px, 5vw, 80px);">
-<div class="grain" aria-hidden="true"></div>
-<div style="position: relative; flex: 1.3 1 420px; min-width: 0;">
-<p class="mono" style="margin: 0 0 10px;">Brief</p>
-<p style="margin: 0; font-weight: 600; font-size: clamp(20px, 1.9vw, 27px); line-height: 1.35;">Dusty Fin curates surf adventures and culture.</p>
-<p class="mono" style="margin: 28px 0 10px;">Concept</p>
-<p style="margin: 0; font-weight: 600; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.4;">The identity leans on 70s surf posters: soft, swollen letters in the spirit of Cooper and Windsor, and a single surf fin that takes the place of the i — the whole idea of the brand in one letter.</p>
-<figure class="print" style="margin: 22px 0 0; max-width: 560px; transform: rotate(-1deg);"><img src="assets/a144973ae079.jpg" alt="The complete Dusty Fin logo design sheet with measurements, colours and scalability tests" style="display: block; width: 100%;"><figcaption>Process — logo design sheet</figcaption></figure>
+<!-- 01 HEADER -->
+<section aria-label="Dusty Fin — visual identity" style="position: relative; height: clamp(560px, 56vw, 840px); overflow: hidden; background: #6A5ACD;">
+<img src="assets/c74529950d34.png" alt="Dusty Fin wordmark in off-white, with an orange surf fin forming the i" style="position: absolute; left: 50%; top: 27%; transform: translate(-50%, -50%); width: min(62%, 760px); max-height: 40%; object-fit: contain;">
+<div class="t2" style="position: absolute; left: -2%; right: -2%; top: 52%; height: clamp(220px, 24vw, 350px); display: flex; flex-direction: column; justify-content: center; padding: 0 clamp(24px, 5vw, 72px);">
+<h1 style="margin: 0; font-weight: 900; font-size: clamp(64px, 10vw, 160px); line-height: 0.8; letter-spacing: -0.05em; text-transform: uppercase;">Dusty Fin</h1>
+<p class="mono" style="margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px;"><span>Visual identity</span><span>Curated surf adventures &amp; culture</span><span>2025</span></p>
 </div>
-<dl style="position: relative; flex: 1 1 340px; min-width: 0; margin: 0; border-top: 2px solid #0E0E0E; font-weight: 600; font-size: 15px; text-transform: uppercase;">
-<div class="row"><dt>Client</dt><dd style="margin: 0; text-align: right;">Dusty Fin</dd></div>
-<div class="row"><dt>Year</dt><dd style="margin: 0; text-align: right;">2025</dd></div>
-<div class="row"><dt>Role</dt><dd style="margin: 0; text-align: right;">Graphic designer</dd></div>
-<div class="row" style="border-bottom: 2px solid #0E0E0E;"><dt>Tags</dt><dd style="margin: 0; text-align: right;">Logo · colour · type · scalability</dd></div>
+</section>
+<section class="vi-wrap" style="padding-top: clamp(40px, 5vw, 72px); padding-bottom: clamp(40px, 5vw, 64px);">
+<div class="grain" aria-hidden="true"></div>
+<dl class="vi-meta" style="position: relative; margin: 0;">
+<div><dt>Client</dt><dd>Dusty Fin</dd></div><div><dt>Year</dt><dd>2025</dd></div><div><dt>Role</dt><dd>Graphic designer</dd></div><div><dt>Tags</dt><dd>Logo · colour · type · scalability</dd></div>
 </dl>
 </section>
 
-<!-- SHEET 01 LOGO -->
-<section style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
+<!-- 02 BRIEF + 03 CONCEPT -->
+<section class="vi-wrap">
 <div class="grain" aria-hidden="true"></div>
-<article class="sheet" style="transform: rotate(-0.6deg);">
-<span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(-3deg);"></span>
-<p class="mono" style="margin: 0; display: flex; justify-content: space-between;"><span>Sheet 01</span><span>Logo &amp; variants</span></p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: clamp(20px, 2.4vw, 32px); margin-top: 28px;">
-<figure style="margin: 0;">
-<div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; background: #F1EEDF; border: 1px solid #0E0E0E;"><img src="assets/2a30ceea23f2.png" alt="Primary Dusty Fin logo: black wordmark with orange fin" style="display: block; width: 84%;"></div>
-<figcaption class="mono" style="margin-top: 8px; display: flex; justify-content: space-between;"><span>Primary</span><span>Black + rust on sand</span></figcaption>
-</figure>
-<figure style="margin: 0;">
-<div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; background: #1A1A1B;"><img src="assets/c74529950d34.png" alt="Logo in negative on obsidian black" style="display: block; width: 82%;"></div>
-<figcaption class="mono" style="margin-top: 8px; display: flex; justify-content: space-between;"><span>Negative</span><span>On obsidian black</span></figcaption>
-</figure>
-<figure style="margin: 0;">
-<div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 4 / 3; background: #6A5ACD;"><img src="assets/c74529950d34.png" alt="Logo in negative on dusty lavender" style="display: block; width: 82%;"></div>
-<figcaption class="mono" style="margin-top: 8px; display: flex; justify-content: space-between;"><span>Negative</span><span>On dusty lavender</span></figcaption>
-</figure>
+<div class="vi-two" style="position: relative;">
+<div><p class="mono vi-lab"><span>02 — Brief</span></p><p class="vi-lead">Dusty Fin curates surf adventures and culture.</p></div>
+<div><p class="mono vi-lab"><span>03 — Concept</span></p><p class="vi-lead">70s surf posters: soft, swollen letters, and one surf fin in place of the i.</p></div>
 </div>
-<div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid #0E0E0E;">
-<p class="mono" style="margin: 0 0 12px; display: flex; justify-content: space-between;"><span>Every size</span><span>50% · 25% · 10%</span></p>
-<div style="background: #F1EEDF; border: 1px solid #0E0E0E; padding: clamp(12px, 2vw, 24px);"><img src="assets/7d285be0ff34.jpg" alt="Compact logo tested at 50, 25 and 10 percent" style="display: block; width: 100%; mix-blend-mode: multiply;"></div>
-<p style="margin: 12px 0 0; font-family: 'Caveat', cursive; font-weight: 700; font-size: 24px; color: #C8321E;">a compact version with the wave, for small sizes — still readable at 10%</p>
-</div>
-<p style="margin: 28px 0 0; padding-top: 18px; border-top: 1px solid #0E0E0E; font-family: 'Caveat', cursive; font-weight: 700; font-size: 27px; line-height: 1.15; color: #C8321E;">the fin replaces the i — the only orange in the logo, so it’s the first thing you see</p>
+</section>
+
+<!-- 04 LOGO -->
+<section class="vi-wrap">
+<div class="grain" aria-hidden="true"></div>
+<p class="mono vi-lab"><span>04 — Logo</span><span>Primary · short / symbol · positive &amp; negative</span></p>
+<article class="vi-sheet" style="transform: rotate(-0.5deg);">
+<span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -6px; width: 120px; height: 30px; margin-left: -60px; z-index: 2;"></span>
+<p class="mono sh"><span>Sheet 04</span><span>Dusty Fin</span></p>
+<div class="vi-body"><div class="lg"><figure style="background: #F1EEDF;"><img src="assets/2a30ceea23f2.png" alt="Primary logo: black wordmark with orange fin"><figcaption style="color: #0E0E0E;">Primary · positive</figcaption></figure><figure style="background: #1A1A1B;"><img src="assets/c74529950d34.png" alt="Logo in negative on obsidian black"><figcaption style="color: #F1EEDF;">Primary · negative</figcaption></figure><figure style="background: #F1EEDF;"><img src="assets/7d285be0ff34.jpg" alt="Compact logo with the wave, at 50, 25 and 10 percent"><figcaption style="color: #0E0E0E;">Compact · positive</figcaption></figure><figure style="background: #6A5ACD;"><img src="assets/c74529950d34.png" alt="Logo in negative on dusty lavender"><figcaption style="color: #F1EEDF;">Primary · on lavender</figcaption></figure></div></div>
 </article>
+<p class="hand" style="position: relative; margin: 18px 0 0; font-size: 26px; transform: rotate(-1deg);">the fin is the only orange in the logo</p>
 </section>
 
-<!-- SHEET 02 COLOUR -->
-<section style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
+<!-- 05 COLOUR -->
+<section class="vi-wrap">
 <div class="grain" aria-hidden="true"></div>
-<article class="sheet" style="transform: rotate(0.8deg);">
-<span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(3deg);"></span>
-<p class="mono" style="margin: 0; display: flex; justify-content: space-between;"><span>Sheet 02</span><span>Colour</span></p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: clamp(14px, 1.8vw, 24px); margin-top: 28px;">
-<div style="background: #FFFFFF; padding: 8px 8px 14px; box-shadow: 0 6px 16px rgba(14,14,14,0.14); transform: rotate(-2deg);">
-<div style="aspect-ratio: 1 / 1; background: #1A1A1B; border: 1px solid rgba(14,14,14,0.25);"></div>
-<p style="margin: 10px 0 0; font-weight: 900; font-size: 17px; text-transform: uppercase; letter-spacing: -0.01em;">Obsidian black</p>
-<p class="mono" style="margin: 4px 0 0;">#1A1A1B</p>
-<p style="margin: 8px 0 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 21px; line-height: 1.05;">to read</p>
-</div>
-<div style="background: #FFFFFF; padding: 8px 8px 14px; box-shadow: 0 6px 16px rgba(14,14,14,0.14); transform: rotate(1.5deg);">
-<div style="aspect-ratio: 1 / 1; background: #F1EEDF; border: 1px solid rgba(14,14,14,0.25);"></div>
-<p style="margin: 10px 0 0; font-weight: 900; font-size: 17px; text-transform: uppercase; letter-spacing: -0.01em;">Off-white sand</p>
-<p class="mono" style="margin: 4px 0 0;">#F1EEDF</p>
-<p style="margin: 8px 0 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 21px; line-height: 1.05;">to read</p>
-</div>
-<div style="background: #FFFFFF; padding: 8px 8px 14px; box-shadow: 0 6px 16px rgba(14,14,14,0.14); transform: rotate(-1deg);">
-<div style="aspect-ratio: 1 / 1; background: #E87722; border: 1px solid rgba(14,14,14,0.25);"></div>
-<p style="margin: 10px 0 0; font-weight: 900; font-size: 17px; text-transform: uppercase; letter-spacing: -0.01em;">Outback rust</p>
-<p class="mono" style="margin: 4px 0 0;">#E87722</p>
-<p style="margin: 8px 0 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 21px; line-height: 1.05;">the fin</p>
-</div>
-<div style="background: #FFFFFF; padding: 8px 8px 14px; box-shadow: 0 6px 16px rgba(14,14,14,0.14); transform: rotate(2deg);">
-<div style="aspect-ratio: 1 / 1; background: #6A5ACD; border: 1px solid rgba(14,14,14,0.25);"></div>
-<p style="margin: 10px 0 0; font-weight: 900; font-size: 17px; text-transform: uppercase; letter-spacing: -0.01em;">Dusty lavender</p>
-<p class="mono" style="margin: 4px 0 0;">#6A5ACD</p>
-<p style="margin: 8px 0 0; font-family: 'Caveat', cursive; font-weight: 500; font-size: 21px; line-height: 1.05;">the dusk</p>
-</div>
-</div>
-<div style="margin-top: 36px;">
-<p class="mono" style="margin: 0 0 8px; display: flex; justify-content: space-between;"><span>The rule</span><span>[ratio]</span></p>
-<div aria-hidden="true" style="display: flex; height: 40px; border: 1px solid #0E0E0E;"><span style="flex: 1; background: #1A1A1B;"></span><span style="flex: 1; background: #F1EEDF;"></span><span style="flex: 1; background: #E87722;"></span><span style="flex: 1; background: #6A5ACD;"></span></div>
-<p style="margin: 14px 0 0; transform: rotate(-1.5deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 27px; line-height: 1.15; color: #C8321E;">sand &amp; black to read, rust for the fin, lavender for the dusk</p>
-</div>
+<p class="mono vi-lab"><span>05 — Colour</span><span>4 colours · HEX</span></p>
+<article class="vi-sheet" style="transform: rotate(0.4deg);">
+<span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -6px; width: 120px; height: 30px; margin-left: -60px; z-index: 2;"></span>
+<p class="mono sh"><span>Sheet 05</span><span>Dusty Fin</span></p>
+<div class="vi-body"><div class="cl" style="grid-template-columns: repeat(4, minmax(0, 1fr));"><div style="background: #1A1A1B; color: #F1EEDF;"><b>Obsidian black</b><span>#1A1A1B</span><i>to read</i></div><div style="background: #F1EEDF; color: #0E0E0E;"><b>Off-white sand</b><span>#F1EEDF</span><i>to read</i></div><div style="background: #E87722; color: #FFFFFF;"><b>Outback rust</b><span>#E87722</span><i>the fin</i></div><div style="background: #6A5ACD; color: #F1EEDF;"><b>Dusty lavender</b><span>#6A5ACD</span><i>the dusk</i></div></div></div>
 </article>
+
 </section>
 
-<!-- SHEETS 03 + 04 -->
-<section style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px); display: flex; flex-wrap: wrap; gap: 64px clamp(32px, 4vw, 64px); align-items: flex-start;">
+<!-- 06 TYPOGRAPHY -->
+<section class="vi-wrap">
 <div class="grain" aria-hidden="true"></div>
-<article class="sheet" style="flex: 1 1 460px; min-width: 0; transform: rotate(-1.2deg);">
-<span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(-3deg);"></span>
-<p class="mono" style="margin: 0; display: flex; justify-content: space-between;"><span>Sheet 03</span><span>Type</span></p>
-<div style="margin-top: 28px; border-top: 2px solid #0E0E0E;">
-<div style="padding: 18px 0; border-bottom: 1px solid #0E0E0E;">
-<p class="mono" style="margin: 0 0 12px; display: flex; justify-content: space-between;"><span>Wordmark</span><span style="background: #E87722; color: #FFFFFF; padding: 2px 6px;">Cooper / Windsor, refined</span></p>
-<img src="assets/2a30ceea23f2.png" alt="Wordmark lettering detail" style="display: block; width: 100%;">
-<p style="margin: 12px 0 0; font-weight: 600; font-size: 16px; line-height: 1.4;">Soft, heavy, retro serifs — redrawn so the letters lock together and leave room for the fin.</p>
-</div>
-<div style="padding: 18px 0; border-bottom: 2px solid #0E0E0E;">
-<p class="mono" style="margin: 0 0 12px; display: flex; justify-content: space-between;"><span>Tagline</span><span style="background: #1A1A1B; color: #FFFFFF; padding: 2px 6px;">Condensed sans</span></p>
-<img src="assets/925489f1fcda.png" alt="Tagline set in a condensed sans with a wave" style="display: block; width: 100%;">
-<p style="margin: 12px 0 0; font-weight: 600; font-size: 16px; line-height: 1.4;">Calm and straight, so the wordmark can do the shouting.</p>
-</div>
-</div>
-<p style="margin: 16px 0 0; transform: rotate(-1.5deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 26px; line-height: 1.15; color: #C8321E;">no icons, no textures — the letters carry it</p>
+<p class="mono vi-lab"><span>06 — Typography</span><span>Primary + secondary · hierarchy</span></p>
+<article class="vi-sheet" style="transform: rotate(-0.4deg);">
+<span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -6px; width: 120px; height: 30px; margin-left: -60px; z-index: 2;"></span>
+<p class="mono sh"><span>Sheet 06</span><span>Dusty Fin</span></p>
+<div class="vi-body"><div class="ty"><div class="faces"><div class="face"><p class="mono" style="display: flex; justify-content: space-between;"><span>Primary</span><span>Cooper / Windsor, refined</span></p><div style="margin-top: 8px;"><img src="assets/2a30ceea23f2.png" alt="Wordmark lettering" style="display: block; height: clamp(34px, 3.6vw, 54px); width: auto;"></div><p style="margin-top: 6px; font-weight: 600; font-size: 14px; line-height: 1.35;">The wordmark — soft, heavy retro serifs.</p></div><div class="face"><p class="mono" style="display: flex; justify-content: space-between;"><span>Secondary</span><span>Condensed sans</span></p><div style="margin-top: 8px;"><img src="assets/925489f1fcda.png" alt="Tagline in a condensed sans" style="display: block; width: 100%; max-width: 100%; height: auto;"></div><p style="margin-top: 6px; font-weight: 600; font-size: 14px; line-height: 1.35;">The tagline — calm, so the wordmark can shout.</p></div></div><div class="hier"><img src="assets/2a30ceea23f2.png" alt="Dusty Fin wordmark" style="display: block; width: 70%; mix-blend-mode: multiply;"><img src="assets/925489f1fcda.png" alt="Curated surf adventures and culture" style="display: block; width: 62%; mix-blend-mode: multiply;"><p class="ph" style="margin: 0; font-size: 24px;">[body text typeface + sample]</p></div></div></div>
 </article>
-<article class="sheet" style="flex: 1 1 460px; min-width: 0; margin-top: clamp(0px, 5vw, 80px); transform: rotate(1.4deg);">
-<span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(3deg);"></span>
-<p class="mono" style="margin: 0; display: flex; justify-content: space-between;"><span>Sheet 04</span><span>Graphic elements</span></p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr)); gap: 18px; margin-top: 28px;">
-<figure style="margin: 0;"><div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 1 / 1; background: #F1EEDF; border: 1px solid #0E0E0E;"><img src="assets/84a9b64bcde6.jpg" alt="Round seal: Authentic and confirmed, est. 2024" style="display: block; width: 70%; mix-blend-mode: multiply;"></div><figcaption class="mono" style="margin-top: 8px;">Seal</figcaption></figure>
-<figure style="margin: 0;"><span class="empty" style="width: 100%; aspect-ratio: 1 / 1; box-sizing: border-box; font-size: 22px;">[wave]</span><figcaption class="mono" style="margin-top: 8px;">Wave</figcaption></figure>
-<figure style="margin: 0;"><span class="empty" style="width: 100%; aspect-ratio: 1 / 1; box-sizing: border-box; font-size: 22px;">[pattern / texture]</span><figcaption class="mono" style="margin-top: 8px;">Pattern</figcaption></figure>
-</div>
-<p style="margin: 18px 0 0; transform: rotate(-1.5deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 24px; line-height: 1.15; color: #8A8478;">[what each element is for — 1 line]</p>
-</article>
+
 </section>
 
-<!-- SHEET 05 APPLICATIONS -->
-<section aria-label="Applications" style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
+<!-- 07 APPLICATIONS -->
+<section class="vi-wrap" style="padding-bottom: clamp(72px, 9vw, 130px);">
 <div class="grain" aria-hidden="true"></div>
-<p class="mono" style="position: relative; margin: 0 0 40px; padding: 8px 0; border-top: 2px solid #0E0E0E; border-bottom: 1px solid #0E0E0E; display: flex; justify-content: space-between;"><span>Sheet 05 — Applications</span><span>Stationery · merch · web · social</span></p>
-<div style="position: relative; display: flex; justify-content: center;">
-<article class="sheet" style="flex: 0 1 640px; min-width: 0; transform: rotate(1deg);">
-<span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(3deg);"></span>
-<p class="mono" style="margin: 0; display: flex; justify-content: space-between;"><span>05A</span><span>[Card / sticker]</span></p>
-<div style="position: relative; margin-top: 32px; display: flex; flex-direction: column; gap: 22px;">
-<figure style="margin: 0;">
-<div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 85 / 55; background: #F4F1EA; box-shadow: 0 6px 18px rgba(14,14,14,0.14); transform: rotate(-2deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">[front]</div>
-<figcaption class="mono" style="margin-top: 10px;">[front]</figcaption>
-</figure>
-<figure style="margin: 0;">
-<div style="display: flex; align-items: center; justify-content: center; aspect-ratio: 85 / 55; background: #F4F1EA; box-shadow: 0 6px 18px rgba(14,14,14,0.14); transform: rotate(1.5deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">[back]</div>
-<figcaption class="mono" style="margin-top: 10px;">[back]</figcaption>
-</figure>
-</div>
-<p style="margin: 16px 0 0; transform: rotate(-1.5deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 26px; line-height: 1.15; color: #8A8478;">[note]</p>
-</article>
-</div>
+<p class="mono vi-lab" style="margin-bottom: 48px;"><span>07 — Applications</span><span>[social · stickers · merch · stationery]</span></p>
+<div class="ap" style="position: relative;"><figure style="transform: rotate(-2.5deg); "><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><img src="assets/84a9b64bcde6.jpg" alt="Round seal: Authentic and confirmed, est. 2024" style="object-fit: contain; background: #F1EEDF; padding: 8%; box-sizing: border-box;"><figcaption>Seal / sticker</figcaption></figure><figure style="transform: rotate(2deg); margin-top: clamp(0px, 4vw, 56px);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty">[Instagram post]</span><figcaption>[Social]</figcaption></figure><figure style="transform: rotate(-1deg); "><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty">[business card]</span><figcaption>[Stationery]</figcaption></figure><figure style="transform: rotate(1.5deg); "><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty">[merch / tee]</span><figcaption>[Merch]</figcaption></figure></div>
 </section>
 
-<!-- SHEET 05B -->
-<section style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px); display: flex; flex-wrap: wrap; gap: 48px clamp(32px, 4vw, 64px); align-items: flex-start;">
+<!-- 08 CLOSING -->
+<section aria-label="Closing" class="vi-wrap">
 <div class="grain" aria-hidden="true"></div>
-<div class="lined" style="position: relative; flex: 1.2 1 480px; min-width: 0; box-sizing: border-box; padding: 46px clamp(20px, 3vw, 36px) 24px; transform: rotate(-1deg); box-shadow: 0 12px 30px rgba(14,14,14,0.16);">
-<span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -16px; width: 120px; height: 34px; margin-left: -60px; transform: rotate(-3deg);"></span>
-<p class="mono" style="margin: 0; line-height: 47px;">05B — Merch</p>
-<h2 style="margin: 0; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(40px, 4vw, 56px); line-height: 47px; color: #8A8478;">[merch / stickers]</h2>
-<ol style="margin: 0; padding: 0 0 0 28px; font-family: 'Caveat', cursive; font-weight: 500; font-size: clamp(23px, 2vw, 28px); line-height: 47px;"><li><span class="ph">[item 1]</span></li><li><span class="ph">[item 2]</span></li><li><span class="ph">[item 3]</span></li></ol>
-</div>
-<figure class="print" style="flex: 0 1 380px; min-width: 0; margin-top: clamp(0px, 3vw, 48px); transform: rotate(2.5deg);">
-<span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; z-index: 1;"></span>
-<span class="empty" style="width: 100%; aspect-ratio: 4 / 5; box-sizing: border-box; font-size: 28px;">[merch photo]</span>
-<figcaption>Merch</figcaption>
-</figure>
+<p class="mono vi-lab" style="position: relative;"><span>08 — Closing</span></p>
+<p style="position: relative; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(30px, 3vw, 44px); line-height: 1.1; color: #8A8478;">[what happened next — 1 line, only if it’s real]</p>
+
 </section>
 
-<!-- SHEET 05C IN USE -->
-<section aria-label="In use" style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
-<div class="grain" aria-hidden="true"></div>
-<p class="mono" style="position: relative; margin: 0 0 40px; padding: 8px 0; border-top: 2px solid #0E0E0E; border-bottom: 1px solid #0E0E0E; display: flex; justify-content: space-between;"><span>05C — In use</span><span>Web · social</span></p>
-<div style="position: relative; display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 44px);">
-<figure class="print" style="flex: 0 1 280px; min-width: 0; transform: rotate(-3deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
-<span class="empty" style="width: 100%; aspect-ratio: 3 / 4; box-sizing: border-box;">[website]</span>
-<figcaption>Web</figcaption></figure>
-<figure class="print" style="flex: 0 1 280px; min-width: 0; transform: rotate(2.5deg); margin-top: clamp(0px, 4vw, 64px);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
-<span class="empty" style="width: 100%; aspect-ratio: 3 / 4; box-sizing: border-box;">[instagram]</span>
-<figcaption>Social</figcaption></figure>
-<figure class="print" style="flex: 0 1 280px; min-width: 0; transform: rotate(-1.5deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span>
-<span class="empty" style="width: 100%; aspect-ratio: 3 / 4; box-sizing: border-box;">[other]</span>
-<figcaption>[caption]</figcaption></figure>
-</div>
-</section>
-
-<!-- CLOSING -->
-<section aria-label="Closing" style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
-<div class="grain" aria-hidden="true"></div>
-<p style="position: relative; margin: 0; padding-top: 14px; border-top: 2px solid #0E0E0E; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(30px, 3vw, 44px); line-height: 1.1; color: #8A8478;">[closing — 1 line, only if it's real; delete if not]</p>
-</section>
-
-<a class="next" href="identity-abril-fox-studio.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
+<a class="next" href="product-kalihu.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
 <span class="t1" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 clamp(24px, 5vw, 72px);">
-<span class="mono">Next — Visual identity 04</span>
-<span class="next-t" style="font-weight: 900; font-size: clamp(48px, 7vw, 108px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Abril Fox Studio →</span>
+<span class="mono">Next — Folder C</span>
+<span class="next-t" style="font-weight: 900; font-size: clamp(48px, 7vw, 108px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Product design →</span>
 </span>
 </a>
 

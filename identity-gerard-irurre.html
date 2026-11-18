@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gerard.irurre — Visual identity — Gerard Irurre</title>
+<meta name="description" content="Gerard Irurre — Brand &amp; Creative Designer, Barcelona. Brand identity, ads &amp; creatives, and content.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800;900&amp;family=Caveat:wght@500;700&amp;family=Space+Mono:wght@400;700&amp;family=EB+Garamond:ital,wght@0,400;1,400&amp;family=Courier+Prime:wght@400;700&amp;family=Rock+Salt&amp;display=swap">
+<style>
+body{margin:0;background:#EEEBE4}
+a{color:inherit}a:hover{color:inherit}
+.grain{position:absolute;inset:0;pointer-events:none;background-image:url(assets/e985e5adb271.png);background-repeat:repeat;opacity:.55;mix-blend-mode:multiply}
+.t1{background:url(assets/0f13f55e5321.png) center/100% 100% no-repeat}
+.t2{background:url(assets/c73f49ea2a15.png) center/100% 100% no-repeat}
+.tape1{background:url(assets/5d264df71453.png) center/100% 100% no-repeat}
+.tape2{background:url(assets/e5c109c687ad.png) center/100% 100% no-repeat}
+.nav a{text-decoration:none;padding:12px 0}
+.nav a:hover,.nav a:focus,.nav a.on{text-decoration:underline;text-underline-offset:4px}
+.mono{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase}
+.hand{font-family:'Caveat',cursive;font-weight:700;color:#C8321E}
+.ph{font-family:'Caveat',cursive;font-weight:700;color:#8A8478}
+.next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
+.vi-wrap{position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(16px,4vw,56px) clamp(56px,7vw,104px)}
+.vi-lab{position:relative;margin:0 0 22px;padding:8px 0;border-top:2px solid #0E0E0E;border-bottom:1px solid #0E0E0E;display:flex;justify-content:space-between;gap:16px}
+.vi-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid #0E0E0E;border-bottom:2px solid #0E0E0E}
+.vi-meta div{padding:12px 14px 14px 0}
+.vi-meta dt{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;color:#6A645A}
+.vi-meta dd{margin:6px 0 0;font-weight:700;font-size:15px;text-transform:uppercase;line-height:1.25}
+.vi-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:start}
+.vi-lead{margin:0;font-weight:600;font-size:clamp(20px,1.9vw,27px);line-height:1.35}
+.vi-sheet{position:relative;box-sizing:border-box;aspect-ratio:16/9;background:#FBFAF6;padding:clamp(18px,2.4vw,36px);box-shadow:0 12px 30px rgba(14,14,14,.16);display:flex;flex-direction:column;overflow:hidden}
+.vi-sheet .sh{margin:0 0 clamp(12px,1.6vw,22px);display:flex;justify-content:space-between}
+.vi-body{flex:1;min-height:0}
+.lg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:clamp(10px,1.4vw,20px);height:100%}
+.lg figure{margin:0;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid rgba(14,14,14,.25)}
+.lg figure img{max-width:84%;max-height:78%;object-fit:contain;display:block}
+.lg figure img.fill{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover}
+.lg figcaption{position:absolute;left:10px;bottom:8px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
+.lg .ph4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;width:92%}
+.lg .ph4 img{max-width:100%;max-height:none;width:100%;aspect-ratio:1/1;object-fit:cover}
+.cl{display:grid;gap:clamp(10px,1.4vw,20px);height:100%}
+.cl div{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(10px,1.2vw,16px);border:1px solid rgba(14,14,14,.2)}
+.cl b{font-weight:900;font-size:clamp(15px,1.4vw,20px);text-transform:uppercase;letter-spacing:-.01em}
+.cl span{font-family:'Space Mono',monospace;font-size:11px;margin-top:4px}
+.cl i{font-style:normal;font-family:'Caveat',cursive;font-size:clamp(17px,1.5vw,21px);margin-top:4px;line-height:1.05}
+.ty{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(16px,2.4vw,40px);height:100%}
+.ty .faces{display:flex;flex-direction:column;gap:clamp(10px,1.4vw,18px)}
+.ty .face{border-top:2px solid #0E0E0E;padding-top:10px}
+.ty .face p{margin:0}
+.ty .hier{border:1px solid rgba(14,14,14,.25);background:#FFFFFF;padding:clamp(14px,2vw,28px);display:flex;flex-direction:column;justify-content:center;gap:10px;overflow:hidden}
+.ty .tag{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;color:#6A645A}
+.ap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(36px,4vw,64px) clamp(20px,3vw,44px);align-items:start}
+.ap figure{position:relative;margin:0;background:#FFFFFF;padding:10px 10px 34px;box-shadow:0 10px 26px rgba(14,14,14,.18)}
+.ap figure img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover}
+.ty .face img{max-width:100%}
+.ap figure .empty{display:flex;align-items:center;justify-content:center;width:100%;aspect-ratio:4/5;background:#F4F1EA;border:1px dashed rgba(14,14,14,.35);font-family:'Caveat',cursive;font-weight:700;font-size:26px;color:#8A8478;text-align:center;box-sizing:border-box}
+.ap figcaption{position:absolute;left:12px;bottom:10px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
+.vi-links{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:18px}
+.vi-links a{font-weight:900;font-size:clamp(20px,2vw,28px);text-transform:uppercase;letter-spacing:-.02em;text-decoration:none;border-bottom:3px solid #0E0E0E}
+.vi-links a:hover{color:#C8321E;border-color:#C8321E}
+@media (max-width:900px){.vi-meta{grid-template-columns:repeat(2,minmax(0,1fr))}.vi-two{grid-template-columns:1fr}.vi-sheet{aspect-ratio:auto}.lg{grid-template-rows:none}.lg figure{aspect-ratio:4/3}.cl{grid-template-columns:repeat(2,minmax(0,1fr))!important}.cl div{aspect-ratio:1/1}.ty{grid-template-columns:1fr}.ap{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
+</head>
+<body>
+<template id="dc-template">
+<div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
+
+<header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
+<a href="brand.html" style="text-decoration: none; padding: 12px 0;">← Poster 01 Brand &#160;▸ B. Visual identity &#160;▸ 02</a>
+<nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
+<a class="on" href="brand.html">Brand</a><a href="ads-and-creatives.html">Ads &amp; Creatives</a><a href="content.html">Content</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
+</nav>
+</header>
+
+<!-- 01 HEADER -->
+<section aria-label="gerard.irurre — visual identity" style="position: relative; height: clamp(560px, 56vw, 840px); overflow: hidden; background: #191816;">
+<img src="assets/40406aeabd5f.jpg" alt="G. IRURRE, hand-lettered logo in white on warm black" style="position: absolute; left: 50%; top: 27%; transform: translate(-50%, -50%); width: min(62%, 820px); max-height: 40%; object-fit: contain;">
+<div class="t2" style="position: absolute; left: -2%; right: -2%; top: 52%; height: clamp(220px, 24vw, 350px); display: flex; flex-direction: column; justify-content: center; padding: 0 clamp(24px, 5vw, 72px);">
+<h1 style="margin: 0; font-weight: 900; font-size: clamp(64px, 10vw, 160px); line-height: 0.8; letter-spacing: -0.05em; text-transform: none;">gerard.irurre</h1>
+<p class="mono" style="margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px;"><span>Visual identity</span><span>Personal brand · designer</span><span>2026</span></p>
+</div>
+</section>
+<section class="vi-wrap" style="padding-top: clamp(40px, 5vw, 72px); padding-bottom: clamp(40px, 5vw, 64px);">
+<div class="grain" aria-hidden="true"></div>
+<dl class="vi-meta" style="position: relative; margin: 0;">
+<div><dt>Client</dt><dd>Personal brand</dd></div><div><dt>Year</dt><dd>2026</dd></div><div><dt>Role</dt><dd>Graphic designer</dd></div><div><dt>Tags</dt><dd>Logo · colour · type · Instagram</dd></div>
+</dl>
+</section>
+
+<!-- 02 BRIEF + 03 CONCEPT -->
+<section class="vi-wrap">
+<div class="grain" aria-hidden="true"></div>
+<div class="vi-two" style="position: relative;">
+<div><p class="mono vi-lab"><span>02 — Brief</span></p><p class="vi-lead">My own identity — the system behind @gerard.irurre: surf, film and trips, and my work as a designer.</p></div>
+<div><p class="mono vi-lab"><span>03 — Concept</span></p><p class="vi-lead">My own photos, my own hand, the date of the day. If a post has none of the three, it isn’t mine.</p></div>
+</div>
+</section>
+
+<!-- 04 LOGO -->
+<section class="vi-wrap">
+<div class="grain" aria-hidden="true"></div>
+<p class="mono vi-lab"><span>04 — Logo</span><span>Primary · short / symbol · positive &amp; negative</span></p>
+<article class="vi-sheet" style="transform: rotate(-0.5deg);">
+<span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -6px; width: 120px; height: 30px; margin-left: -60px; z-index: 2;"></span>
+<p class="mono sh"><span>Sheet 04</span><span>gerard.irurre</span></p>
+<div class="vi-body"><div class="lg"><figure style="background: #FFFFFF;"><img src="assets/5183403c75e2.jpg" alt="Primary logo, ink on white" class="fill"><figcaption style="color: #0E0E0E;">Primary · positive</figcaption></figure><figure style="background: #191816;"><img src="assets/20492a732643.jpg" alt="Primary logo in negative on ink" class="fill"><figcaption style="color: #FFFFFF;">Primary · negative</figcaption></figure><figure style="background: #FFFFFF;"><div class="ph4"><img src="assets/19da3577226a.jpg" alt="Mark option"><img src="assets/ea8991e33f8d.jpg" alt="Mark option"><img src="assets/89b9c64b81ef.jpg" alt="Mark option"><img src="assets/7f6140358451.jpg" alt="Mark option"></div><figcaption style="color: #0E0E0E;">Symbol · four options</figcaption></figure><figure style="background: #191816;"><span class="ph" style="font-size: clamp(20px, 2vw, 28px); text-align: center;"><span style="color:#8A8478;">[chosen symbol — negative]</span></span><figcaption style="color: #FFFFFF;">Symbol · negative</figcaption></figure></div></div>
+</article>
+<p class="hand" style="position: relative; margin: 18px 0 0; font-size: 26px; transform: rotate(-1deg);">[pick the symbol: A hand · B classic · C stamp · D bold]</p>
+</section>
+
+<!-- 05 COLOUR -->
+<section class="vi-wrap">
+<div class="grain" aria-hidden="true"></div>
+<p class="mono vi-lab"><span>05 — Colour</span><span>4 colours · HEX</span></p>
+<article class="vi-sheet" style="transform: rotate(0.4deg);">
+<span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -6px; width: 120px; height: 30px; margin-left: -60px; z-index: 2;"></span>
+<p class="mono sh"><span>Sheet 05</span><span>gerard.irurre</span></p>
+<div class="vi-body"><div class="cl" style="grid-template-columns: repeat(4, minmax(0, 1fr));"><div style="background: #1A1816; color: #FFFFFF;"><b>Ink</b><span>#1A1816</span><i>text, end cards</i></div><div style="background: #EEEBE4; color: #0E0E0E;"><b>Paper</b><span>#EEEBE4</span><i>the background</i></div><div style="background: #FFFFFF; color: #0E0E0E;"><b>White</b><span>#FFFFFF</span><i>borders, logo on photos</i></div><div style="background: #B5651D; color: #FFFFFF;"><b>Whiskey</b><span>#B5651D</span><i>dates, one detail</i></div></div></div>
+</article>
+<p class="hand" style="position: relative; margin: 18px 0 0; font-size: 26px; transform: rotate(-1deg);">whiskey is never a big background</p>
+</section>
+
+<!-- 06 TYPOGRAPHY -->
+<section class="vi-wrap">
+<div class="grain" aria-hidden="true"></div>
+<p class="mono vi-lab"><span>06 — Typography</span><span>Primary + secondary · hierarchy</span></p>
+<article class="vi-sheet" style="transform: rotate(-0.4deg);">
+<span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -6px; width: 120px; height: 30px; margin-left: -60px; z-index: 2;"></span>
+<p class="mono sh"><span>Sheet 06</span><span>gerard.irurre</span></p>
+<div class="vi-body"><div class="ty"><div class="faces"><div class="face"><p class="mono" style="display: flex; justify-content: space-between;"><span>Primary</span><span>Archivo</span></p><div style="margin-top: 8px;"><p style="font-weight: 900; font-size: clamp(26px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.02em;">Aa Bb Cc 0123</p></div><p style="margin-top: 6px; font-weight: 600; font-size: 14px; line-height: 1.35;">Titles, project names. 900 big, 500 body.</p></div><div class="face"><p class="mono" style="display: flex; justify-content: space-between;"><span>Secondary</span><span>EB Garamond</span></p><div style="margin-top: 8px;"><p style="font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(26px, 2.6vw, 38px); line-height: 1;">Aa Bb Cc 0123</p></div><p style="margin-top: 6px; font-weight: 600; font-size: 14px; line-height: 1.35;">Mostly italic — captions, places, quotes.</p></div></div><div class="hier"><p class="tag" style="margin: 0; font-family: 'Courier Prime', monospace; font-weight: 700; color: #B5651D; font-size: 13px;">DAY 5 OF 7 · ’26 10 23</p><p style="margin: 0; font-weight: 900; font-size: clamp(30px, 3.2vw, 48px); line-height: 0.95; letter-spacing: -0.03em;">New waves</p><p style="margin: 0; font-family: 'EB Garamond', serif; font-style: italic; font-size: clamp(18px, 1.8vw, 26px); line-height: 1.15;">Gerupuk, Lombok — day five.</p><p style="margin: 0; font-weight: 500; font-size: clamp(13px, 1.1vw, 15px); line-height: 1.45; max-width: 46ch;">Out at six, back for breakfast. One trip, seven days, seven videos.</p></div></div></div>
+</article>
+<p class="hand" style="position: relative; margin: 18px 0 0; font-size: 26px; transform: rotate(-1deg);">+ Courier Prime for dates · Rock Salt for the hand</p>
+</section>
+
+<!-- 07 APPLICATIONS -->
+<section class="vi-wrap" style="padding-bottom: clamp(72px, 9vw, 130px);">
+<div class="grain" aria-hidden="true"></div>
+<p class="mono vi-lab" style="margin-bottom: 48px;"><span>07 — Applications</span><span>Instagram · posts · reels</span></p>
+<div class="ap" style="position: relative;"><figure style="transform: rotate(-2.5deg); "><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><img src="assets/3a8bbe916f0f.jpg" alt="Headline post: SURFER over a surf photo, date stamp" style="object-fit: cover; background: #FFFFFF;"><figcaption>Headline post</figcaption></figure><figure style="transform: rotate(2deg); margin-top: clamp(0px, 4vw, 56px);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><img src="assets/3eee9855ce05.jpg" alt="Reel cover: Episode 5 of 7, NEW WAVES" style="object-fit: cover; background: #FFFFFF;"><figcaption>Reel cover</figcaption></figure><figure style="transform: rotate(-1deg); "><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><img src="assets/65e602ff613b.jpg" alt="Reel end card: Day 5/7 done" style="object-fit: cover; background: #FFFFFF;"><figcaption>Reel end card</figcaption></figure><figure style="transform: rotate(1.5deg); "><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><img src="assets/ea08e06c3e65.jpg" alt="Logo in white over a film photo, with a date stamp" style="object-fit: contain; background: #191816; padding: 8%; box-sizing: border-box;"><figcaption>Logo on photos</figcaption></figure><figure style="transform: rotate(-2deg); margin-top: clamp(0px, 4vw, 56px);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><img src="assets/cc40f8783775.jpg" alt="Instagram highlight covers" style="object-fit: contain; background: #EEEBE4; padding: 8%; box-sizing: border-box;"><figcaption>Highlights</figcaption></figure><figure style="transform: rotate(2.5deg); "><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><img src="assets/521e5b2bc2e4.jpg" alt="Text post: Stay tuned., episode 7 of 7, date stamp" style="object-fit: cover; background: #FFFFFF;"><figcaption>Text post</figcaption></figure></div>
+</section>
+
+<!-- 08 CLOSING -->
+<section aria-label="Closing" class="vi-wrap">
+<div class="grain" aria-hidden="true"></div>
+<p class="mono vi-lab" style="position: relative;"><span>08 — Closing</span></p>
+<p style="position: relative; margin: 0; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(30px, 3vw, 44px); line-height: 1.1; color: #8A8478;">[what happened next — 1 line, only if it’s real]</p>
+
+</section>
+
+<a class="next" href="identity-dusty-fin.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
+<span class="t1" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 clamp(24px, 5vw, 72px);">
+<span class="mono">Next — Visual identity 03</span>
+<span class="next-t" style="font-weight: 900; font-size: clamp(48px, 7vw, 108px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Dusty Fin →</span>
+</span>
+</a>
+
+<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<a href="brand.html" style="text-decoration: none; padding: 12px 0;">← All visual identity</a>
+<a href="mailto:girurre5@gmail.com" style="text-decoration: none; padding: 12px 0;">girurre5@gmail.com</a>
+<span style="padding: 12px 0;">Brand &amp; Creative Designer — Barcelona</span>
+</footer>
+</div>
+</template>
+<div id="dc-root"></div>
+<script src="dc.js"></script>
+<script>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+window.__DCComponent = Component;
+</script>
+</body>
+</html>
