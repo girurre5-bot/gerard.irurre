@@ -15,9 +15,9 @@ a{color:inherit}a:hover{color:inherit}
 .tape2{background:url(assets/e5c109c687ad.png) center/100% 100% no-repeat}
 .nav a{text-decoration:none;padding:12px 0}
 .nav a:hover,.nav a:focus,.nav a.on{text-decoration:underline;text-underline-offset:4px}
-.folders{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(24px,2.6vw,40px)}
-.folders > .folder{flex:0 0 calc((100% - 2 * clamp(24px,2.6vw,40px)) / 3)}
-@media (max-width:1100px){.folders > .folder{flex-basis:calc((100% - clamp(24px,2.6vw,40px)) / 2)}}
+.folders{display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(24px,2.6vw,40px) clamp(32px,4vw,64px);max-width:1080px;margin:0 auto}
+.folders > .folder{flex:0 0 calc((100% - clamp(32px,4vw,64px)) / 2)}
+.folders > .folder:nth-child(4n+2),.folders > .folder:nth-child(4n+3){transform:translateY(clamp(0px,2vw,28px))}
 .folder{position:relative;display:block;width:100%;aspect-ratio:4/3;padding:0;border:0;background:transparent;cursor:pointer;container-type:inline-size;font:inherit;color:#0E0E0E;text-align:left}
 .folder .peek{transition:transform .4s ease}
 .folder:hover .peek,.folder:focus .peek{transform:translateY(-2.4cqw)}
@@ -37,7 +37,7 @@ a{color:inherit}a:hover{color:inherit}
 <div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
 
 <header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
-<a href="index.html" style="text-decoration: none; padding: 12px 0;">Issue 01 &#160;▸ 01A &#160; Gerard Irurre</a>
+<a href="index.html" style="text-decoration: none; padding: 12px 0;">Issue 01 &nbsp;▸ 01A &nbsp; Gerard Irurre</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
 <a class="on" href="brand.html">Brand</a><a href="ads-and-creatives.html">Ads &amp; Creatives</a><a href="content.html">Content</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
 </nav>
@@ -46,11 +46,11 @@ a{color:inherit}a:hover{color:inherit}
 <section aria-label="Brand &amp; Identity" style="position: relative; height: clamp(520px, 52vw, 780px); overflow: hidden; background: #CFCFCF;">
 <img src="assets/78b1a1ebc130.jpg" alt="A surfer riding a wave below a rocky headland, black and white film" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%;">
 <div style="position: absolute; left: clamp(16px, 4vw, 56px); top: clamp(24px, 4vw, 56px); right: clamp(16px, 4vw, 56px); color: #FFFFFF;">
-<p style="margin: 0 0 12px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 01 — 4 folders — 12 pieces</p>
+
 <h1 style="margin: 0; font-weight: 900; font-size: clamp(72px, 11vw, 168px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Brand &amp;<br>Identity</h1>
-<p style="margin: 18px 0 0; transform: rotate(-3deg); transform-origin: left; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.4vw, 34px); color: #FFFFFF;">by discipline — open a folder ↓</p>
+
 </div>
-<span style="position: absolute; right: clamp(16px, 4vw, 56px); bottom: clamp(16px, 3vw, 40px); color: #FFFFFF; font-weight: 900; font-size: clamp(64px, 9vw, 140px); line-height: 0.8;">01</span>
+
 </section>
 
 <section aria-label="Folders" style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px) clamp(32px, 4vw, 56px);">
@@ -79,7 +79,7 @@ a{color:inherit}a:hover{color:inherit}
 <span style="display: block; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Open — folder {{cur.letter}} — {{cur.count}}</span>
 <h2 style="margin: 6px 0 0; font-weight: 900; font-size: clamp(48px, 6vw, 92px); line-height: 0.82; letter-spacing: -0.045em; text-transform: uppercase;">{{cur.title}}</h2>
 </div>
-<span style="transform: rotate(-3deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(24px, 2.2vw, 32px); color: #C8321E;">{{cur.note}}</span>
+
 </div>
 <div class="clips" style="position: relative;">
 <sc-for list="{{items}}" as="c" hint-placeholder-count="4">
@@ -92,7 +92,6 @@ a{color:inherit}a:hover{color:inherit}
 </span>
 <span style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 16px;">
 <span style="font-weight: 900; font-size: clamp(24px, 2.2vw, 32px); line-height: 0.92; letter-spacing: -0.03em; text-transform: uppercase;">{{c.title}}</span>
-<span style="flex: 0 0 auto; transform: rotate(-3deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 24px; color: #C8321E;">{{c.client}}</span>
 </span>
 <span style="display: block; margin-top: 10px; border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
 <span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Client</span><span style="text-align: right;">{{c.clientName}}</span></span>
@@ -128,24 +127,24 @@ class Component extends DCLogic {
     const B = 'assets/';
     const ch = [
       { letter: 'A', tab: 'A — Branding', title: 'Branding', note: 'name, idea, values, voice', peek: [], items: [
-        { title: 'KALIHU — Brand strategy', client: 'surf apparel', clientName: 'KALIHU', year: '2020 — now', tags: 'Naming · platform · tone of voice', img: 'assets/6497032e0c04.jpg', alt: 'Surfers at dusk on the Maresme coast', href: 'branding-kalihu.html', gray: true },
-        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio', year: '2026', role: 'Brand designer', tags: 'Research · positioning · naming', img: 'assets/7013b9fb158f.jpg', alt: 'Abril Fox Studio brand manual cover', href: 'branding-abril-fox-studio.html' },
-        { title: 'Jove Camper', client: 'campervan rental', clientName: 'Jove Camper (own project)', year: '2025', role: 'Brand & marketing', tags: 'Business plan · positioning · logo exploration', img: 'assets/1ef4da4fc788.jpg', alt: 'Jove Camper provisional logo: two vans in a cream circle on black', concept: true, href: 'branding-jove-camper.html' }
+        { title: 'KALIHU', client: 'surf apparel', clientName: 'KALIHU', year: '2020 — now', role: 'Brand designer', tags: 'Positioning · naming · tone of voice', img: 'assets/6497032e0c04.jpg', alt: 'Surfers at dusk on the Maresme coast', href: 'branding-kalihu.html', gray: true },
+        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio', year: '2026', role: 'Brand designer', tags: 'Positioning · naming · research', img: 'assets/7013b9fb158f.jpg', alt: 'Abril Fox Studio brand manual cover', href: 'branding-abril-fox-studio.html' },
+        { title: 'Jove Camper', client: 'campervan rental', clientName: 'Jove Camper (own project)', year: '2025', role: 'Brand designer', tags: 'Positioning · research · business plan', img: 'assets/1ef4da4fc788.jpg', alt: 'Jove Camper provisional logo: two vans in a cream circle on black', concept: true, href: 'branding-jove-camper.html' }
       ]},
       { letter: 'B', tab: 'B — Identity', title: 'Visual identity', note: 'logo, colour, type, applications', peek: [], items: [
-        { title: 'KALIHU — Visual identity', client: 'surf apparel', clientName: 'KALIHU', year: '2020 — now', tags: 'Logo · type · packaging · showroom', img: 'assets/5bd98d3e7af3.jpg', alt: 'KALIHU logo', href: 'identity-kalihu.html' },
-        { title: 'gerard.irurre', client: 'personal brand', clientName: 'Personal brand', year: '2026', role: 'Brand designer', tags: 'Logo · colour · type · Instagram', img: 'assets/20492a732643.jpg', alt: 'G. IRURRE hand-lettered logo on warm black', href: 'identity-gerard-irurre.html' },
-        { title: 'Dusty Fin', client: 'surf travel', clientName: 'Dusty Fin', year: '2025', tags: 'Logo · colour · type · scalability', img: 'assets/b7aec6a939bf.jpg', alt: 'Dusty Fin logo', href: 'identity-dusty-fin.html', fit: 'contain', bg: '#F1EEDF' }
+        { title: 'KALIHU', client: 'surf apparel', clientName: 'KALIHU', year: '2020 — now', tags: 'Logo · type · colour · showroom', img: 'assets/5bd98d3e7af3.jpg', alt: 'KALIHU logo', href: 'identity-kalihu.html' },
+        { title: 'gerard.irurre', client: 'personal brand', clientName: 'Personal brand', year: '2026', tags: 'Logo · type · colour · Instagram', img: 'assets/20492a732643.jpg', alt: 'G. IRURRE hand-lettered logo on warm black', href: 'identity-gerard-irurre.html' },
+        { title: 'Dusty Fin', client: 'surf travel', clientName: 'Dusty Fin', year: '2025', tags: 'Logo · type · colour · scalability', img: 'assets/b7aec6a939bf.jpg', alt: 'Dusty Fin logo', href: 'identity-dusty-fin.html', fit: 'contain', bg: '#F1EEDF' }
       ]},
       { letter: 'C', tab: 'C — Product', title: 'Product design', note: 'materials, samples, final product', peek: [], items: [
         { title: 'KALIHU', client: 'surf apparel', clientName: 'KALIHU', year: '2020 — now', tags: 'Tees · hoodies · caps · socks', img: 'assets/5eb4765a4c86.jpg', alt: 'KALIHU t-shirt on the beach', href: 'product-kalihu.html' },
-        { title: 'Nordest', client: 'running club', clientName: 'Private club — my friends', year: '2026', tags: 'Tee · shorts · print', img: 'assets/0e6ec7ba52fe.jpg', alt: 'Nordest tee in tan with the black horse print', href: 'product-nordest.html' },
-        { title: '[Project]', client: '[sector]', clientName: '[brand]', year: '[year]', tags: '[tags]', ph: '[project soon]', href: 'product-project-03.html' }
+        { title: 'Nordest', client: 'running club', clientName: 'Private client', year: '2026', tags: 'Tee · shorts · print', img: 'assets/0e6ec7ba52fe.jpg', alt: 'Nordest tee in tan with the black horse print', href: 'product-nordest.html' },
+        { title: 'Kangarow', client: 'digital product', clientName: 'Kangarow', year: '[year]', tags: '[tags]', ph: '[Kangarow — screens soon]', href: 'product-project-03.html' }
       ]},
       { letter: 'D', tab: 'D — Web', title: 'Web design', note: 'structure, design, live site', peek: [], items: [
-        { title: 'Jove Llar', client: 'home renovation', clientName: 'Jove Llar', year: '[year]', tags: 'Structure · design · build', img: 'assets/77d8c963ac8e.jpg', alt: 'Jove Llar website', href: 'web-jove-llar.html' },
-        { title: 'KALIHU store', client: 'e-commerce', clientName: 'KALIHU', year: '2020 — now', tags: 'Shopify · SEO · collections', img: 'assets/219d75dc5483.jpg', alt: 'KALIHU store shop grid on mobile', href: 'web-kalihu-store.html' },
-        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio', year: '[year]', tags: '[tags]', ph: '[screenshot soon]', href: 'web-abril-fox-studio.html' }
+        { title: 'Jove Llar', client: 'home renovation', clientName: 'Jove Llar', year: '2025', tags: 'Structure · design · build', img: 'assets/77d8c963ac8e.jpg', alt: 'Jove Llar website', href: 'web-jove-llar.html' },
+        { title: 'KALIHU store', client: 'e-commerce', clientName: 'KALIHU', year: '2020 — now', tags: 'Structure · design · Shopify', img: 'assets/219d75dc5483.jpg', alt: 'KALIHU store shop grid on mobile', href: 'web-kalihu-store.html' },
+        { title: 'Abril Fox Studio', client: 'wedding studio', clientName: 'Abril Fox Studio', year: '2026', tags: 'Structure · design · portfolio', ph: '[screenshot soon]', href: 'web-abril-fox-studio.html' }
       ]}
     ];
     const open = this.state.open;
