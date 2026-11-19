@@ -10,73 +10,97 @@
 body{margin:0;background:#EEEBE4}
 a{color:inherit}a:hover{color:inherit}
 .grain{position:absolute;inset:0;pointer-events:none;background-image:url(assets/e985e5adb271.png);background-repeat:repeat;opacity:.55;mix-blend-mode:multiply}
-.t1{background:url(assets/0f13f55e5321.png) center/100% 100% no-repeat}
-.t2{background:url(assets/c73f49ea2a15.png) center/100% 100% no-repeat}
-.tape1{background:url(assets/5d264df71453.png) center/100% 100% no-repeat}
-.tape2{background:url(assets/e5c109c687ad.png) center/100% 100% no-repeat}
 .nav a{text-decoration:none;padding:12px 0}
 .nav a:hover,.nav a:focus,.nav a.on{text-decoration:underline;text-underline-offset:4px}
-.clips{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:clamp(48px,5vw,72px) clamp(32px,5vw,88px);max-width:1100px;margin:0 auto}
-.clip{position:relative;display:block;text-decoration:none;color:#0E0E0E;transition:transform .35s ease}
-.clip:hover,.clip:focus{transform:translateY(-6px) rotate(0deg) !important}
-.next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
+.mono{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase}
+.wrap{position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(16px,4vw,56px)}
+.ph{font-family:'Caveat',cursive;font-weight:700;color:#8A8478}
+.big{font-weight:900;letter-spacing:-0.05em;line-height:.8}
+/* index */
+.ledger{border-top:2px solid #0E0E0E}
+.lh,.lr{display:grid;grid-template-columns:110px minmax(0,1.6fr) minmax(0,1fr) minmax(0,.9fr) minmax(150px,.9fr);gap:0 clamp(16px,2vw,32px);align-items:center}
+.lh{padding:8px 0;border-bottom:1px solid #0E0E0E}
+.lr{padding:18px 0;border-bottom:2px solid #0E0E0E;text-decoration:none;color:#0E0E0E;transition:background .2s ease}
+.lr:hover,.lr:focus{background:#E4E0D7}
+.lr:hover .lt,.lr:focus .lt{color:#C8321E}
+.th{width:110px;aspect-ratio:4/5;object-fit:cover;display:block;background:#FBFAF6}
+.th.e{display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(14,14,14,.25);font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;color:#8A8478}
+.lt{font-weight:900;font-size:clamp(26px,2.8vw,44px);line-height:.9;letter-spacing:-0.035em;text-transform:uppercase}
+.ln{display:block;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:3px 7px;border:1px solid #0E0E0E;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
+.res{text-align:right;font-weight:900;font-size:clamp(48px,5.6vw,92px);line-height:.8;letter-spacing:-0.05em}
+.res.no{font-size:clamp(20px,2vw,28px);letter-spacing:-0.01em;color:#8A8478;text-transform:uppercase}
+.res small{display:block;margin-top:8px;font-family:'Space Mono',monospace;font-weight:400;font-size:10px;letter-spacing:0;text-transform:uppercase;color:#6A645A}
+/* inner */
+.top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px clamp(24px,4vw,64px);align-items:end;padding:clamp(40px,5vw,72px) 0 clamp(28px,3vw,40px);border-bottom:2px solid #0E0E0E}
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:2px solid #0E0E0E}
+.strip>div{padding:16px clamp(12px,2vw,28px) 22px 0}
+.strip>div+div{padding-left:clamp(12px,2vw,28px);border-left:1px solid #0E0E0E}
+.strip p{margin:8px 0 0;font-weight:600;font-size:17px;line-height:1.35}
+.strip b{font-weight:900;text-transform:uppercase;letter-spacing:-0.01em}
+.board{display:grid;grid-template-columns:170px minmax(0,1fr);border-bottom:2px solid #0E0E0E}
+.board>.lab{padding:16px 16px 16px 0;border-right:1px solid #0E0E0E}
+.board>.lab b{display:block;margin-top:6px;font-weight:900;font-size:24px;line-height:.95;letter-spacing:-0.02em;text-transform:uppercase}
+.cells{display:grid;gap:clamp(12px,1.6vw,24px);padding:clamp(16px,2vw,28px) 0 clamp(16px,2vw,28px) clamp(16px,2vw,28px)}
+.cells figure{margin:0;background:#FBFAF6;padding:8px 8px 28px;position:relative;box-shadow:0 1px 0 rgba(14,14,14,.12)}
+.cells img{display:block;width:100%;object-fit:cover}
+.cells figcaption{position:absolute;left:10px;bottom:7px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
+.empty{display:flex;align-items:center;justify-content:center;background:#F4F1EA;border:1px dashed rgba(14,14,14,.35);font-family:'Caveat',cursive;font-weight:700;font-size:24px;color:#8A8478}
+.pnext{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:clamp(48px,6vw,88px) 0 clamp(48px,6vw,88px);padding-top:10px;border-top:2px solid #0E0E0E;text-decoration:none}
+.pnext b{font-weight:900;font-size:clamp(36px,4.6vw,72px);line-height:.85;letter-spacing:-0.04em;text-transform:uppercase}
+.pnext:hover b,.pnext:focus b{color:#C8321E}
+@media (max-width:900px){.lh{display:none}.lr{grid-template-columns:80px 1fr;gap:10px 16px}.th{width:80px}.lr>.c3,.lr>.c4{grid-column:2}.res{grid-column:1 / -1;text-align:left}.top,.strip{grid-template-columns:1fr}.strip>div+div{border-left:0;border-top:1px solid #0E0E0E;padding-left:0}.board{grid-template-columns:1fr}.board>.lab{border-right:0;border-bottom:1px solid #0E0E0E}.cells{padding-left:0}}
 </style>
 <style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
 </head>
 <body>
 <template id="dc-template">
 <div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
-
 <header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
 <a href="index.html" style="text-decoration: none; padding: 12px 0;">Issue 01 &#160;▸ 02A &#160; Gerard Irurre</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
 <a href="brand.html">Brand</a><a class="on" href="ads-and-creatives.html">Ads &amp; Creatives</a><a href="content.html">Content</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
 </nav>
 </header>
-
-<section aria-label="Ads &amp; Creatives" style="position: relative; height: clamp(520px, 52vw, 780px); overflow: hidden; background: #2A2A2A;">
-<img src="assets/73ad3b685275.jpg" alt="The KALIHU × Maresme Waves pop-up at night, black and white photocopy" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
-<p style="position: absolute; left: clamp(16px, 4vw, 56px); top: clamp(20px, 3vw, 40px); margin: 0; color: #FFFFFF; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Poster 02 — 04 entries</p>
-<div class="t1" style="position: absolute; left: -2%; right: -2%; top: 26%; height: clamp(240px, 30vw, 440px); display: flex; flex-direction: column; justify-content: center; padding: 0 clamp(24px, 5vw, 72px);">
-<h1 style="margin: 0; font-weight: 900; font-size: clamp(64px, 11vw, 170px); line-height: 0.8; letter-spacing: -0.05em; text-transform: uppercase;">Ads &amp;<br>Creatives</h1>
-<p style="margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;"><span>An objective, an angle, the creatives</span><span>Paid social · product · collabs</span><span>1:1 · 4:5 · 9:16</span></p>
-</div>
-<p style="position: absolute; right: clamp(16px, 5vw, 72px); bottom: clamp(24px, 4vw, 56px); margin: 0; transform: rotate(-5deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(26px, 2.6vw, 40px); color: #FFFFFF;">+40% KALIHU sales ↘</p>
-</section>
-
-<main style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(64px, 8vw, 120px) clamp(16px, 4vw, 56px);">
+<section class="wrap" aria-label="Ads &amp; Creatives" style="padding-top: clamp(40px, 5vw, 72px); padding-bottom: clamp(28px, 3vw, 44px);">
 <div class="grain" aria-hidden="true"></div>
-<div class="clips" style="position: relative;">
-<sc-for list="{{clips}}" as="c" hint-placeholder-count="5">
-<a class="clip" href="{{c.href}}" style="{{c.box}}">
-<span class="{{c.tape}}" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 96px; height: 28px; margin-left: -48px; transform: rotate(-3deg); z-index: 1;"></span>
-<sc-if value="{{c.concept}}" hint-placeholder-val="{{false}}"><span style="position: absolute; right: 18px; top: 22px; z-index: 2; transform: rotate(7deg); padding: 6px 14px; border: 3px solid #C8321E; background: rgba(251,250,246,0.92); color: #C8321E; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase;">Concept</span></sc-if>
-<span style="display: block; background: #FFFFFF; padding: 10px 10px 12px; box-shadow: 0 8px 22px rgba(14,14,14,0.16);">
-<sc-if value="{{c.hasImg}}" hint-placeholder-val="{{true}}"><img src="{{c.img}}" alt="{{c.alt}}" style="display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover;"></sc-if>
-<sc-if value="{{c.noImg}}" hint-placeholder-val="{{false}}"><span style="display: flex; align-items: center; justify-content: center; width: 100%; aspect-ratio: 4 / 5; background: #F4F1EA; font-family: 'Caveat', cursive; font-weight: 700; font-size: 28px; color: #8A8478;">[ad creatives soon]</span></sc-if>
-</span>
-<span style="display: block; margin-top: 18px; font-weight: 900; font-size: clamp(28px, 2.6vw, 38px); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase;">{{c.title}}</span>
-<span style="display: block; margin-top: 10px; border-top: 2px solid #0E0E0E; border-bottom: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Client</span><span style="text-align: right;">{{c.client}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Year</span><span style="text-align: right;">{{c.year}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Role</span><span style="text-align: right;">{{c.role}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid #0E0E0E;"><span>Tags</span><span style="text-align: right;">{{c.tags}}</span></span>
-<span style="display: flex; justify-content: space-between; gap: 12px; padding: 6px 0;"><span>Result</span><span style="text-align: right;">{{c.result}}</span></span>
-</span>
-<span style="display: block; margin-top: 10px; transform: rotate(-2deg); font-family: 'Caveat', cursive; font-weight: 700; font-size: 26px; line-height: 1.05; color: #C8321E;">{{c.note}}</span>
-</a>
-</sc-for>
+<div style="position: relative; display: flex; justify-content: space-between; gap: 16px; padding: 6px 0; border-top: 2px solid #0E0E0E; border-bottom: 1px solid #0E0E0E;" class="mono"><span>▸ 02</span><span>Poster 02 — 04 campaigns</span></div>
+<div style="position: relative; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 40px; margin-top: clamp(24px, 3vw, 40px);">
+<h1 class="big" style="margin: 0; font-size: clamp(64px, 10vw, 156px); text-transform: uppercase;">Ads &amp;<br>Creatives</h1>
+<p class="mono" style="margin: 0 0 6px; max-width: 320px; line-height: 1.7;">An objective → an angle → the creatives → a result.<br>Real numbers only.</p>
 </div>
-</main>
-
-<a class="next" href="content.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
-<span class="t2" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 clamp(24px, 5vw, 72px);">
-<span style="font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">Next — Poster 03</span>
-<span class="next-t" style="font-weight: 900; font-size: clamp(56px, 8vw, 120px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">Content →</span>
-</span>
+</section>
+<section class="wrap" aria-label="Campaigns" style="padding-bottom: clamp(56px, 7vw, 104px);">
+<div class="ledger">
+<div class="lh mono"><span></span><span>Campaign</span><span>Client · year</span><span>Formats</span><span style="text-align: right;">Result</span></div>
+<a class="lr" href="kalihu-x-maresme-waves.html"><img class="th" src="assets/0881c818fc1b.jpg" alt="Guests at the pop-up" loading="lazy">
+<span><span class="mono ln">02.4</span><span class="lt">KALIHU × Maresme Waves</span><span style="display:block;margin-top:10px;font-weight:600;font-size:15px;line-height:1.35;color:#3A3630;max-width:460px;">Take a digital-only brand offline — and sell the capsule.</span></span>
+<span class="c3 mono" style="line-height:1.6;">KALIHU × Maresme Waves surf school<br>Nov 2025</span>
+<span class="c4"><span class="chips"><span class="chip">Posters</span><span class="chip">Pop-ups</span><span class="chip">Capsule</span></span></span>
+<span class="res">+40%<small>KALIHU sales</small></span>
 </a>
-
-<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<a class="lr" href="ads-lolo.html"><span class="th e">[ad]</span>
+<span><span class="mono ln">02.1</span><span class="lt">Lolo</span><span style="display:block;margin-top:10px;font-weight:600;font-size:15px;line-height:1.35;color:#3A3630;max-width:460px;">Two angles: emotional and humorous, testing caption variants.</span></span>
+<span class="c3 mono" style="line-height:1.6;">Lolo — ibérico ham, France<br>Summer 2026</span>
+<span class="c4"><span class="chips"><span class="chip">1:1</span><span class="chip">4:5</span><span class="chip">9:16</span></span></span>
+<span class="res">+15%<small>vs. [what]</small></span>
+</a>
+<a class="lr" href="ads-kalihu.html"><span class="th e">[ad]</span>
+<span><span class="mono ln">02.3</span><span class="lt">KALIHU</span><span style="display:block;margin-top:10px;font-weight:600;font-size:15px;line-height:1.35;color:#3A3630;max-width:460px;"><span class="ph">[One line: what the ads had to do.]</span></span></span>
+<span class="c3 mono" style="line-height:1.6;">KALIHU — surf apparel<br>[year]</span>
+<span class="c4"><span class="chips"><span class="chip">1:1</span><span class="chip">4:5</span><span class="chip">9:16</span></span></span>
+<span class="res no">[ ]<small>[result]</small></span>
+</a>
+<a class="lr" href="ads-nordest.html"><img class="th" src="assets/23f77dd40dfa.jpg" alt="Nordest concept creative" loading="lazy">
+<span><span class="mono ln">02.2</span><span class="lt">Nordest Running Club</span><span style="display:block;margin-top:10px;font-weight:600;font-size:15px;line-height:1.35;color:#3A3630;max-width:460px;">Concept ads and the club’s Instagram.</span></span>
+<span class="c3 mono" style="line-height:1.6;">Concept — self-initiated<br>2026</span>
+<span class="c4"><span class="chips"><span class="chip">4:5</span><span class="chip">9:16</span><span class="chip">Instagram</span></span></span>
+<span class="res no">Not run<small>concept</small></span>
+</a>
+</div>
+</section>
+<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; border-top: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
 <a href="brand.html" style="text-decoration: none; padding: 12px 0;">← Poster 01 Brand</a>
 <a href="mailto:girurre5@gmail.com" style="text-decoration: none; padding: 12px 0;">girurre5@gmail.com</a>
 <span style="padding: 12px 0;">Brand &amp; Creative Designer — Barcelona</span>
@@ -87,17 +111,7 @@ a{color:inherit}a:hover{color:inherit}
 <script src="dc.js"></script>
 <script>
 class Component extends DCLogic {
-  renderVals() {
-    const B = 'assets/';
-    const d = [
-      { title: 'Lolo', client: 'Lolo', year: '[year]', role: 'Ad creative · design', tags: 'Paid social · 1:1 · 4:5 · 9:16', result: '+15%', note: 'objective, angles, creatives →', href: 'ads-lolo.html', r: -2 },
-      { title: 'Nordest Running Club', client: 'Self-initiated', year: '[year]', role: 'Ad creative · copy', tags: 'Paid social · concept', result: 'Concept — not run', note: 'concept — not a real client', img: 'assets/23f77dd40dfa.jpg', alt: 'Runner in motion, Nordest concept', href: 'ads-nordest.html', concept: true, r: 2 },
-      { title: 'KALIHU', client: 'KALIHU', year: '[year]', role: 'Ad creative · design', tags: 'Paid social · 1:1 · 4:5 · 9:16', result: '[result]', note: 'paid social for my own brand →', href: 'ads-kalihu.html', r: -1 },
-      { title: 'KALIHU × Maresme Waves', client: 'KALIHU × Maresme Waves', year: 'Nov 2025', role: 'Strategy · product · events · print', tags: 'Capsule · pop-ups · posters', result: '+40% sales', note: 'capsule + 2 pop-ups →', img: 'assets/0881c818fc1b.jpg', alt: 'Guests at the pop-up', href: 'kalihu-x-maresme-waves.html', r: 3 }
-    ];
-    return { clips: d.map((x, i) => ({ ...x, concept: !!x.concept, tape: i % 2 ? 'tape2' : 'tape1', hasImg: !!x.img, noImg: !x.img, img: x.img || '', alt: x.alt || '',
-      box: 'transform: rotate(' + x.r + 'deg);' + (i % 2 === 1 ? ' margin-top: clamp(0px, 4vw, 64px);' : '') })) };
-  }
+  renderVals() { return {}; }
 }
 window.__DCComponent = Component;
 </script>

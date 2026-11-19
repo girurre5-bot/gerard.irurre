@@ -10,137 +10,82 @@
 body{margin:0;background:#EEEBE4}
 a{color:inherit}a:hover{color:inherit}
 .grain{position:absolute;inset:0;pointer-events:none;background-image:url(assets/e985e5adb271.png);background-repeat:repeat;opacity:.55;mix-blend-mode:multiply}
-.t1{background:url(assets/0f13f55e5321.png) center/100% 100% no-repeat}
-.t2{background:url(assets/c73f49ea2a15.png) center/100% 100% no-repeat}
-.tape1{background:url(assets/5d264df71453.png) center/100% 100% no-repeat}
-.tape2{background:url(assets/e5c109c687ad.png) center/100% 100% no-repeat}
 .nav a{text-decoration:none;padding:12px 0}
 .nav a:hover,.nav a:focus,.nav a.on{text-decoration:underline;text-underline-offset:4px}
-.lined{background-color:#FBFAF6;background-image:repeating-linear-gradient(to bottom,transparent 0 46px,rgba(14,14,14,.55) 46px 47px)}
-.sheet{position:relative;box-sizing:border-box;background:#FBFAF6;padding:clamp(24px,3vw,40px);box-shadow:0 12px 30px rgba(14,14,14,.16)}
 .mono{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase}
-.hand{font-family:'Caveat',cursive;font-weight:700;color:#C8321E}
+.wrap{position:relative;max-width:1440px;margin:0 auto;padding:0 clamp(16px,4vw,56px)}
 .ph{font-family:'Caveat',cursive;font-weight:700;color:#8A8478}
-.row{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #0E0E0E}
-.prow{display:grid;grid-template-columns:minmax(90px,140px) 1fr;gap:16px;padding:14px 0;border-bottom:1px solid #0E0E0E}
-.print{position:relative;display:block;margin:0;background:#FFFFFF;padding:10px 10px 30px;box-shadow:0 10px 26px rgba(14,14,14,.18)}
-.print figcaption{position:absolute;left:12px;bottom:8px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
-.empty{display:flex;align-items:center;justify-content:center;background:#F4F1EA;border:1px dashed rgba(14,14,14,.35);font-family:'Caveat',cursive;font-weight:700;font-size:26px;color:#8A8478;text-align:center}
-.stamp{display:inline-block;padding:6px 14px;border:3px solid #C8321E;background:rgba(251,250,246,.92);color:#C8321E;font-family:'Space Mono',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-6deg)}
-.fmt{display:grid;gap:clamp(28px,3vw,44px) clamp(20px,2.4vw,32px);align-items:start}
-.fmt.sq,.fmt.pt{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
-.fmt.st{grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}
-.fmtlabel{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:10px;border-top:2px solid #0E0E0E;margin:clamp(48px,6vw,80px) 0 clamp(28px,3vw,40px)}
-.cap2{position:absolute;left:12px;right:12px;bottom:8px;display:flex;justify-content:space-between;gap:8px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
-.next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
+.big{font-weight:900;letter-spacing:-0.05em;line-height:.8}
+/* index */
+.ledger{border-top:2px solid #0E0E0E}
+.lh,.lr{display:grid;grid-template-columns:110px minmax(0,1.6fr) minmax(0,1fr) minmax(0,.9fr) minmax(150px,.9fr);gap:0 clamp(16px,2vw,32px);align-items:center}
+.lh{padding:8px 0;border-bottom:1px solid #0E0E0E}
+.lr{padding:18px 0;border-bottom:2px solid #0E0E0E;text-decoration:none;color:#0E0E0E;transition:background .2s ease}
+.lr:hover,.lr:focus{background:#E4E0D7}
+.lr:hover .lt,.lr:focus .lt{color:#C8321E}
+.th{width:110px;aspect-ratio:4/5;object-fit:cover;display:block;background:#FBFAF6}
+.th.e{display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(14,14,14,.25);font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;color:#8A8478}
+.lt{font-weight:900;font-size:clamp(26px,2.8vw,44px);line-height:.9;letter-spacing:-0.035em;text-transform:uppercase}
+.ln{display:block;margin-bottom:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:3px 7px;border:1px solid #0E0E0E;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
+.res{text-align:right;font-weight:900;font-size:clamp(48px,5.6vw,92px);line-height:.8;letter-spacing:-0.05em}
+.res.no{font-size:clamp(20px,2vw,28px);letter-spacing:-0.01em;color:#8A8478;text-transform:uppercase}
+.res small{display:block;margin-top:8px;font-family:'Space Mono',monospace;font-weight:400;font-size:10px;letter-spacing:0;text-transform:uppercase;color:#6A645A}
+/* inner */
+.top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:24px clamp(24px,4vw,64px);align-items:end;padding:clamp(40px,5vw,72px) 0 clamp(28px,3vw,40px);border-bottom:2px solid #0E0E0E}
+.strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:2px solid #0E0E0E}
+.strip>div{padding:16px clamp(12px,2vw,28px) 22px 0}
+.strip>div+div{padding-left:clamp(12px,2vw,28px);border-left:1px solid #0E0E0E}
+.strip p{margin:8px 0 0;font-weight:600;font-size:17px;line-height:1.35}
+.strip b{font-weight:900;text-transform:uppercase;letter-spacing:-0.01em}
+.board{display:grid;grid-template-columns:170px minmax(0,1fr);border-bottom:2px solid #0E0E0E}
+.board>.lab{padding:16px 16px 16px 0;border-right:1px solid #0E0E0E}
+.board>.lab b{display:block;margin-top:6px;font-weight:900;font-size:24px;line-height:.95;letter-spacing:-0.02em;text-transform:uppercase}
+.cells{display:grid;gap:clamp(12px,1.6vw,24px);padding:clamp(16px,2vw,28px) 0 clamp(16px,2vw,28px) clamp(16px,2vw,28px)}
+.cells figure{margin:0;background:#FBFAF6;padding:8px 8px 28px;position:relative;box-shadow:0 1px 0 rgba(14,14,14,.12)}
+.cells img{display:block;width:100%;object-fit:cover}
+.cells figcaption{position:absolute;left:10px;bottom:7px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase}
+.empty{display:flex;align-items:center;justify-content:center;background:#F4F1EA;border:1px dashed rgba(14,14,14,.35);font-family:'Caveat',cursive;font-weight:700;font-size:24px;color:#8A8478}
+.pnext{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:clamp(48px,6vw,88px) 0 clamp(48px,6vw,88px);padding-top:10px;border-top:2px solid #0E0E0E;text-decoration:none}
+.pnext b{font-weight:900;font-size:clamp(36px,4.6vw,72px);line-height:.85;letter-spacing:-0.04em;text-transform:uppercase}
+.pnext:hover b,.pnext:focus b{color:#C8321E}
+@media (max-width:900px){.lh{display:none}.lr{grid-template-columns:80px 1fr;gap:10px 16px}.th{width:80px}.lr>.c3,.lr>.c4{grid-column:2}.res{grid-column:1 / -1;text-align:left}.top,.strip{grid-template-columns:1fr}.strip>div+div{border-left:0;border-top:1px solid #0E0E0E;padding-left:0}.board{grid-template-columns:1fr}.board>.lab{border-right:0;border-bottom:1px solid #0E0E0E}.cells{padding-left:0}}
 </style>
 <style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
 </head>
 <body>
 <template id="dc-template">
 <div style="position: relative; background: #EEEBE4; color: #0E0E0E; font-family: 'Archivo', system-ui, sans-serif; overflow: hidden;">
-
 <header style="position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: space-between; align-items: center; padding: 8px clamp(16px, 3vw, 40px); font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.04em;">
 <a href="ads-and-creatives.html" style="text-decoration: none; padding: 12px 0;">← Poster 02 Ads &amp; Creatives &#160;▸ 02.3</a>
 <nav class="nav" aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px 22px;">
 <a href="brand.html">Brand</a><a class="on" href="ads-and-creatives.html">Ads &amp; Creatives</a><a href="content.html">Content</a><a href="index.html#about">About</a><a href="index.html#contact">Contact</a>
 </nav>
 </header>
-
-<!-- HERO -->
-<section aria-label="KALIHU" style="position: relative; height: clamp(560px, 56vw, 840px); overflow: hidden; background: #CFCFCF;">
-<span class="ph" style="position: absolute; left: 0; right: 0; top: 12%; text-align: center; font-size: clamp(32px, 3vw, 44px);">[best KALIHU ad]</span>
-
-<div class="t2" style="position: absolute; left: -2%; right: -2%; top: 52%; height: clamp(220px, 24vw, 350px); display: flex; flex-direction: column; justify-content: center; padding: 0 clamp(24px, 5vw, 72px);">
-<h1 style="margin: 0; font-weight: 900; font-size: clamp(72px, 12vw, 190px); line-height: 0.8; letter-spacing: -0.05em; text-transform: uppercase;">KALIHU</h1>
-<p class="mono" style="margin: 14px 0 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 20px;"><span>Ads &amp; creatives</span><span>Surf apparel</span><span>[year]</span></p>
-</div>
-</section>
-
-<!-- INTRO -->
-<section style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px); display: flex; flex-wrap: wrap; gap: 40px clamp(32px, 5vw, 80px);">
+<section class="wrap" aria-label="KALIHU">
 <div class="grain" aria-hidden="true"></div>
-<div style="position: relative; flex: 1.3 1 420px; min-width: 0;">
-<p class="mono" style="margin: 0 0 10px;">Brief</p>
-<p style="margin: 0; font-weight: 600; font-size: clamp(20px, 1.9vw, 27px); line-height: 1.35;">Paid social for KALIHU, the surf apparel brand from the Maresme. <span class="ph">[1 line: what the ads were for]</span></p>
+<div class="top" style="position: relative;">
+<div><p class="mono" style="margin: 0 0 14px;">02.3 — Paid social · 1:1 · 4:5 · 9:16</p><h1 class="big" style="margin: 0; font-size: clamp(52px, 7vw, 112px); text-transform: uppercase;">KALIHU</h1>
+<p class="mono" style="margin: 18px 0 0;">KALIHU — surf apparel, Maresme · <span class="ph" style="font-size: 18px;">[year]</span></p></div>
+<div style="text-align: right;"><p class="big" style="margin: 0; color: #8A8478; font-size: clamp(56px, 6vw, 96px);">[ ]</p><p class="mono" style="margin: 12px 0 0;"><span class="ph" style="font-size: 18px;">[one real number — and compared to what]</span></p></div>
 </div>
-<dl style="position: relative; flex: 1 1 340px; min-width: 0; margin: 0; border-top: 2px solid #0E0E0E; font-weight: 600; font-size: 15px; text-transform: uppercase;">
-<div class="row"><dt>Client</dt><dd style="margin: 0; text-align: right;">KALIHU</dd></div>
-<div class="row"><dt>Year</dt><dd style="margin: 0; text-align: right;">[year]</dd></div>
-<div class="row"><dt>Role</dt><dd style="margin: 0; text-align: right;">Ad creative · design</dd></div>
-<div class="row" style="border-bottom: 2px solid #0E0E0E;"><dt>Tags</dt><dd style="margin: 0; text-align: right;">Paid social · 1:1 · 4:5 · 9:16</dd></div>
-</dl>
-</section>
-
-<!-- a) OBJECTIVE + b) ANGLES -->
-<section style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px);">
-<div class="grain" aria-hidden="true"></div>
-<div style="position: relative; display: grid; grid-template-columns: minmax(90px, 160px) 1fr; gap: 16px 32px; padding: 14px 0 18px; border-top: 2px solid #0E0E0E; border-bottom: 1px solid #0E0E0E;">
-<span class="mono" style="padding-top: 6px;">a — Objective</span>
-<p style="margin: 0; font-weight: 900; font-size: clamp(24px, 2.6vw, 38px); line-height: 1; letter-spacing: -0.02em; text-transform: uppercase;"><span class="ph">[One line: what the ads had to do.]</span></p>
-</div>
-<div style="position: relative; display: grid; grid-template-columns: minmax(90px, 160px) 1fr; gap: 16px 32px; padding: 14px 0 18px; border-bottom: 2px solid #0E0E0E;">
-<span class="mono" style="padding-top: 6px;">b — Angles</span>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 12px 28px;"><div><p class="mono" style="margin: 0; color: #C8321E;">Angle 01</p><p style="margin: 6px 0 0; font-weight: 800; font-size: 18px; line-height: 1.2;"><span class="ph">[Name of the angle]</span></p><p style="margin: 4px 0 0; font-weight: 600; font-size: 15px; line-height: 1.35; color: #6A645A;"><span class="ph">[The idea in one line.]</span></p></div><div><p class="mono" style="margin: 0; color: #C8321E;">Angle 02</p><p style="margin: 6px 0 0; font-weight: 800; font-size: 18px; line-height: 1.2;"><span class="ph">[Name of the angle]</span></p><p style="margin: 4px 0 0; font-weight: 600; font-size: 15px; line-height: 1.35; color: #6A645A;"><span class="ph">[The idea in one line.]</span></p></div><div><p class="mono" style="margin: 0; color: #C8321E;">Angle 03</p><p style="margin: 6px 0 0; font-weight: 800; font-size: 18px; line-height: 1.2;"><span class="ph">[Name of the angle]</span></p><p style="margin: 4px 0 0; font-weight: 600; font-size: 15px; line-height: 1.35; color: #6A645A;"><span class="ph">[The idea in one line.]</span></p></div></div>
+<div class="strip" style="position: relative;">
+<div><span class="mono">Objective</span><p>Paid social for my own surf apparel brand. <span class="ph" style="font-size: 20px;">[what the ads had to do]</span></p></div>
+<div><span class="mono">Angles</span><p><span class="ph" style="font-size: 20px;">[Angle 01 — the idea]</span><br><span class="ph" style="font-size: 20px;">[Angle 02 — the idea]</span></p></div>
+<div><span class="mono">What I did</span><p>Ad creative · design.</p></div>
 </div>
 </section>
-
-<!-- c) CREATIVES -->
-<section aria-label="Creatives" style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 112px);">
-<div class="grain" aria-hidden="true"></div>
-<div style="position: relative;">
-<p class="mono" style="margin: clamp(40px, 5vw, 64px) 0 0;">c — The creatives</p>
-<div class="fmtlabel"><h3 style="margin: 0; font-weight: 900; font-size: clamp(32px, 3.6vw, 52px); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase;">1:1</h3><span class="mono">Feed</span></div>
-<div class="fmt sq">
-<figure class="print" style="min-width: 0; transform: rotate(-1.5deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 1 / 1; box-sizing: border-box; font-size: 24px; padding: 8px;">[1:1 — angle 01]</span><span class="cap2"><span>1:1</span><span>Angle 01</span></span></figure>
-<figure class="print" style="min-width: 0; transform: rotate(1.2deg);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 1 / 1; box-sizing: border-box; font-size: 24px; padding: 8px;">[1:1 — angle 02]</span><span class="cap2"><span>1:1</span><span>Angle 02</span></span></figure>
-<figure class="print" style="min-width: 0; transform: rotate(-0.8deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 1 / 1; box-sizing: border-box; font-size: 24px; padding: 8px;">[1:1 — angle 03]</span><span class="cap2"><span>1:1</span><span>Angle 03</span></span></figure>
-</div>
-<div class="fmtlabel"><h3 style="margin: 0; font-weight: 900; font-size: clamp(32px, 3.6vw, 52px); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase;">4:5</h3><span class="mono">Feed</span></div>
-<div class="fmt pt">
-<figure class="print" style="min-width: 0; transform: rotate(-1.5deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 4 / 5; box-sizing: border-box; font-size: 24px; padding: 8px;">[4:5 — angle 01]</span><span class="cap2"><span>4:5</span><span>Angle 01</span></span></figure>
-<figure class="print" style="min-width: 0; transform: rotate(1.2deg);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 4 / 5; box-sizing: border-box; font-size: 24px; padding: 8px;">[4:5 — angle 02]</span><span class="cap2"><span>4:5</span><span>Angle 02</span></span></figure>
-<figure class="print" style="min-width: 0; transform: rotate(-0.8deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 4 / 5; box-sizing: border-box; font-size: 24px; padding: 8px;">[4:5 — angle 03]</span><span class="cap2"><span>4:5</span><span>Angle 03</span></span></figure>
-</div>
-<div class="fmtlabel"><h3 style="margin: 0; font-weight: 900; font-size: clamp(32px, 3.6vw, 52px); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase;">9:16</h3><span class="mono">Stories · Reels</span></div>
-<div class="fmt st">
-<figure class="print" style="min-width: 0; transform: rotate(-1.5deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 9 / 16; box-sizing: border-box; font-size: 24px; padding: 8px;">[9:16 — angle 01]</span><span class="cap2"><span>9:16</span><span>Angle 01</span></span></figure>
-<figure class="print" style="min-width: 0; transform: rotate(1.2deg);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 9 / 16; box-sizing: border-box; font-size: 24px; padding: 8px;">[9:16 — angle 02]</span><span class="cap2"><span>9:16</span><span>Angle 02</span></span></figure>
-<figure class="print" style="min-width: 0; transform: rotate(-0.8deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 9 / 16; box-sizing: border-box; font-size: 24px; padding: 8px;">[9:16 — angle 03]</span><span class="cap2"><span>9:16</span><span>Angle 03</span></span></figure>
-</div>
-<div class="fmtlabel"><h3 style="margin: 0; font-weight: 900; font-size: clamp(32px, 3.6vw, 52px); line-height: 0.9; letter-spacing: -0.03em; text-transform: uppercase;">Variants</h3><span class="mono">What we tested</span></div>
-<div class="fmt sq">
-<figure class="print" style="min-width: 0; transform: rotate(-1.5deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 1 / 1; box-sizing: border-box; font-size: 24px; padding: 8px;">[Variant A — hook / headline]</span><span class="cap2"><span>A</span><span>[what changed]</span></span></figure>
-<figure class="print" style="min-width: 0; transform: rotate(1.2deg);"><span class="tape2" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 1 / 1; box-sizing: border-box; font-size: 24px; padding: 8px;">[Variant B]</span><span class="cap2"><span>B</span><span>[what changed]</span></span></figure>
-<figure class="print" style="min-width: 0; transform: rotate(-0.8deg);"><span class="tape1" aria-hidden="true" style="position: absolute; left: 50%; top: -14px; width: 90px; height: 26px; margin-left: -45px; z-index: 1;"></span><span class="empty" style="width: 100%; aspect-ratio: 1 / 1; box-sizing: border-box; font-size: 24px; padding: 8px;">[Variant C]</span><span class="cap2"><span>C</span><span>[what changed]</span></span></figure>
-</div>
-</div>
+<section class="wrap" aria-label="The creatives" style="padding-bottom: 0;">
+<p class="mono" style="position: relative; margin: clamp(40px, 5vw, 64px) 0 0; padding-bottom: 8px; border-bottom: 2px solid #0E0E0E;">The creatives — by format</p>
+<div class="board"><div class="lab"><span class="mono">1:1 · Feed</span><b>Square</b></div><div class="cells" style="grid-template-columns: repeat(3, minmax(0,1fr));"><figure><span class="empty" style="aspect-ratio: 1 / 1;">[1:1 — angle 01]</span><figcaption>1:1 — angle 01</figcaption></figure><figure><span class="empty" style="aspect-ratio: 1 / 1;">[1:1 — angle 02]</span><figcaption>1:1 — angle 02</figcaption></figure><figure><span class="empty" style="aspect-ratio: 1 / 1;">[1:1 — angle 03]</span><figcaption>1:1 — angle 03</figcaption></figure></div></div>
+<div class="board"><div class="lab"><span class="mono">4:5 · Feed</span><b>Portrait</b></div><div class="cells" style="grid-template-columns: repeat(3, minmax(0,1fr));"><figure><span class="empty" style="aspect-ratio: 4 / 5;">[4:5 — angle 01]</span><figcaption>4:5 — angle 01</figcaption></figure><figure><span class="empty" style="aspect-ratio: 4 / 5;">[4:5 — angle 02]</span><figcaption>4:5 — angle 02</figcaption></figure><figure><span class="empty" style="aspect-ratio: 4 / 5;">[4:5 — angle 03]</span><figcaption>4:5 — angle 03</figcaption></figure></div></div>
+<div class="board"><div class="lab"><span class="mono">9:16 · Stories &amp; reels</span><b>Vertical</b></div><div class="cells" style="grid-template-columns: repeat(4, minmax(0,1fr));"><figure><span class="empty" style="aspect-ratio: 9 / 16;">[9:16 — angle 01]</span><figcaption>9:16 — angle 01</figcaption></figure><figure><span class="empty" style="aspect-ratio: 9 / 16;">[9:16 — angle 02]</span><figcaption>9:16 — angle 02</figcaption></figure><figure><span class="empty" style="aspect-ratio: 9 / 16;">[9:16 — angle 03]</span><figcaption>9:16 — angle 03</figcaption></figure><figure><span class="empty" style="aspect-ratio: 9 / 16;">[9:16 — variant]</span><figcaption>9:16 — variant</figcaption></figure></div></div>
+<div class="board"><div class="lab"><span class="mono">A/B</span><b>Variants</b></div><div class="cells" style="grid-template-columns: repeat(3, minmax(0,1fr));"><figure><span class="empty" style="aspect-ratio: 1 / 1;">[Variant A — hook]</span><figcaption>Variant A — hook</figcaption></figure><figure><span class="empty" style="aspect-ratio: 1 / 1;">[Variant B]</span><figcaption>Variant B</figcaption></figure><figure><span class="empty" style="aspect-ratio: 1 / 1;">[Variant C]</span><figcaption>Variant C</figcaption></figure></div></div>
+<a class="pnext" href="ads-nordest.html"><span class="mono">Next campaign — 02.2</span><b>Nordest Running Club →</b></a>
 </section>
-
-<!-- d) RESULT -->
-<section style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 112px);">
-<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 40px; padding-top: 14px; border-top: 2px solid #0E0E0E;">
-<div><p class="mono" style="margin: 0;">d — Result</p>
-<p style="margin: 8px 0 0; font-weight: 900; font-size: clamp(96px, 14vw, 200px); line-height: 0.8; letter-spacing: -0.05em; color: #8A8478;">[number]</p></div>
-<p style="margin: 0 0 8px; max-width: 420px; font-weight: 600; font-size: clamp(18px, 1.6vw, 22px); line-height: 1.3;"><span class="ph">[One real number — and compared to what. Delete if there isn’t one.]</span></p>
-</div>
-</section>
-
-<!-- CLOSING -->
-<section aria-label="Closing" style="position: relative; max-width: 1440px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 56px) clamp(64px, 8vw, 120px);">
-<div class="grain" aria-hidden="true"></div>
-<p style="position: relative; margin: 0; padding-top: 14px; border-top: 2px solid #0E0E0E; font-family: 'Caveat', cursive; font-weight: 700; font-size: clamp(30px, 3vw, 44px); line-height: 1.1; color: #8A8478;">[closing — 1 line, only if it's real; delete if not]</p>
-</section>
-
-<a class="next" href="kalihu-x-maresme-waves.html" style="position: relative; display: block; height: clamp(150px, 15vw, 220px); margin: 0 -2%; text-decoration: none;">
-<span class="t1" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 clamp(24px, 5vw, 72px);">
-<span class="mono">Next — 02.4</span>
-<span class="next-t" style="font-weight: 900; font-size: clamp(44px, 7vw, 108px); line-height: 0.8; letter-spacing: -0.045em; text-transform: uppercase;">KALIHU × Maresme Waves →</span>
-</span>
-</a>
-
-<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
-<a href="ads-and-creatives.html" style="text-decoration: none; padding: 12px 0;">← All ads &amp; creatives</a>
+<footer style="position: relative; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; padding: 22px clamp(16px, 3vw, 40px) 32px; border-top: 2px solid #0E0E0E; font-family: 'Space Mono', monospace; font-size: 11px; text-transform: uppercase;">
+<a href="ads-and-creatives.html" style="text-decoration: none; padding: 12px 0;">← All campaigns</a>
 <a href="mailto:girurre5@gmail.com" style="text-decoration: none; padding: 12px 0;">girurre5@gmail.com</a>
 <span style="padding: 12px 0;">Brand &amp; Creative Designer — Barcelona</span>
 </footer>

@@ -28,6 +28,11 @@ a{color:inherit}a:hover{color:inherit}
 .empty{display:flex;align-items:center;justify-content:center;background:#F4F1EA;border:1px dashed rgba(14,14,14,.35);font-family:'Caveat',cursive;font-weight:700;font-size:26px;color:#8A8478;text-align:center}
 .stamp{display:inline-block;padding:6px 14px;border:3px solid #C8321E;background:rgba(251,250,246,.92);color:#C8321E;font-family:'Space Mono',monospace;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-6deg)}
 .next:hover .next-t,.next:focus .next-t{text-decoration:underline;text-decoration-thickness:4px}
+.vmeta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid #0E0E0E;border-bottom:2px solid #0E0E0E;margin:0}
+.vmeta div{padding:12px 14px 14px 0}
+.vmeta dt{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;color:#6A645A}
+.vmeta dd{margin:6px 0 0;font-weight:700;font-size:15px;text-transform:uppercase;line-height:1.25}
+@media (max-width:900px){.vmeta{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 </style>
 <style>html:not(.dc-ready) #dc-root{visibility:hidden}</style>
 </head>
@@ -53,18 +58,10 @@ a{color:inherit}a:hover{color:inherit}
 </section>
 
 <!-- INTRO -->
-<section style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(56px, 7vw, 104px) clamp(16px, 4vw, 56px); display: flex; flex-wrap: wrap; gap: 40px clamp(32px, 5vw, 80px);">
+<section class="pw-intro" style="position: relative; max-width: 1440px; margin: 0 auto; padding: clamp(40px, 5vw, 72px) clamp(16px, 4vw, 56px) clamp(56px, 7vw, 96px);">
 <div class="grain" aria-hidden="true"></div>
-<div style="position: relative; flex: 1.3 1 420px; min-width: 0;">
-<p class="mono" style="margin: 0 0 10px;">Brief</p>
-<p style="margin: 0; font-weight: 600; font-size: clamp(20px, 1.9vw, 27px); line-height: 1.35;">Abril Fox Studio is the wedding photography studio I run with my partner. <span class="ph">[what the site needed — 1 line]</span></p>
-</div>
-<dl style="position: relative; flex: 1 1 340px; min-width: 0; margin: 0; border-top: 2px solid #0E0E0E; font-weight: 600; font-size: 15px; text-transform: uppercase;">
-<div class="row"><dt>Client</dt><dd style="margin: 0; text-align: right;">Abril Fox Studio (co-founder)</dd></div>
-<div class="row"><dt>Year</dt><dd style="margin: 0; text-align: right;">[year]</dd></div>
-<div class="row"><dt>Role</dt><dd style="margin: 0; text-align: right;">Graphic designer</dd></div>
-<div class="row" style="border-bottom: 2px solid #0E0E0E;"><dt>Tags</dt><dd style="margin: 0; text-align: right;">[tags]</dd></div>
-</dl>
+<dl class="vmeta" style="position: relative;"><div><dt>Client</dt><dd>Abril Fox Studio</dd></div><div><dt>Year</dt><dd>[year]</dd></div><div><dt>Role</dt><dd>Graphic designer</dd></div><div><dt>Tags</dt><dd>[tags]</dd></div></dl>
+<p style="position: relative; margin: clamp(28px, 3vw, 44px) 0 0; max-width: 820px; font-weight: 600; font-size: clamp(19px, 1.8vw, 25px); line-height: 1.4;">Abril Fox Studio is the wedding photography studio I run with my partner. <span class="ph">[what the site needed — 1 line]</span></p>
 </section>
 
 <!-- SHEETS 01 + 02 -->
